@@ -1,5 +1,5 @@
 public class CountTheDays {
-  public static public static void main(String[] args) {
-    System.out.println(daysBetween());
+  public static void main(String[] args) {
+    System.out.println("There are x number of days between the two dates");
   }
 }
