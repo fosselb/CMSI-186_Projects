@@ -171,16 +171,40 @@ public class CalendarStuff {
    */
    public static long daysBetween( long month1, long day1, long year1, long month2, long day2, long year2 ) {
       long dayCount = 0;
-      for (int i = Math.toIntExact(year1) + 1; i < year2; i++) {
-        dayCount += 365;
-        if (isLeapYear(i)) {
-          dayCount += 366;
+      if (compareDate(month1, day1, year1, month2, day2, year2) == 0) {
+        return dayCount;
+      } else if (compareDate(month1, day1, year1, month2, day2, year2) > 0) {
+        return daysBetween(month2, day2, year2, month1, day1, year1);
+      }
+
+      long daysOfMonths = 0;
+      if (month1 != month2) {
+        for (int i = Math.toIntExact(month1) + 1; i <= 12; i++) {
+          daysOfMonths += daysInMonth(i, year1);
+        }
+        for (int i = 1; i < month2; i++) {
+          daysOfMonths += daysInMonth(i, year2);
         }
       }
-      for (int j = Math.toIntExact(month1); j < 13; j++) {
-        dayCount += daysInMonth(month1 + 1, year1);
+
+      if (year1 == year2 && month1 == month2) {
+        dayCount = day2 - day1;
+      } else if (year1 == year2) {
+        dayCount = (days[Math.toIntExact(month1) - 1] - day1) + day2;
+      } else if (month1 == month2) {
+        dayCount = (((year2 - year1)) * 365) + (day2 - day1);
+        if (isLeapYear(year1) || isLeapYear(year2)) {
+          dayCount += 1;
+        }
+      } else {
+        dayCount = (((year2 - year1) - 1) * 365) + (days[Math.toIntExact(month1) - 1] - day1) + daysOfMonths + day2;
       }
-      dayCount = (daysInMonth(month1, year1) - day1) + day2;
+
+      for (int i = Math.toIntExact(year1) + 1; i < year2; i++) {
+        if (isLeapYear(i)) {
+          dayCount += 1;
+        }
+      }
       return dayCount;
    }
 
