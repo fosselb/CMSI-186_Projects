@@ -34,23 +34,5 @@ public class CountTheDays {
     catch(Exception e) {
       System.out.println("Please enter a valid date.");
     }
-/*
-    System.out.println(
-      "There are " +
-      CalendarStuff.daysBetween(month1, day1, year1, month2, day2, year2) +
-      " days between " +
-      month1String +
-      " " +
-      day1 +
-      " , " +
-      year1 +
-      " and " +
-      month2String +
-      " " +
-      day2 +
-      " , " +
-      year2
-    );
-    */
   }
 }
