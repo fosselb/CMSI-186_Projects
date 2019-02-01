@@ -13,7 +13,28 @@ public class CountTheDays {
     String day2String = CalendarStuff.toMonthString(Math.toIntExact(day2));
 
 
-    //System.out.println(moth1String);
+    try {
+      System.out.println(
+        "There are " +
+        CalendarStuff.daysBetween(month1, day1, year1, month2, day2, year2) +
+        " days between " +
+        month1String +
+        " " +
+        day1 +
+        " , " +
+        year1 +
+        " and " +
+        month2String +
+        " " +
+        day2 +
+        " , " +
+        year2
+      );
+    }
+    catch(Exception e) {
+      System.out.println("Please enter a valid date.");
+    }
+/*
     System.out.println(
       "There are " +
       CalendarStuff.daysBetween(month1, day1, year1, month2, day2, year2) +
@@ -30,5 +51,6 @@ public class CountTheDays {
       " , " +
       year2
     );
+    */
   }
 }
