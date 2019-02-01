@@ -8,10 +8,7 @@ public class CountTheDays {
     long year2 = Long.parseLong(args[5]);
 
     String month1String = CalendarStuff.toMonthString(Math.toIntExact(month1));
-    String day1String = CalendarStuff.toDayOfWeekString(Math.toIntExact(day1));
     String month2String = CalendarStuff.toMonthString(Math.toIntExact(month2));
-    String day2String = CalendarStuff.toMonthString(Math.toIntExact(day2));
-
 
     try {
       System.out.println(
