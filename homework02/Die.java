@@ -23,7 +23,7 @@ public class Die {
        System.out.println("Please enter a valid number");
      }
      this.sides = nSides;
-     //this.pips = pips;
+     this.pips = 0;
    }
 
    public int isValid(int sides) {
