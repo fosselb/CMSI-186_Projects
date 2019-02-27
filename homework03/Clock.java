@@ -98,8 +98,7 @@ public class Clock {
    *  @return double-precision value of the hour hand location
    */
    public double getHourHandAngle() {
-     hourHandAngle = elapsedTime * HOUR_HAND_DEGREES_PER_SECOND;
-     return hourHandAngle;
+     return (elapsedTime * HOUR_HAND_DEGREES_PER_SECOND) % 360;
    }
 
   /**
@@ -107,8 +106,7 @@ public class Clock {
    *  @return double-precision value of the minute hand location
    */
    public double getMinuteHandAngle() {
-     minuteHandAngle = elapsedTime * MINUTE_HAND_DEGREES_PER_SECOND;
-     return minuteHandAngle;
+     return (elapsedTime * MINUTE_HAND_DEGREES_PER_SECOND) % 360;
    }
 
   /**
@@ -116,7 +114,12 @@ public class Clock {
    *  @return double-precision value of the angle between the two hands
    */
    public double getHandAngle() {
-      return Math.abs(getMinuteHandAngle() - getHourHandAngle());
+      double handAngle = Math.abs(getMinuteHandAngle() - getHourHandAngle());
+      if (handAngle <= 180.0) {
+        return handAngle;
+      } else {
+        return 360 - handAngle;
+      }
    }
 
   /**

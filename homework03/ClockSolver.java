@@ -41,16 +41,19 @@ public class ClockSolver {
    *   this sets up the variables for the simulation
    */
    public void handleInitialArguments( String args[] ) {
+     Clock testClock = new Clock();
      try {
-       Clock testClock = new Clock();
        angleArg = testClock.validateAngleArg(args[0]);
      } catch (Exception e) {
        throw new IllegalArgumentException("Please input an Angle Argument that is a number between 0 and 360");
      }
 
+
+
+
      try {
-       Clock testClock = new Clock();
-       if (args[1].length() == 0) {
+       //Clock testClock = new Clock();
+       if (args.length == 1) {
          testClock.timeSlice = DEFAULT_TIME_SLICE_SECONDS;
        } else {
          if (testClock.validateTimeSliceArg(args[1]) == -1.0) {
@@ -62,6 +65,7 @@ public class ClockSolver {
      } catch (Exception e) {
        throw new IllegalArgumentException("Please input a valid argument");
      }
+
 
 
      // args[0] specifies the angle for which you are looking
@@ -101,15 +105,17 @@ public class ClockSolver {
       System.out.println("Hand Angle: " + clock.getHandAngle());
       */
       System.out.println("Here are the times in a 12-Hour day that correspond to your specified angle and time slice: ");
-      while( true ) {
+      while( clock.getTotalSeconds() <= MAX_ELAPSED_TIME_IN_SECONDS ) {
         clock.tick();
-        if (angleArg < clock.getHandAngle() + EPSILON_VALUE && angleArg > clock.getHandAngle() - EPSILON_VALUE) {
+        if ((angleArg < (clock.getHandAngle() + EPSILON_VALUE)) && (angleArg > (clock.getHandAngle() - EPSILON_VALUE))) {
           System.out.println(clock.toString());
         }
         //System.out.println(clock.getHandAngle());
+        /*
         if (clock.getTotalSeconds() > MAX_ELAPSED_TIME_IN_SECONDS) {
           break;
         }
+        */
       }
       System.exit( 0 );
    }
