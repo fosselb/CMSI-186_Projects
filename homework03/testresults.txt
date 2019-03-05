@@ -1,0 +1,191 @@
+
+CLOCK CLASS TESTER PROGRAM
+--------------------------
+
+  Creating a new clock: 
+    New clock created: Hour: 0.0 Minute: 0.0 Second: 0.0
+    Testing validateAngleArg()....
+      sending '  0 degrees', expecting double value   0.0 - got 0.0
+ - got 360.0
+ - got 180.0
+ - got 0.0
+ - got 1800.0
+ - got 30.0
+
+   Hello world, from the ClockSolver program!!
+
+
+Here are the times in a 12-Hour day that correspond to your specified angle and time slice: 
+
+   Hello world, from the ClockSolver program!!
+
+
+Here are the times in a 12-Hour day that correspond to your specified angle and time slice: 
+Hour: 1.0 Minute: 0.0 Second: 0.0
+
+   Hello world, from the ClockSolver program!!
+
+
+Here are the times in a 12-Hour day that correspond to your specified angle and time slice: 
+Hour: 1.0 Minute: 0.0 Second: 0.0
+Hour: 3.0 Minute: 21.0 Second: 50.0
+Hour: 5.0 Minute: 21.0 Second: 50.0
+Hour: 7.0 Minute: 43.0 Second: 40.0
+Hour: 9.0 Minute: 43.0 Second: 40.0
+
+   Hello world, from the ClockSolver program!!
+
+
+Here are the times in a 12-Hour day that correspond to your specified angle and time slice: 
+Hour: 0.0 Minute: 5.0 Second: 27.0
+Hour: 0.0 Minute: 5.0 Second: 28.0
+Hour: 1.0 Minute: 0.0 Second: 0.0
+Hour: 1.0 Minute: 0.0 Second: 1.0
+Hour: 1.0 Minute: 10.0 Second: 54.0
+Hour: 1.0 Minute: 10.0 Second: 55.0
+Hour: 2.0 Minute: 5.0 Second: 27.0
+Hour: 2.0 Minute: 5.0 Second: 28.0
+Hour: 2.0 Minute: 16.0 Second: 22.0
+Hour: 2.0 Minute: 16.0 Second: 23.0
+Hour: 3.0 Minute: 10.0 Second: 55.0
+Hour: 3.0 Minute: 10.0 Second: 56.0
+Hour: 3.0 Minute: 21.0 Second: 49.0
+Hour: 3.0 Minute: 21.0 Second: 50.0
+Hour: 3.0 Minute: 21.0 Second: 51.0
+Hour: 4.0 Minute: 16.0 Second: 22.0
+Hour: 4.0 Minute: 16.0 Second: 23.0
+Hour: 4.0 Minute: 16.0 Second: 24.0
+Hour: 4.0 Minute: 27.0 Second: 17.0
+Hour: 4.0 Minute: 27.0 Second: 18.0
+Hour: 5.0 Minute: 21.0 Second: 50.0
+Hour: 5.0 Minute: 21.0 Second: 51.0
+Hour: 5.0 Minute: 32.0 Second: 44.0
+Hour: 5.0 Minute: 32.0 Second: 45.0
+Hour: 5.0 Minute: 32.0 Second: 46.0
+Hour: 6.0 Minute: 27.0 Second: 17.0
+Hour: 6.0 Minute: 27.0 Second: 18.0
+Hour: 6.0 Minute: 27.0 Second: 19.0
+Hour: 6.0 Minute: 38.0 Second: 12.0
+Hour: 6.0 Minute: 38.0 Second: 13.0
+Hour: 7.0 Minute: 32.0 Second: 45.0
+Hour: 7.0 Minute: 32.0 Second: 46.0
+Hour: 7.0 Minute: 43.0 Second: 40.0
+Hour: 7.0 Minute: 43.0 Second: 41.0
+Hour: 8.0 Minute: 38.0 Second: 13.0
+Hour: 8.0 Minute: 38.0 Second: 14.0
+Hour: 8.0 Minute: 49.0 Second: 7.0
+Hour: 8.0 Minute: 49.0 Second: 8.0
+Hour: 9.0 Minute: 43.0 Second: 40.0
+Hour: 9.0 Minute: 43.0 Second: 41.0
+Hour: 9.0 Minute: 54.0 Second: 35.0
+Hour: 9.0 Minute: 54.0 Second: 36.0
+Hour: 10.0 Minute: 49.0 Second: 8.0
+Hour: 10.0 Minute: 49.0 Second: 9.0
+Hour: 11.0 Minute: 0.0 Second: 2.0
+Hour: 11.0 Minute: 0.0 Second: 3.0
+Hour: 11.0 Minute: 54.0 Second: 35.0
+Hour: 11.0 Minute: 54.0 Second: 36.0
+
+   Hello world, from the ClockSolver program!!
+
+
+Here are the times in a 12-Hour day that correspond to your specified angle and time slice: 
+Hour: 8.0 Minute: 30.0 Second: 0.0
+
+   Hello world, from the ClockSolver program!!
+
+
+Here are the times in a 12-Hour day that correspond to your specified angle and time slice: 
+Hour: 1.0 Minute: 57.0 Second: 15.0
+Hour: 3.0 Minute: 2.0 Second: 42.0
+Hour: 4.0 Minute: 8.0 Second: 9.0
+Hour: 5.0 Minute: 13.0 Second: 36.0
+Hour: 8.0 Minute: 57.0 Second: 22.0
+Hour: 10.0 Minute: 2.0 Second: 49.0
+Hour: 11.0 Minute: 8.0 Second: 16.0
+
+   Hello world, from the ClockSolver program!!
+
+
+Here are the times in a 12-Hour day that correspond to your specified angle and time slice: 
+Hour: 0.0 Minute: 13.0 Second: 40.29999999999234
+Hour: 0.0 Minute: 13.0 Second: 41.59999999999229
+Hour: 0.0 Minute: 51.0 Second: 47.00000000009777
+Hour: 1.0 Minute: 19.0 Second: 7.600000000326872
+Hour: 1.0 Minute: 19.0 Second: 8.900000000327054
+Hour: 1.0 Minute: 57.0 Second: 14.300000000646833
+Hour: 2.0 Minute: 24.0 Second: 34.90000000053806
+Hour: 2.0 Minute: 24.0 Second: 36.20000000053733
+Hour: 3.0 Minute: 2.0 Second: 41.599999999258216
+Hour: 3.0 Minute: 2.0 Second: 42.89999999925749
+Hour: 3.0 Minute: 30.0 Second: 3.4999999983392627
+Hour: 4.0 Minute: 8.0 Second: 8.89999999706015
+Hour: 4.0 Minute: 8.0 Second: 10.199999997059422
+Hour: 4.0 Minute: 35.0 Second: 30.799999996143015
+Hour: 5.0 Minute: 13.0 Second: 36.1999999948639
+Hour: 5.0 Minute: 13.0 Second: 37.499999994863174
+Hour: 5.0 Minute: 40.0 Second: 58.09999999394495
+Hour: 5.0 Minute: 40.0 Second: 59.39999999394422
+Hour: 6.0 Minute: 19.0 Second: 4.799999992665107
+Hour: 6.0 Minute: 46.0 Second: 25.39999999174688
+Hour: 6.0 Minute: 46.0 Second: 26.699999991746154
+Hour: 7.0 Minute: 24.0 Second: 32.09999999046704
+Hour: 7.0 Minute: 51.0 Second: 52.699999989548814
+Hour: 7.0 Minute: 51.0 Second: 53.99999998954809
+Hour: 8.0 Minute: 29.0 Second: 59.39999998826897
+Hour: 8.0 Minute: 30.0 Second: 0.6999999882682459
+Hour: 8.0 Minute: 57.0 Second: 21.29999998735002
+Hour: 9.0 Minute: 35.0 Second: 26.699999990989454
+Hour: 9.0 Minute: 35.0 Second: 27.999999990992364
+Hour: 10.0 Minute: 2.0 Second: 48.59999999466527
+Hour: 10.0 Minute: 40.0 Second: 53.99999999978172
+Hour: 10.0 Minute: 40.0 Second: 55.29999999978463
+Hour: 11.0 Minute: 8.0 Second: 15.900000003457535
+Hour: 11.0 Minute: 8.0 Second: 17.200000003460445
+Hour: 11.0 Minute: 46.0 Second: 22.6000000085769
+
+   Hello world, from the ClockSolver program!!
+
+
+Here are the times in a 12-Hour day that correspond to your specified angle and time slice: 
+Hour: 0.0 Minute: 16.0 Second: 22.5
+Hour: 0.0 Minute: 49.0 Second: 5.0
+Hour: 1.0 Minute: 21.0 Second: 50.0
+Hour: 1.0 Minute: 54.0 Second: 32.5
+Hour: 2.0 Minute: 27.0 Second: 17.5
+Hour: 3.0 Minute: 0.0 Second: 0.0
+Hour: 3.0 Minute: 32.0 Second: 45.0
+Hour: 4.0 Minute: 5.0 Second: 27.5
+Hour: 4.0 Minute: 38.0 Second: 12.5
+Hour: 5.0 Minute: 10.0 Second: 55.0
+Hour: 5.0 Minute: 43.0 Second: 40.0
+Hour: 6.0 Minute: 16.0 Second: 22.5
+Hour: 6.0 Minute: 49.0 Second: 7.5
+Hour: 7.0 Minute: 21.0 Second: 50.0
+Hour: 7.0 Minute: 54.0 Second: 35.0
+Hour: 8.0 Minute: 27.0 Second: 17.5
+Hour: 9.0 Minute: 0.0 Second: 2.5
+Hour: 10.0 Minute: 5.0 Second: 30.0
+Hour: 11.0 Minute: 10.0 Second: 57.5
+
+   Hello world, from the ClockSolver program!!
+
+
+Here are the times in a 12-Hour day that correspond to your specified angle and time slice: 
+Hour: 0.0 Minute: 32.0 Second: 43.79999999996562
+Hour: 1.0 Minute: 38.0 Second: 11.40000000035161
+Hour: 2.0 Minute: 43.0 Second: 38.99999999992724
+Hour: 3.0 Minute: 49.0 Second: 6.5999999983396265
+Hour: 4.0 Minute: 54.0 Second: 34.19999999675201
+Hour: 6.0 Minute: 0.0 Second: 1.7999999951643986
+Hour: 7.0 Minute: 5.0 Second: 29.399999993576785
+Hour: 8.0 Minute: 10.0 Second: 56.99999999198917
+Hour: 9.0 Minute: 16.0 Second: 24.599999991645745
+Hour: 10.0 Minute: 21.0 Second: 52.1999999979962
+Hour: 11.0 Minute: 27.0 Second: 19.800000004346657
+
+   Hello world, from the ClockSolver program!!
+
+
+Here are the times in a 12-Hour day that correspond to your specified angle and time slice: 
+Hour: 3.0 Minute: 0.0 Second: 0.0
