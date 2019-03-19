@@ -7,9 +7,10 @@ public class SoccerSim {
   private static double y;
   private static double dx;
   private static double dy;
-  //private static double timeSlice = 1.0;
   private static int numberOfBallsOnField = 0;
   private static int numberOfCollisions = 0;
+  private static double poleXPosition = 10.0;
+  private static double poleYPosition = 10.0;
 
   /**
   * methods
@@ -71,13 +72,14 @@ public class SoccerSim {
 
     System.out.println("\n--- WELCOME TO SOCCER SIMULATION ---\n");
     System.out.println("The size of the soccer field is <-500, 500> in the x direction and <-500, 500> in the y direction\n");
+/*
     System.out.println(b[0].toStringPosition());
     System.out.println(b[0].toStringVelocity());
     System.out.println(b[1].toStringPosition());
     System.out.println(b[1].toStringVelocity());
     System.out.println(Ball.timeSlice);
     System.out.println("test end\n");
-
+*/
     while ( true ) {
       simulationTimer.tick();
 
@@ -100,7 +102,7 @@ public class SoccerSim {
         for (int j = i + 1; j < b.length; j++) {
           if (b[i].hasCollided(b[j])) {
             numberOfCollisions++;
-            System.out.println("A collision has occured between ball " + i + " and ball " + j + " at: " + b[i].toStringPosition());
+            System.out.println("\n --- A collision has occured between ball " + i + " and ball " + j + " at: " + b[i].toStringPosition() + " ---\n");
             System.exit(0);
           }
         }
