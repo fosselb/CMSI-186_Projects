@@ -3,23 +3,12 @@ public class SoccerSim {
   /**
   * Field defenitions
   */
-  // private static double x;
-  // private static double y;
-  // private static double dx;
-  // private static double dy;
   private static int numberOfBallsOnField = 0;
   private static int numberOfCollisions = 0;
 
   /**
   * methods
   */
-/*
-  public void moveAllBalls(Ball b) {
-    for (int i = 0; i < numberOfBallsOnField; i++) {
-      b[i].moveBall();
-    }
-  }
-*/
 
   public Ball[] validateArgs(String[] args) {
     int argsLength = args.length;
