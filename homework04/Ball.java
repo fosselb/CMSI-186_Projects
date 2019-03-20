@@ -3,14 +3,16 @@ public class Ball {
   /**
   * Field defenitions
   */
-  private static double x;
-  private static double y;
-  private static double dx;
-  private static double dy;
+  private double x;
+  private double y;
+  private double dx;
+  private double dy;
   public static double timeSlice = 1.0;
   private static final double BALL_RADIUS_IN_FEET = 0.370833;
   private static final double VELOCITY_AT_REST_IN_FEET_PER_SECOND = 0.0833;
   private static final double MAX_FIELD_SIZE = 500;
+  private static double poleXPosition = 10.0;
+  private static double poleYPosition = 10.0;
 
 
   /**
@@ -36,8 +38,8 @@ public class Ball {
   * Method to slow down ball
   */
   public void slowDown() {
-    this.dx *= 0.99 * timeSlice;
-    this.dy *= 0.99 * timeSlice;
+    this.dx *= Math.pow(0.99, timeSlice);
+    this.dy *= Math.pow(0.99, timeSlice);
   }
 
   /**
@@ -125,16 +127,18 @@ public class Ball {
     } else {
       return false;
     }
+  }
 
-
-/*
-    double differenceOfX = Math.abs(ballSetTest[0].getXPosition - ballSetTest[1].getXPosition);
-    double differenceOfY = Math.abs(ballSetTest[0].getYPosition - ballSetTest[1].getYPosition);
-    System.out.println("diff of X: " + differenceOfX);
-    System.out.println("diff of Y: " + differenceOfY);
-    double lengthBetweenBalls = Math.sqrt(Math.pow(differenceOfX, 2) + Math.pow(differenceOfY, 2));
-    return (lengthBetweenBalls < )
+    /**
+    * Method to check is balls have collided
     */
+
+    public boolean hasCollidedWithPole() {
+      if ( Math.sqrt(Math.pow(this.x - poleXPosition, 2) + Math.pow(this.y - poleYPosition, 2))  < 0.74166 ) {
+        return true;
+      } else {
+        return false;
+      }
   }
 
   /**
