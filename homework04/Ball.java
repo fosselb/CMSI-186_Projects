@@ -148,16 +148,11 @@ public class Ball {
     Ball testBall = new Ball(-300, 300, -20.0, 20.0);
     System.out.println("\n ---WELCOME TO BALL CLASS TEST---\n");
     System.out.println("INITIAL POSITION & VELOCITY:");
-    //System.out.println("Ball Location: < " + testBall.getBallPosition()[0] + ", " + testBall.getBallPosition()[1] + " > feet");
-    //System.out.println("Ball Velocity: < " + testBall.getBallVelocity()[0] + ", " + testBall.getBallVelocity()[1] + " > feet/second");
     System.out.println(testBall.toStringPosition());
     System.out.println(testBall.toStringVelocity());
 
-    //System.out.println("MOVE BALL 1 time");
     while (testBall.isStillMoving()) {
       testBall.moveBall();
-      //System.out.println("Ball Location: < " + testBall.getBallPosition()[0] + ", " + testBall.getBallPosition()[1] + " > feet");
-      //System.out.println("Ball Velocity: < " + testBall.getBallVelocity()[0] + ", " + testBall.getBallVelocity()[1] + " > feet/second");
       System.out.println(testBall.toStringPosition());
       System.out.println(testBall.toStringVelocity());
       if (!testBall.isInBounds()) {
@@ -165,12 +160,6 @@ public class Ball {
         System.exit(0);
       }
     }
-    /*
-    System.out.println(Math.abs(testBall.dx));
-    System.out.println(Math.abs(testBall.dy));
-    System.out.println("Is the ball still moving? " + testBall.isStillMoving());
-    System.out.println("Is the ball in bounds of field? " + testBall.isInBounds());
-    */
     System.out.println("Ball is at rest");
     System.exit(0);
   }
