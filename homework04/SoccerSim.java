@@ -3,14 +3,12 @@ public class SoccerSim {
   /**
   * Field defenitions
   */
-  private static double x;
-  private static double y;
-  private static double dx;
-  private static double dy;
+  // private static double x;
+  // private static double y;
+  // private static double dx;
+  // private static double dy;
   private static int numberOfBallsOnField = 0;
   private static int numberOfCollisions = 0;
-  private static double poleXPosition = 10.0;
-  private static double poleYPosition = 10.0;
 
   /**
   * methods
@@ -25,31 +23,32 @@ public class SoccerSim {
 
   public Ball[] validateArgs(String[] args) {
     int argsLength = args.length;
-    Ball[] b;
+    // Ball[] b;
 
-      //checking length of arguments
-      if (argsLength % 4 == 1) {
-        Ball.timeSlice = Double.parseDouble(args[argsLength - 1]);
-      } else if (argsLength % 4 == 0) {
-        argsLength++;
-      } else {
-        throw new IllegalArgumentException("\nPlease enter a valid number of arguments." +
-        "\n The first 2 arguments will describe the ball position, respectively." +
-        "\n The next set of arguments will describe the ball velocity in x and y direction, respectively." +
-        "\n The finally argument will describe the time Slice. (This is optional)" +
-        "\n Example of valid argument input: 300 300 -1.0 1.0 10.0");
+    //checking length of arguments
+    if (argsLength % 4 == 1) {
+      Ball.timeSlice = Double.parseDouble(args[argsLength - 1]);
+    } else if (argsLength % 4 == 0) {
+      argsLength++;
+    } else {
+      throw new IllegalArgumentException("\nPlease enter a valid number of arguments." +
+      "\n The first 2 arguments will describe the ball position, respectively." +
+      "\n The next set of arguments will describe the ball velocity in x and y direction, respectively." +
+      "\n The finally argument will describe the time Slice. (This is optional)" +
+      "\n Example of valid argument input: 300 300 -1.0 1.0 10.0");
 
-      }
+    }
 
-      numberOfBallsOnField = (argsLength - 1) / 4;
+    numberOfBallsOnField = (argsLength - 1) / 4;
 
-      b = new Ball[numberOfBallsOnField];
+    Ball[] b = new Ball[numberOfBallsOnField];
 
     try {
       //populate array
       int count = 0;
       for (int i = 0; i < argsLength - 1; i += 4) {
-        b[count] = new Ball(Double.parseDouble(args[i]), Double.parseDouble(args[i + 1]), Double.parseDouble(args[i + 2]), Double.parseDouble(args[i + 3]));
+        Ball ball = new Ball(Double.parseDouble(args[i]), Double.parseDouble(args[i + 1]), Double.parseDouble(args[i + 2]), Double.parseDouble(args[i + 3]));
+        b[count] = ball;
         count++;
       }
 
@@ -69,32 +68,31 @@ public class SoccerSim {
     Ball[] b = null;
     b = ss.validateArgs(args);
     Timer simulationTimer = new Timer();
+    //b[numberOfBallsOnField] = new Ball(poleXPosition, poleYPosition, 0.0, 0.0);
+
 
     System.out.println("\n--- WELCOME TO SOCCER SIMULATION ---\n");
     System.out.println("The size of the soccer field is <-500, 500> in the x direction and <-500, 500> in the y direction\n");
-/*
-    System.out.println(b[0].toStringPosition());
-    System.out.println(b[0].toStringVelocity());
-    System.out.println(b[1].toStringPosition());
-    System.out.println(b[1].toStringVelocity());
-    System.out.println(Ball.timeSlice);
-    System.out.println("test end\n");
-*/
+
+    System.out.println("INITIAL CONDITIONS");
+    for (int i = 0; i < b.length; i++) {
+      System.out.println(b[i].toStringPosition());
+      System.out.println(b[i].toStringVelocity());
+    }
+    System.out.println("\n");
+
     while ( true ) {
-      simulationTimer.tick();
-
-      //moves all the balls 1 time slice
-      //ss.moveAllBalls();
-      System.out.println("Progress report at " + simulationTimer.toStringClock());
-      for (int i = 0; i < b.length; i++) {
-        System.out.println("Ball " + i + ": " + b[i].toStringPosition() + "      " + b[i].toStringVelocity());
-      }
-
       for (int i = 0; i < b.length; i++) {
         b[i].moveBall();
-        System.out.println("Progress report at " + simulationTimer.toStringClock());
+      }
+
+      simulationTimer.tick();
+      System.out.println("Progress report at " + simulationTimer.toStringClock());
+
+      for (int i = 0; i < b.length; i++) {
         System.out.println("Ball " + i + ": " + b[i].toStringPosition() + "      " + b[i].toStringVelocity());
       }
+      System.out.println("\n");
 
 
       //checking for collision
@@ -103,6 +101,11 @@ public class SoccerSim {
           if (b[i].hasCollided(b[j])) {
             numberOfCollisions++;
             System.out.println("\n --- A collision has occured between ball " + i + " and ball " + j + " at: " + b[i].toStringPosition() + " ---\n");
+            System.exit(0);
+          }
+          if (b[i].hasCollidedWithPole()) {
+            numberOfCollisions++;
+            System.out.println("\n --- A collision has occured between ball " + i + " and the pole at: " + b[i].toStringPosition() + " ---\n");
             System.exit(0);
           }
         }
