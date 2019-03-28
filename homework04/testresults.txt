@@ -1,0 +1,1804 @@
+.                                       
+.                                       
+======================================  
+... Testing Ball class ...              
+======================================  
+
+ ---WELCOME TO BALL CLASS TEST---
+
+INITIAL POSITION & VELOCITY:
+Location: < -300.0, 300.0 > feet
+Velocity: < -20.0, 20.0 > feet/second
+Location: < -320.0, 320.0 > feet
+Velocity: < -19.8, 19.8 > feet/second
+Location: < -339.8, 339.8 > feet
+Velocity: < -19.602, 19.602 > feet/second
+Location: < -359.402, 359.402 > feet
+Velocity: < -19.40598, 19.40598 > feet/second
+Location: < -378.80798, 378.80798 > feet
+Velocity: < -19.211920199999998, 19.211920199999998 > feet/second
+Location: < -398.0199002, 398.0199002 > feet
+Velocity: < -19.019800997999997, 19.019800997999997 > feet/second
+Location: < -417.039701198, 417.039701198 > feet
+Velocity: < -18.829602988019996, 18.829602988019996 > feet/second
+Location: < -435.86930418602, 435.86930418602 > feet
+Velocity: < -18.641306958139797, 18.641306958139797 > feet/second
+Location: < -454.5106111441598, 454.5106111441598 > feet
+Velocity: < -18.4548938885584, 18.4548938885584 > feet/second
+Location: < -472.96550503271817, 472.96550503271817 > feet
+Velocity: < -18.270344949672815, 18.270344949672815 > feet/second
+Location: < -491.23584998239096, 491.23584998239096 > feet
+Velocity: < -18.087641500176087, 18.087641500176087 > feet/second
+Location: < -509.323491482567, 509.323491482567 > feet
+Velocity: < -17.906765085174325, 17.906765085174325 > feet/second
+Ball is not in bounds
+.                                       
+.                                       
+.                                       
+.                                       
+======================================  
+... Testing Timer class ...                
+======================================  
+0.0:0.0:1.0
+0.0:0.0:2.0
+0.0:0.0:3.0
+0.0:0.0:4.0
+0.0:0.0:5.0
+0.0:0.0:6.0
+0.0:0.0:7.0
+0.0:0.0:8.0
+0.0:0.0:9.0
+0.0:0.0:10.0
+0.0:0.0:11.0
+0.0:0.0:12.0
+0.0:0.0:13.0
+0.0:0.0:14.0
+0.0:0.0:15.0
+0.0:0.0:16.0
+0.0:0.0:17.0
+0.0:0.0:18.0
+0.0:0.0:19.0
+0.0:0.0:20.0
+0.0:0.0:21.0
+0.0:0.0:22.0
+0.0:0.0:23.0
+0.0:0.0:24.0
+0.0:0.0:25.0
+0.0:0.0:26.0
+0.0:0.0:27.0
+0.0:0.0:28.0
+0.0:0.0:29.0
+0.0:0.0:30.0
+0.0:0.0:31.0
+0.0:0.0:32.0
+0.0:0.0:33.0
+0.0:0.0:34.0
+0.0:0.0:35.0
+0.0:0.0:36.0
+0.0:0.0:37.0
+0.0:0.0:38.0
+0.0:0.0:39.0
+0.0:0.0:40.0
+0.0:0.0:41.0
+0.0:0.0:42.0
+0.0:0.0:43.0
+0.0:0.0:44.0
+0.0:0.0:45.0
+0.0:0.0:46.0
+0.0:0.0:47.0
+0.0:0.0:48.0
+0.0:0.0:49.0
+0.0:0.0:50.0
+0.0:0.0:51.0
+0.0:0.0:52.0
+0.0:0.0:53.0
+0.0:0.0:54.0
+0.0:0.0:55.0
+0.0:0.0:56.0
+0.0:0.0:57.0
+0.0:0.0:58.0
+0.0:0.0:59.0
+0.0:1.0:0.0
+0.0:1.0:1.0
+0.0:1.0:2.0
+0.0:1.0:3.0
+0.0:1.0:4.0
+0.0:1.0:5.0
+0.0:1.0:6.0
+0.0:1.0:7.0
+0.0:1.0:8.0
+0.0:1.0:9.0
+0.0:1.0:10.0
+0.0:1.0:11.0
+0.0:1.0:12.0
+0.0:1.0:13.0
+0.0:1.0:14.0
+0.0:1.0:15.0
+0.0:1.0:16.0
+0.0:1.0:17.0
+0.0:1.0:18.0
+0.0:1.0:19.0
+0.0:1.0:20.0
+0.0:1.0:21.0
+0.0:1.0:22.0
+0.0:1.0:23.0
+0.0:1.0:24.0
+0.0:1.0:25.0
+0.0:1.0:26.0
+0.0:1.0:27.0
+0.0:1.0:28.0
+0.0:1.0:29.0
+0.0:1.0:30.0
+0.0:1.0:31.0
+0.0:1.0:32.0
+0.0:1.0:33.0
+0.0:1.0:34.0
+0.0:1.0:35.0
+0.0:1.0:36.0
+0.0:1.0:37.0
+0.0:1.0:38.0
+0.0:1.0:39.0
+0.0:1.0:40.0
+.                                       
+.                                       
+======================================  
+... Testing SoccerSim no args...        
+...   Should throw exception that won't show in results 
+...   Or should output a message of some type 
+======================================  
+.                                       
+.                                       
+======================================  
+... Testing SoccerSim one arg...        
+...   Should throw exception that won't show in results 
+...   Or should output a message of some type 
+======================================  
+.                                       
+.                                       
+======================================  
+... Testing SoccerSim two args...       
+...   Should throw exception that won't show in results 
+...   Or should output a message of some type 
+======================================  
+.                                       
+.                                       
+======================================  
+... Testing SoccerSim three args...     
+...   Should throw exception that won't show in results 
+...   Or should output a message of some type 
+======================================  
+.                                       
+.                                       
+======================================  
+... Testing SoccerSim six args...       
+...   Should throw exception that won't show in results 
+...   Or should output a message of some type 
+======================================  
+.                                       
+.                                       
+======================================  
+... Testing SoccerSim out of bounds...  
+...   Should throw exception that won't show in results 
+...   Or should output a message of some type 
+======================================  
+
+--- WELCOME TO SOCCER SIMULATION ---
+
+The size of the soccer field is <-500, 500> in the x direction and <-500, 500> in the y direction
+
+INITIAL CONDITIONS
+Location: < 475.0, 475.0 > feet
+Velocity: < 99.0, 99.0 > feet/second
+
+
+Progress report at 0.0:0.0:1.0
+Ball 0: Location: < 574.0, 574.0 > feet      Velocity: < 98.01, 98.01 > feet/second
+
+
+All soccer balls have stopped moving. No collision possible
+.                                       
+.                                       
+======================================  
+... Testing SoccerSim negative time slice...
+...   Should throw exception that won't show in results 
+...   Or should output a message of some type 
+======================================  
+
+--- WELCOME TO SOCCER SIMULATION ---
+
+The size of the soccer field is <-500, 500> in the x direction and <-500, 500> in the y direction
+
+INITIAL CONDITIONS
+Location: < 10.0, 10.0 > feet
+Velocity: < 5.0, 5.0 > feet/second
+
+
+Progress report at -1.0:-1.0:-1.0
+Ball 0: Location: < 5.0, 5.0 > feet      Velocity: < 5.050505050505051, 5.050505050505051 > feet/second
+
+
+Progress report at -1.0:-1.0:-2.0
+Ball 0: Location: < -0.05050505050505105, -0.05050505050505105 > feet      Velocity: < 5.101520253035406, 5.101520253035406 > feet/second
+
+
+Progress report at -1.0:-1.0:-3.0
+Ball 0: Location: < -5.152025303540457, -5.152025303540457 > feet      Velocity: < 5.1530507606418245, 5.1530507606418245 > feet/second
+
+
+Progress report at -1.0:-1.0:-4.0
+Ball 0: Location: < -10.30507606418228, -10.30507606418228 > feet      Velocity: < 5.205101778426085, 5.205101778426085 > feet/second
+
+
+Progress report at -1.0:-1.0:-5.0
+Ball 0: Location: < -15.510177842608366, -15.510177842608366 > feet      Velocity: < 5.257678564066754, 5.257678564066754 > feet/second
+
+
+Progress report at -1.0:-1.0:-6.0
+Ball 0: Location: < -20.76785640667512, -20.76785640667512 > feet      Velocity: < 5.310786428350257, 5.310786428350257 > feet/second
+
+
+Progress report at -1.0:-1.0:-7.0
+Ball 0: Location: < -26.078642835025377, -26.078642835025377 > feet      Velocity: < 5.36443073570733, 5.36443073570733 > feet/second
+
+
+Progress report at -1.0:-1.0:-8.0
+Ball 0: Location: < -31.443073570732707, -31.443073570732707 > feet      Velocity: < 5.418616904754879, 5.418616904754879 > feet/second
+
+
+Progress report at -1.0:-1.0:-9.0
+Ball 0: Location: < -36.861690475487585, -36.861690475487585 > feet      Velocity: < 5.473350408843313, 5.473350408843313 > feet/second
+
+
+Progress report at -1.0:-1.0:-10.0
+Ball 0: Location: < -42.335040884330894, -42.335040884330894 > feet      Velocity: < 5.5286367766094076, 5.5286367766094076 > feet/second
+
+
+Progress report at -1.0:-1.0:-11.0
+Ball 0: Location: < -47.863677660940304, -47.863677660940304 > feet      Velocity: < 5.584481592534756, 5.584481592534756 > feet/second
+
+
+Progress report at -1.0:-1.0:-12.0
+Ball 0: Location: < -53.44815925347506, -53.44815925347506 > feet      Velocity: < 5.640890497509854, 5.640890497509854 > feet/second
+
+
+Progress report at -1.0:-1.0:-13.0
+Ball 0: Location: < -59.08904975098491, -59.08904975098491 > feet      Velocity: < 5.697869189403893, 5.697869189403893 > feet/second
+
+
+Progress report at -1.0:-1.0:-14.0
+Ball 0: Location: < -64.7869189403888, -64.7869189403888 > feet      Velocity: < 5.755423423640297, 5.755423423640297 > feet/second
+
+
+Progress report at -1.0:-1.0:-15.0
+Ball 0: Location: < -70.5423423640291, -70.5423423640291 > feet      Velocity: < 5.813559013778078, 5.813559013778078 > feet/second
+
+
+Progress report at -1.0:-1.0:-16.0
+Ball 0: Location: < -76.35590137780717, -76.35590137780717 > feet      Velocity: < 5.872281832099069, 5.872281832099069 > feet/second
+
+
+Progress report at -1.0:-1.0:-17.0
+Ball 0: Location: < -82.22818320990623, -82.22818320990623 > feet      Velocity: < 5.9315978102010805, 5.9315978102010805 > feet/second
+
+
+Progress report at -1.0:-1.0:-18.0
+Ball 0: Location: < -88.15978102010732, -88.15978102010732 > feet      Velocity: < 5.991512939597051, 5.991512939597051 > feet/second
+
+
+Progress report at -1.0:-1.0:-19.0
+Ball 0: Location: < -94.15129395970436, -94.15129395970436 > feet      Velocity: < 6.052033272320254, 6.052033272320254 > feet/second
+
+
+Progress report at -1.0:-1.0:-20.0
+Ball 0: Location: < -100.20332723202462, -100.20332723202462 > feet      Velocity: < 6.113164921535611, 6.113164921535611 > feet/second
+
+
+Progress report at -1.0:-1.0:-21.0
+Ball 0: Location: < -106.31649215356023, -106.31649215356023 > feet      Velocity: < 6.174914062157183, 6.174914062157183 > feet/second
+
+
+Progress report at -1.0:-1.0:-22.0
+Ball 0: Location: < -112.49140621571742, -112.49140621571742 > feet      Velocity: < 6.237286931471902, 6.237286931471902 > feet/second
+
+
+Progress report at -1.0:-1.0:-23.0
+Ball 0: Location: < -118.72869314718932, -118.72869314718932 > feet      Velocity: < 6.300289829769599, 6.300289829769599 > feet/second
+
+
+Progress report at -1.0:-1.0:-24.0
+Ball 0: Location: < -125.02898297695891, -125.02898297695891 > feet      Velocity: < 6.363929120979393, 6.363929120979393 > feet/second
+
+
+Progress report at -1.0:-1.0:-25.0
+Ball 0: Location: < -131.3929120979383, -131.3929120979383 > feet      Velocity: < 6.428211233312519, 6.428211233312519 > feet/second
+
+
+Progress report at -1.0:-1.0:-26.0
+Ball 0: Location: < -137.82112333125082, -137.82112333125082 > feet      Velocity: < 6.493142659911635, 6.493142659911635 > feet/second
+
+
+Progress report at -1.0:-1.0:-27.0
+Ball 0: Location: < -144.31426599116244, -144.31426599116244 > feet      Velocity: < 6.558729959506703, 6.558729959506703 > feet/second
+
+
+Progress report at -1.0:-1.0:-28.0
+Ball 0: Location: < -150.87299595066915, -150.87299595066915 > feet      Velocity: < 6.624979757077479, 6.624979757077479 > feet/second
+
+
+Progress report at -1.0:-1.0:-29.0
+Ball 0: Location: < -157.49797570774663, -157.49797570774663 > feet      Velocity: < 6.691898744522706, 6.691898744522706 > feet/second
+
+
+Progress report at -1.0:-1.0:-30.0
+Ball 0: Location: < -164.18987445226935, -164.18987445226935 > feet      Velocity: < 6.759493681336067, 6.759493681336067 > feet/second
+
+
+Progress report at -1.0:-1.0:-31.0
+Ball 0: Location: < -170.94936813360542, -170.94936813360542 > feet      Velocity: < 6.8277713952889565, 6.8277713952889565 > feet/second
+
+
+Progress report at -1.0:-1.0:-32.0
+Ball 0: Location: < -177.77713952889437, -177.77713952889437 > feet      Velocity: < 6.896738783120158, 6.896738783120158 > feet/second
+
+
+Progress report at -1.0:-1.0:-33.0
+Ball 0: Location: < -184.67387831201452, -184.67387831201452 > feet      Velocity: < 6.966402811232483, 6.966402811232483 > feet/second
+
+
+Progress report at -1.0:-1.0:-34.0
+Ball 0: Location: < -191.640281123247, -191.640281123247 > feet      Velocity: < 7.036770516396448, 7.036770516396448 > feet/second
+
+
+Progress report at -1.0:-1.0:-35.0
+Ball 0: Location: < -198.67705163964345, -198.67705163964345 > feet      Velocity: < 7.107849006461059, 7.107849006461059 > feet/second
+
+
+Progress report at -1.0:-1.0:-36.0
+Ball 0: Location: < -205.78490064610452, -205.78490064610452 > feet      Velocity: < 7.179645461071777, 7.179645461071777 > feet/second
+
+
+Progress report at -1.0:-1.0:-37.0
+Ball 0: Location: < -212.9645461071763, -212.9645461071763 > feet      Velocity: < 7.252167132395734, 7.252167132395734 > feet/second
+
+
+Progress report at -1.0:-1.0:-38.0
+Ball 0: Location: < -220.21671323957202, -220.21671323957202 > feet      Velocity: < 7.325421345854278, 7.325421345854278 > feet/second
+
+
+Progress report at -1.0:-1.0:-39.0
+Ball 0: Location: < -227.54213458542628, -227.54213458542628 > feet      Velocity: < 7.399415500862908, 7.399415500862908 > feet/second
+
+
+Progress report at -1.0:-1.0:-40.0
+Ball 0: Location: < -234.9415500862892, -234.9415500862892 > feet      Velocity: < 7.474157071578695, 7.474157071578695 > feet/second
+
+
+Progress report at -1.0:-1.0:-41.0
+Ball 0: Location: < -242.4157071578679, -242.4157071578679 > feet      Velocity: < 7.549653607655248, 7.549653607655248 > feet/second
+
+
+Progress report at -1.0:-1.0:-42.0
+Ball 0: Location: < -249.96536076552314, -249.96536076552314 > feet      Velocity: < 7.6259127350053015, 7.6259127350053015 > feet/second
+
+
+Progress report at -1.0:-1.0:-43.0
+Ball 0: Location: < -257.5912735005285, -257.5912735005285 > feet      Velocity: < 7.702942156571012, 7.702942156571012 > feet/second
+
+
+Progress report at -1.0:-1.0:-44.0
+Ball 0: Location: < -265.29421565709947, -265.29421565709947 > feet      Velocity: < 7.780749653102033, 7.780749653102033 > feet/second
+
+
+Progress report at -1.0:-1.0:-45.0
+Ball 0: Location: < -273.0749653102015, -273.0749653102015 > feet      Velocity: < 7.859343083941448, 7.859343083941448 > feet/second
+
+
+Progress report at -1.0:-1.0:-46.0
+Ball 0: Location: < -280.93430839414293, -280.93430839414293 > feet      Velocity: < 7.938730387819645, 7.938730387819645 > feet/second
+
+
+Progress report at -1.0:-1.0:-47.0
+Ball 0: Location: < -288.8730387819626, -288.8730387819626 > feet      Velocity: < 8.018919583656208, 8.018919583656208 > feet/second
+
+
+Progress report at -1.0:-1.0:-48.0
+Ball 0: Location: < -296.8919583656188, -296.8919583656188 > feet      Velocity: < 8.099918771369907, 8.099918771369907 > feet/second
+
+
+Progress report at -1.0:-1.0:-49.0
+Ball 0: Location: < -304.9918771369887, -304.9918771369887 > feet      Velocity: < 8.181736132696876, 8.181736132696876 > feet/second
+
+
+Progress report at -1.0:-1.0:-50.0
+Ball 0: Location: < -313.1736132696856, -313.1736132696856 > feet      Velocity: < 8.264379932017048, 8.264379932017048 > feet/second
+
+
+Progress report at -1.0:-1.0:-51.0
+Ball 0: Location: < -321.4379932017026, -321.4379932017026 > feet      Velocity: < 8.347858517188937, 8.347858517188937 > feet/second
+
+
+Progress report at -1.0:-1.0:-52.0
+Ball 0: Location: < -329.78585171889154, -329.78585171889154 > feet      Velocity: < 8.432180320392867, 8.432180320392867 > feet/second
+
+
+Progress report at -1.0:-1.0:-53.0
+Ball 0: Location: < -338.2180320392844, -338.2180320392844 > feet      Velocity: < 8.517353858982695, 8.517353858982695 > feet/second
+
+
+Progress report at -1.0:-1.0:-54.0
+Ball 0: Location: < -346.7353858982671, -346.7353858982671 > feet      Velocity: < 8.603387736346157, 8.603387736346157 > feet/second
+
+
+Progress report at -1.0:-1.0:-55.0
+Ball 0: Location: < -355.3387736346133, -355.3387736346133 > feet      Velocity: < 8.690290642773897, 8.690290642773897 > feet/second
+
+
+Progress report at -1.0:-1.0:-56.0
+Ball 0: Location: < -364.0290642773872, -364.0290642773872 > feet      Velocity: < 8.778071356337271, 8.778071356337271 > feet/second
+
+
+Progress report at -1.0:-1.0:-57.0
+Ball 0: Location: < -372.80713563372444, -372.80713563372444 > feet      Velocity: < 8.866738743775022, 8.866738743775022 > feet/second
+
+
+Progress report at -1.0:-1.0:-58.0
+Ball 0: Location: < -381.6738743774995, -381.6738743774995 > feet      Velocity: < 8.95630176138891, 8.95630176138891 > feet/second
+
+
+Progress report at -1.0:-1.0:-59.0
+Ball 0: Location: < -390.6301761388884, -390.6301761388884 > feet      Velocity: < 9.046769455948395, 9.046769455948395 > feet/second
+
+
+Progress report at -1.0:-1.0:-0.0
+Ball 0: Location: < -399.67694559483675, -399.67694559483675 > feet      Velocity: < 9.13815096560444, 9.13815096560444 > feet/second
+
+
+Progress report at -1.0:-2.0:-1.0
+Ball 0: Location: < -408.8150965604412, -408.8150965604412 > feet      Velocity: < 9.230455520812567, 9.230455520812567 > feet/second
+
+
+Progress report at -1.0:-2.0:-2.0
+Ball 0: Location: < -418.04555208125373, -418.04555208125373 > feet      Velocity: < 9.32369244526522, 9.32369244526522 > feet/second
+
+
+Progress report at -1.0:-2.0:-3.0
+Ball 0: Location: < -427.36924452651897, -427.36924452651897 > feet      Velocity: < 9.417871156833556, 9.417871156833556 > feet/second
+
+
+Progress report at -1.0:-2.0:-4.0
+Ball 0: Location: < -436.7871156833525, -436.7871156833525 > feet      Velocity: < 9.513001168518743, 9.513001168518743 > feet/second
+
+
+Progress report at -1.0:-2.0:-5.0
+Ball 0: Location: < -446.3001168518713, -446.3001168518713 > feet      Velocity: < 9.609092089412872, 9.609092089412872 > feet/second
+
+
+Progress report at -1.0:-2.0:-6.0
+Ball 0: Location: < -455.90920894128413, -455.90920894128413 > feet      Velocity: < 9.706153625669568, 9.706153625669568 > feet/second
+
+
+Progress report at -1.0:-2.0:-7.0
+Ball 0: Location: < -465.6153625669537, -465.6153625669537 > feet      Velocity: < 9.804195581484413, 9.804195581484413 > feet/second
+
+
+Progress report at -1.0:-2.0:-8.0
+Ball 0: Location: < -475.4195581484381, -475.4195581484381 > feet      Velocity: < 9.903227860085266, 9.903227860085266 > feet/second
+
+
+Progress report at -1.0:-2.0:-9.0
+Ball 0: Location: < -485.3227860085234, -485.3227860085234 > feet      Velocity: < 10.003260464732593, 10.003260464732593 > feet/second
+
+
+Progress report at -1.0:-2.0:-10.0
+Ball 0: Location: < -495.326046473256, -495.326046473256 > feet      Velocity: < 10.104303499729893, 10.104303499729893 > feet/second
+
+
+Progress report at -1.0:-2.0:-11.0
+Ball 0: Location: < -505.4303499729859, -505.4303499729859 > feet      Velocity: < 10.206367171444336, 10.206367171444336 > feet/second
+
+
+All soccer balls have stopped moving. No collision possible
+.                                       
+.                                       
+======================================  
+... Testing SoccerSim time slice too large...
+...   Should throw exception that won't show in results 
+...   Or should output a message of some type 
+======================================  
+
+--- WELCOME TO SOCCER SIMULATION ---
+
+The size of the soccer field is <-500, 500> in the x direction and <-500, 500> in the y direction
+
+INITIAL CONDITIONS
+Location: < 10.0, 10.0 > feet
+Velocity: < 5.0, 5.0 > feet/second
+
+
+Progress report at 0.0:30.0:0.09999999999990905
+Ball 0: Location: < 9010.5, 9010.5 > feet      Velocity: < 6.94838380505555E-8, 6.94838380505555E-8 > feet/second
+
+
+All soccer balls have stopped moving. No collision possible
+.                                       
+.                                       
+======================================  
+... Testing SoccerSim time slice value of zero...
+...   Should throw exception that won't show in results 
+...   Or should output a message of some type 
+======================================  
+.                                       
+.                                       
+======================================  
+... Testing SoccerSim valid ball should come to rest...
+...   Should stop at about 4:42           
+======================================  
+
+--- WELCOME TO SOCCER SIMULATION ---
+
+The size of the soccer field is <-500, 500> in the x direction and <-500, 500> in the y direction
+
+INITIAL CONDITIONS
+Location: < 10.0, 10.0 > feet
+Velocity: < 1.0, 1.0 > feet/second
+
+
+Progress report at 0.0:0.0:1.0
+Ball 0: Location: < 11.0, 11.0 > feet      Velocity: < 0.99, 0.99 > feet/second
+
+
+Progress report at 0.0:0.0:2.0
+Ball 0: Location: < 11.99, 11.99 > feet      Velocity: < 0.9801, 0.9801 > feet/second
+
+
+Progress report at 0.0:0.0:3.0
+Ball 0: Location: < 12.9701, 12.9701 > feet      Velocity: < 0.9702989999999999, 0.9702989999999999 > feet/second
+
+
+Progress report at 0.0:0.0:4.0
+Ball 0: Location: < 13.940399000000001, 13.940399000000001 > feet      Velocity: < 0.96059601, 0.96059601 > feet/second
+
+
+Progress report at 0.0:0.0:5.0
+Ball 0: Location: < 14.90099501, 14.90099501 > feet      Velocity: < 0.9509900498999999, 0.9509900498999999 > feet/second
+
+
+Progress report at 0.0:0.0:6.0
+Ball 0: Location: < 15.8519850599, 15.8519850599 > feet      Velocity: < 0.9414801494009999, 0.9414801494009999 > feet/second
+
+
+Progress report at 0.0:0.0:7.0
+Ball 0: Location: < 16.793465209301, 16.793465209301 > feet      Velocity: < 0.9320653479069899, 0.9320653479069899 > feet/second
+
+
+Progress report at 0.0:0.0:8.0
+Ball 0: Location: < 17.72553055720799, 17.72553055720799 > feet      Velocity: < 0.92274469442792, 0.92274469442792 > feet/second
+
+
+Progress report at 0.0:0.0:9.0
+Ball 0: Location: < 18.64827525163591, 18.64827525163591 > feet      Velocity: < 0.9135172474836407, 0.9135172474836407 > feet/second
+
+
+Progress report at 0.0:0.0:10.0
+Ball 0: Location: < 19.561792499119548, 19.561792499119548 > feet      Velocity: < 0.9043820750088043, 0.9043820750088043 > feet/second
+
+
+Progress report at 0.0:0.0:11.0
+Ball 0: Location: < 20.466174574128353, 20.466174574128353 > feet      Velocity: < 0.8953382542587163, 0.8953382542587163 > feet/second
+
+
+Progress report at 0.0:0.0:12.0
+Ball 0: Location: < 21.36151282838707, 21.36151282838707 > feet      Velocity: < 0.8863848717161291, 0.8863848717161291 > feet/second
+
+
+Progress report at 0.0:0.0:13.0
+Ball 0: Location: < 22.2478977001032, 22.2478977001032 > feet      Velocity: < 0.8775210229989678, 0.8775210229989678 > feet/second
+
+
+Progress report at 0.0:0.0:14.0
+Ball 0: Location: < 23.125418723102165, 23.125418723102165 > feet      Velocity: < 0.8687458127689781, 0.8687458127689781 > feet/second
+
+
+Progress report at 0.0:0.0:15.0
+Ball 0: Location: < 23.994164535871143, 23.994164535871143 > feet      Velocity: < 0.8600583546412883, 0.8600583546412883 > feet/second
+
+
+Progress report at 0.0:0.0:16.0
+Ball 0: Location: < 24.854222890512432, 24.854222890512432 > feet      Velocity: < 0.8514577710948754, 0.8514577710948754 > feet/second
+
+
+Progress report at 0.0:0.0:17.0
+Ball 0: Location: < 25.705680661607307, 25.705680661607307 > feet      Velocity: < 0.8429431933839266, 0.8429431933839266 > feet/second
+
+
+Progress report at 0.0:0.0:18.0
+Ball 0: Location: < 26.548623854991234, 26.548623854991234 > feet      Velocity: < 0.8345137614500874, 0.8345137614500874 > feet/second
+
+
+Progress report at 0.0:0.0:19.0
+Ball 0: Location: < 27.38313761644132, 27.38313761644132 > feet      Velocity: < 0.8261686238355865, 0.8261686238355865 > feet/second
+
+
+Progress report at 0.0:0.0:20.0
+Ball 0: Location: < 28.209306240276906, 28.209306240276906 > feet      Velocity: < 0.8179069375972307, 0.8179069375972307 > feet/second
+
+
+Progress report at 0.0:0.0:21.0
+Ball 0: Location: < 29.027213177874135, 29.027213177874135 > feet      Velocity: < 0.8097278682212583, 0.8097278682212583 > feet/second
+
+
+Progress report at 0.0:0.0:22.0
+Ball 0: Location: < 29.836941046095394, 29.836941046095394 > feet      Velocity: < 0.8016305895390458, 0.8016305895390458 > feet/second
+
+
+Progress report at 0.0:0.0:23.0
+Ball 0: Location: < 30.638571635634438, 30.638571635634438 > feet      Velocity: < 0.7936142836436553, 0.7936142836436553 > feet/second
+
+
+Progress report at 0.0:0.0:24.0
+Ball 0: Location: < 31.432185919278094, 31.432185919278094 > feet      Velocity: < 0.7856781408072188, 0.7856781408072188 > feet/second
+
+
+Progress report at 0.0:0.0:25.0
+Ball 0: Location: < 32.21786406008531, 32.21786406008531 > feet      Velocity: < 0.7778213593991465, 0.7778213593991465 > feet/second
+
+
+Progress report at 0.0:0.0:26.0
+Ball 0: Location: < 32.99568541948446, 32.99568541948446 > feet      Velocity: < 0.7700431458051551, 0.7700431458051551 > feet/second
+
+
+Progress report at 0.0:0.0:27.0
+Ball 0: Location: < 33.76572856528961, 33.76572856528961 > feet      Velocity: < 0.7623427143471035, 0.7623427143471035 > feet/second
+
+
+Progress report at 0.0:0.0:28.0
+Ball 0: Location: < 34.52807127963672, 34.52807127963672 > feet      Velocity: < 0.7547192872036325, 0.7547192872036325 > feet/second
+
+
+Progress report at 0.0:0.0:29.0
+Ball 0: Location: < 35.282790566840355, 35.282790566840355 > feet      Velocity: < 0.7471720943315961, 0.7471720943315961 > feet/second
+
+
+Progress report at 0.0:0.0:30.0
+Ball 0: Location: < 36.02996266117195, 36.02996266117195 > feet      Velocity: < 0.7397003733882802, 0.7397003733882802 > feet/second
+
+
+Progress report at 0.0:0.0:31.0
+Ball 0: Location: < 36.76966303456023, 36.76966303456023 > feet      Velocity: < 0.7323033696543974, 0.7323033696543974 > feet/second
+
+
+Progress report at 0.0:0.0:32.0
+Ball 0: Location: < 37.50196640421463, 37.50196640421463 > feet      Velocity: < 0.7249803359578534, 0.7249803359578534 > feet/second
+
+
+Progress report at 0.0:0.0:33.0
+Ball 0: Location: < 38.22694674017248, 38.22694674017248 > feet      Velocity: < 0.7177305325982748, 0.7177305325982748 > feet/second
+
+
+Progress report at 0.0:0.0:34.0
+Ball 0: Location: < 38.944677272770754, 38.944677272770754 > feet      Velocity: < 0.7105532272722921, 0.7105532272722921 > feet/second
+
+
+Progress report at 0.0:0.0:35.0
+Ball 0: Location: < 39.65523050004305, 39.65523050004305 > feet      Velocity: < 0.7034476949995692, 0.7034476949995692 > feet/second
+
+
+Progress report at 0.0:0.0:36.0
+Ball 0: Location: < 40.358678195042614, 40.358678195042614 > feet      Velocity: < 0.6964132180495735, 0.6964132180495735 > feet/second
+
+
+Progress report at 0.0:0.0:37.0
+Ball 0: Location: < 41.055091413092185, 41.055091413092185 > feet      Velocity: < 0.6894490858690777, 0.6894490858690777 > feet/second
+
+
+Progress report at 0.0:0.0:38.0
+Ball 0: Location: < 41.744540498961264, 41.744540498961264 > feet      Velocity: < 0.682554595010387, 0.682554595010387 > feet/second
+
+
+Progress report at 0.0:0.0:39.0
+Ball 0: Location: < 42.42709509397165, 42.42709509397165 > feet      Velocity: < 0.6757290490602831, 0.6757290490602831 > feet/second
+
+
+Progress report at 0.0:0.0:40.0
+Ball 0: Location: < 43.10282414303193, 43.10282414303193 > feet      Velocity: < 0.6689717585696803, 0.6689717585696803 > feet/second
+
+
+Progress report at 0.0:0.0:41.0
+Ball 0: Location: < 43.771795901601614, 43.771795901601614 > feet      Velocity: < 0.6622820409839835, 0.6622820409839835 > feet/second
+
+
+Progress report at 0.0:0.0:42.0
+Ball 0: Location: < 44.434077942585596, 44.434077942585596 > feet      Velocity: < 0.6556592205741436, 0.6556592205741436 > feet/second
+
+
+Progress report at 0.0:0.0:43.0
+Ball 0: Location: < 45.08973716315974, 45.08973716315974 > feet      Velocity: < 0.6491026283684022, 0.6491026283684022 > feet/second
+
+
+Progress report at 0.0:0.0:44.0
+Ball 0: Location: < 45.73883979152814, 45.73883979152814 > feet      Velocity: < 0.6426116020847181, 0.6426116020847181 > feet/second
+
+
+Progress report at 0.0:0.0:45.0
+Ball 0: Location: < 46.38145139361286, 46.38145139361286 > feet      Velocity: < 0.6361854860638709, 0.6361854860638709 > feet/second
+
+
+Progress report at 0.0:0.0:46.0
+Ball 0: Location: < 47.017636879676736, 47.017636879676736 > feet      Velocity: < 0.6298236312032323, 0.6298236312032323 > feet/second
+
+
+Progress report at 0.0:0.0:47.0
+Ball 0: Location: < 47.64746051087997, 47.64746051087997 > feet      Velocity: < 0.6235253948912, 0.6235253948912 > feet/second
+
+
+Progress report at 0.0:0.0:48.0
+Ball 0: Location: < 48.27098590577117, 48.27098590577117 > feet      Velocity: < 0.617290140942288, 0.617290140942288 > feet/second
+
+
+Progress report at 0.0:0.0:49.0
+Ball 0: Location: < 48.88827604671346, 48.88827604671346 > feet      Velocity: < 0.6111172395328651, 0.6111172395328651 > feet/second
+
+
+Progress report at 0.0:0.0:50.0
+Ball 0: Location: < 49.499393286246324, 49.499393286246324 > feet      Velocity: < 0.6050060671375365, 0.6050060671375365 > feet/second
+
+
+Progress report at 0.0:0.0:51.0
+Ball 0: Location: < 50.10439935338386, 50.10439935338386 > feet      Velocity: < 0.5989560064661611, 0.5989560064661611 > feet/second
+
+
+Progress report at 0.0:0.0:52.0
+Ball 0: Location: < 50.70335535985002, 50.70335535985002 > feet      Velocity: < 0.5929664464014994, 0.5929664464014994 > feet/second
+
+
+Progress report at 0.0:0.0:53.0
+Ball 0: Location: < 51.29632180625152, 51.29632180625152 > feet      Velocity: < 0.5870367819374844, 0.5870367819374844 > feet/second
+
+
+Progress report at 0.0:0.0:54.0
+Ball 0: Location: < 51.883358588189004, 51.883358588189004 > feet      Velocity: < 0.5811664141181095, 0.5811664141181095 > feet/second
+
+
+Progress report at 0.0:0.0:55.0
+Ball 0: Location: < 52.46452500230711, 52.46452500230711 > feet      Velocity: < 0.5753547499769285, 0.5753547499769285 > feet/second
+
+
+Progress report at 0.0:0.0:56.0
+Ball 0: Location: < 53.039879752284044, 53.039879752284044 > feet      Velocity: < 0.5696012024771592, 0.5696012024771592 > feet/second
+
+
+Progress report at 0.0:0.0:57.0
+Ball 0: Location: < 53.6094809547612, 53.6094809547612 > feet      Velocity: < 0.5639051904523876, 0.5639051904523876 > feet/second
+
+
+Progress report at 0.0:0.0:58.0
+Ball 0: Location: < 54.17338614521359, 54.17338614521359 > feet      Velocity: < 0.5582661385478638, 0.5582661385478638 > feet/second
+
+
+Progress report at 0.0:0.0:59.0
+Ball 0: Location: < 54.731652283761456, 54.731652283761456 > feet      Velocity: < 0.5526834771623851, 0.5526834771623851 > feet/second
+
+
+Progress report at 0.0:1.0:0.0
+Ball 0: Location: < 55.28433576092384, 55.28433576092384 > feet      Velocity: < 0.5471566423907612, 0.5471566423907612 > feet/second
+
+
+Progress report at 0.0:1.0:1.0
+Ball 0: Location: < 55.8314924033146, 55.8314924033146 > feet      Velocity: < 0.5416850759668536, 0.5416850759668536 > feet/second
+
+
+Progress report at 0.0:1.0:2.0
+Ball 0: Location: < 56.37317747928145, 56.37317747928145 > feet      Velocity: < 0.536268225207185, 0.536268225207185 > feet/second
+
+
+Progress report at 0.0:1.0:3.0
+Ball 0: Location: < 56.90944570448864, 56.90944570448864 > feet      Velocity: < 0.5309055429551132, 0.5309055429551132 > feet/second
+
+
+Progress report at 0.0:1.0:4.0
+Ball 0: Location: < 57.44035124744375, 57.44035124744375 > feet      Velocity: < 0.525596487525562, 0.525596487525562 > feet/second
+
+
+Progress report at 0.0:1.0:5.0
+Ball 0: Location: < 57.96594773496931, 57.96594773496931 > feet      Velocity: < 0.5203405226503064, 0.5203405226503064 > feet/second
+
+
+Progress report at 0.0:1.0:6.0
+Ball 0: Location: < 58.48628825761962, 58.48628825761962 > feet      Velocity: < 0.5151371174238033, 0.5151371174238033 > feet/second
+
+
+Progress report at 0.0:1.0:7.0
+Ball 0: Location: < 59.001425375043425, 59.001425375043425 > feet      Velocity: < 0.5099857462495653, 0.5099857462495653 > feet/second
+
+
+Progress report at 0.0:1.0:8.0
+Ball 0: Location: < 59.51141112129299, 59.51141112129299 > feet      Velocity: < 0.5048858887870696, 0.5048858887870696 > feet/second
+
+
+Progress report at 0.0:1.0:9.0
+Ball 0: Location: < 60.01629701008006, 60.01629701008006 > feet      Velocity: < 0.4998370298991989, 0.4998370298991989 > feet/second
+
+
+Progress report at 0.0:1.0:10.0
+Ball 0: Location: < 60.516134039979256, 60.516134039979256 > feet      Velocity: < 0.49483865960020695, 0.49483865960020695 > feet/second
+
+
+Progress report at 0.0:1.0:11.0
+Ball 0: Location: < 61.01097269957946, 61.01097269957946 > feet      Velocity: < 0.4898902730042049, 0.4898902730042049 > feet/second
+
+
+Progress report at 0.0:1.0:12.0
+Ball 0: Location: < 61.50086297258367, 61.50086297258367 > feet      Velocity: < 0.48499137027416284, 0.48499137027416284 > feet/second
+
+
+Progress report at 0.0:1.0:13.0
+Ball 0: Location: < 61.985854342857834, 61.985854342857834 > feet      Velocity: < 0.4801414565714212, 0.4801414565714212 > feet/second
+
+
+Progress report at 0.0:1.0:14.0
+Ball 0: Location: < 62.46599579942926, 62.46599579942926 > feet      Velocity: < 0.475340042005707, 0.475340042005707 > feet/second
+
+
+Progress report at 0.0:1.0:15.0
+Ball 0: Location: < 62.94133584143496, 62.94133584143496 > feet      Velocity: < 0.47058664158564995, 0.47058664158564995 > feet/second
+
+
+Progress report at 0.0:1.0:16.0
+Ball 0: Location: < 63.41192248302061, 63.41192248302061 > feet      Velocity: < 0.4658807751697934, 0.4658807751697934 > feet/second
+
+
+Progress report at 0.0:1.0:17.0
+Ball 0: Location: < 63.877803258190404, 63.877803258190404 > feet      Velocity: < 0.4612219674180955, 0.4612219674180955 > feet/second
+
+
+Progress report at 0.0:1.0:18.0
+Ball 0: Location: < 64.3390252256085, 64.3390252256085 > feet      Velocity: < 0.45660974774391455, 0.45660974774391455 > feet/second
+
+
+Progress report at 0.0:1.0:19.0
+Ball 0: Location: < 64.7956349733524, 64.7956349733524 > feet      Velocity: < 0.4520436502664754, 0.4520436502664754 > feet/second
+
+
+Progress report at 0.0:1.0:20.0
+Ball 0: Location: < 65.24767862361888, 65.24767862361888 > feet      Velocity: < 0.44752321376381066, 0.44752321376381066 > feet/second
+
+
+Progress report at 0.0:1.0:21.0
+Ball 0: Location: < 65.6952018373827, 65.6952018373827 > feet      Velocity: < 0.44304798162617254, 0.44304798162617254 > feet/second
+
+
+Progress report at 0.0:1.0:22.0
+Ball 0: Location: < 66.13824981900888, 66.13824981900888 > feet      Velocity: < 0.4386175018099108, 0.4386175018099108 > feet/second
+
+
+Progress report at 0.0:1.0:23.0
+Ball 0: Location: < 66.57686732081879, 66.57686732081879 > feet      Velocity: < 0.4342313267918117, 0.4342313267918117 > feet/second
+
+
+Progress report at 0.0:1.0:24.0
+Ball 0: Location: < 67.01109864761061, 67.01109864761061 > feet      Velocity: < 0.4298890135238936, 0.4298890135238936 > feet/second
+
+
+Progress report at 0.0:1.0:25.0
+Ball 0: Location: < 67.4409876611345, 67.4409876611345 > feet      Velocity: < 0.42559012338865465, 0.42559012338865465 > feet/second
+
+
+Progress report at 0.0:1.0:26.0
+Ball 0: Location: < 67.86657778452316, 67.86657778452316 > feet      Velocity: < 0.4213342221547681, 0.4213342221547681 > feet/second
+
+
+Progress report at 0.0:1.0:27.0
+Ball 0: Location: < 68.28791200667793, 68.28791200667793 > feet      Velocity: < 0.41712087993322045, 0.41712087993322045 > feet/second
+
+
+Progress report at 0.0:1.0:28.0
+Ball 0: Location: < 68.70503288661115, 68.70503288661115 > feet      Velocity: < 0.41294967113388825, 0.41294967113388825 > feet/second
+
+
+Progress report at 0.0:1.0:29.0
+Ball 0: Location: < 69.11798255774504, 69.11798255774504 > feet      Velocity: < 0.40882017442254937, 0.40882017442254937 > feet/second
+
+
+Progress report at 0.0:1.0:30.0
+Ball 0: Location: < 69.52680273216758, 69.52680273216758 > feet      Velocity: < 0.4047319726783239, 0.4047319726783239 > feet/second
+
+
+Progress report at 0.0:1.0:31.0
+Ball 0: Location: < 69.9315347048459, 69.9315347048459 > feet      Velocity: < 0.40068465295154065, 0.40068465295154065 > feet/second
+
+
+Progress report at 0.0:1.0:32.0
+Ball 0: Location: < 70.33221935779744, 70.33221935779744 > feet      Velocity: < 0.39667780642202527, 0.39667780642202527 > feet/second
+
+
+Progress report at 0.0:1.0:33.0
+Ball 0: Location: < 70.72889716421946, 70.72889716421946 > feet      Velocity: < 0.392711028357805, 0.392711028357805 > feet/second
+
+
+Progress report at 0.0:1.0:34.0
+Ball 0: Location: < 71.12160819257727, 71.12160819257727 > feet      Velocity: < 0.38878391807422696, 0.38878391807422696 > feet/second
+
+
+Progress report at 0.0:1.0:35.0
+Ball 0: Location: < 71.5103921106515, 71.5103921106515 > feet      Velocity: < 0.3848960788934847, 0.3848960788934847 > feet/second
+
+
+Progress report at 0.0:1.0:36.0
+Ball 0: Location: < 71.89528818954498, 71.89528818954498 > feet      Velocity: < 0.38104711810454983, 0.38104711810454983 > feet/second
+
+
+Progress report at 0.0:1.0:37.0
+Ball 0: Location: < 72.27633530764953, 72.27633530764953 > feet      Velocity: < 0.37723664692350434, 0.37723664692350434 > feet/second
+
+
+Progress report at 0.0:1.0:38.0
+Ball 0: Location: < 72.65357195457304, 72.65357195457304 > feet      Velocity: < 0.37346428045426927, 0.37346428045426927 > feet/second
+
+
+Progress report at 0.0:1.0:39.0
+Ball 0: Location: < 73.02703623502731, 73.02703623502731 > feet      Velocity: < 0.36972963764972655, 0.36972963764972655 > feet/second
+
+
+Progress report at 0.0:1.0:40.0
+Ball 0: Location: < 73.39676587267704, 73.39676587267704 > feet      Velocity: < 0.36603234127322926, 0.36603234127322926 > feet/second
+
+
+Progress report at 0.0:1.0:41.0
+Ball 0: Location: < 73.76279821395026, 73.76279821395026 > feet      Velocity: < 0.36237201786049694, 0.36237201786049694 > feet/second
+
+
+Progress report at 0.0:1.0:42.0
+Ball 0: Location: < 74.12517023181076, 74.12517023181076 > feet      Velocity: < 0.358748297681892, 0.358748297681892 > feet/second
+
+
+Progress report at 0.0:1.0:43.0
+Ball 0: Location: < 74.48391852949266, 74.48391852949266 > feet      Velocity: < 0.35516081470507305, 0.35516081470507305 > feet/second
+
+
+Progress report at 0.0:1.0:44.0
+Ball 0: Location: < 74.83907934419773, 74.83907934419773 > feet      Velocity: < 0.3516092065580223, 0.3516092065580223 > feet/second
+
+
+Progress report at 0.0:1.0:45.0
+Ball 0: Location: < 75.19068855075575, 75.19068855075575 > feet      Velocity: < 0.34809311449244207, 0.34809311449244207 > feet/second
+
+
+Progress report at 0.0:1.0:46.0
+Ball 0: Location: < 75.5387816652482, 75.5387816652482 > feet      Velocity: < 0.34461218334751764, 0.34461218334751764 > feet/second
+
+
+Progress report at 0.0:1.0:47.0
+Ball 0: Location: < 75.88339384859572, 75.88339384859572 > feet      Velocity: < 0.34116606151404244, 0.34116606151404244 > feet/second
+
+
+Progress report at 0.0:1.0:48.0
+Ball 0: Location: < 76.22455991010976, 76.22455991010976 > feet      Velocity: < 0.337754400898902, 0.337754400898902 > feet/second
+
+
+Progress report at 0.0:1.0:49.0
+Ball 0: Location: < 76.56231431100866, 76.56231431100866 > feet      Velocity: < 0.334376856889913, 0.334376856889913 > feet/second
+
+
+Progress report at 0.0:1.0:50.0
+Ball 0: Location: < 76.89669116789858, 76.89669116789858 > feet      Velocity: < 0.33103308832101386, 0.33103308832101386 > feet/second
+
+
+Progress report at 0.0:1.0:51.0
+Ball 0: Location: < 77.22772425621959, 77.22772425621959 > feet      Velocity: < 0.3277227574378037, 0.3277227574378037 > feet/second
+
+
+Progress report at 0.0:1.0:52.0
+Ball 0: Location: < 77.55544701365739, 77.55544701365739 > feet      Velocity: < 0.3244455298634257, 0.3244455298634257 > feet/second
+
+
+Progress report at 0.0:1.0:53.0
+Ball 0: Location: < 77.87989254352081, 77.87989254352081 > feet      Velocity: < 0.3212010745647914, 0.3212010745647914 > feet/second
+
+
+Progress report at 0.0:1.0:54.0
+Ball 0: Location: < 78.20109361808561, 78.20109361808561 > feet      Velocity: < 0.3179890638191435, 0.3179890638191435 > feet/second
+
+
+Progress report at 0.0:1.0:55.0
+Ball 0: Location: < 78.51908268190475, 78.51908268190475 > feet      Velocity: < 0.31480917318095203, 0.31480917318095203 > feet/second
+
+
+Progress report at 0.0:1.0:56.0
+Ball 0: Location: < 78.8338918550857, 78.8338918550857 > feet      Velocity: < 0.3116610814491425, 0.3116610814491425 > feet/second
+
+
+Progress report at 0.0:1.0:57.0
+Ball 0: Location: < 79.14555293653484, 79.14555293653484 > feet      Velocity: < 0.30854447063465107, 0.30854447063465107 > feet/second
+
+
+Progress report at 0.0:1.0:58.0
+Ball 0: Location: < 79.4540974071695, 79.4540974071695 > feet      Velocity: < 0.30545902592830454, 0.30545902592830454 > feet/second
+
+
+Progress report at 0.0:1.0:59.0
+Ball 0: Location: < 79.7595564330978, 79.7595564330978 > feet      Velocity: < 0.3024044356690215, 0.3024044356690215 > feet/second
+
+
+Progress report at 0.0:2.0:0.0
+Ball 0: Location: < 80.06196086876682, 80.06196086876682 > feet      Velocity: < 0.29938039131233124, 0.29938039131233124 > feet/second
+
+
+Progress report at 0.0:2.0:1.0
+Ball 0: Location: < 80.36134126007914, 80.36134126007914 > feet      Velocity: < 0.2963865873992079, 0.2963865873992079 > feet/second
+
+
+Progress report at 0.0:2.0:2.0
+Ball 0: Location: < 80.65772784747836, 80.65772784747836 > feet      Velocity: < 0.29342272152521587, 0.29342272152521587 > feet/second
+
+
+Progress report at 0.0:2.0:3.0
+Ball 0: Location: < 80.95115056900357, 80.95115056900357 > feet      Velocity: < 0.2904884943099637, 0.2904884943099637 > feet/second
+
+
+Progress report at 0.0:2.0:4.0
+Ball 0: Location: < 81.24163906331354, 81.24163906331354 > feet      Velocity: < 0.28758360936686406, 0.28758360936686406 > feet/second
+
+
+Progress report at 0.0:2.0:5.0
+Ball 0: Location: < 81.5292226726804, 81.5292226726804 > feet      Velocity: < 0.2847077732731954, 0.2847077732731954 > feet/second
+
+
+Progress report at 0.0:2.0:6.0
+Ball 0: Location: < 81.8139304459536, 81.8139304459536 > feet      Velocity: < 0.28186069554046345, 0.28186069554046345 > feet/second
+
+
+Progress report at 0.0:2.0:7.0
+Ball 0: Location: < 82.09579114149406, 82.09579114149406 > feet      Velocity: < 0.2790420885850588, 0.2790420885850588 > feet/second
+
+
+Progress report at 0.0:2.0:8.0
+Ball 0: Location: < 82.37483323007912, 82.37483323007912 > feet      Velocity: < 0.2762516676992082, 0.2762516676992082 > feet/second
+
+
+Progress report at 0.0:2.0:9.0
+Ball 0: Location: < 82.65108489777833, 82.65108489777833 > feet      Velocity: < 0.27348915102221616, 0.27348915102221616 > feet/second
+
+
+Progress report at 0.0:2.0:10.0
+Ball 0: Location: < 82.92457404880055, 82.92457404880055 > feet      Velocity: < 0.270754259511994, 0.270754259511994 > feet/second
+
+
+Progress report at 0.0:2.0:11.0
+Ball 0: Location: < 83.19532830831254, 83.19532830831254 > feet      Velocity: < 0.26804671691687404, 0.26804671691687404 > feet/second
+
+
+Progress report at 0.0:2.0:12.0
+Ball 0: Location: < 83.46337502522941, 83.46337502522941 > feet      Velocity: < 0.2653662497477053, 0.2653662497477053 > feet/second
+
+
+Progress report at 0.0:2.0:13.0
+Ball 0: Location: < 83.72874127497711, 83.72874127497711 > feet      Velocity: < 0.2627125872502282, 0.2627125872502282 > feet/second
+
+
+Progress report at 0.0:2.0:14.0
+Ball 0: Location: < 83.99145386222735, 83.99145386222735 > feet      Velocity: < 0.2600854613777259, 0.2600854613777259 > feet/second
+
+
+Progress report at 0.0:2.0:15.0
+Ball 0: Location: < 84.25153932360507, 84.25153932360507 > feet      Velocity: < 0.2574846067639487, 0.2574846067639487 > feet/second
+
+
+Progress report at 0.0:2.0:16.0
+Ball 0: Location: < 84.50902393036903, 84.50902393036903 > feet      Velocity: < 0.2549097606963092, 0.2549097606963092 > feet/second
+
+
+Progress report at 0.0:2.0:17.0
+Ball 0: Location: < 84.76393369106533, 84.76393369106533 > feet      Velocity: < 0.2523606630893461, 0.2523606630893461 > feet/second
+
+
+Progress report at 0.0:2.0:18.0
+Ball 0: Location: < 85.01629435415468, 85.01629435415468 > feet      Velocity: < 0.24983705645845267, 0.24983705645845267 > feet/second
+
+
+Progress report at 0.0:2.0:19.0
+Ball 0: Location: < 85.26613141061313, 85.26613141061313 > feet      Velocity: < 0.24733868589386815, 0.24733868589386815 > feet/second
+
+
+Progress report at 0.0:2.0:20.0
+Ball 0: Location: < 85.51347009650699, 85.51347009650699 > feet      Velocity: < 0.24486529903492946, 0.24486529903492946 > feet/second
+
+
+Progress report at 0.0:2.0:21.0
+Ball 0: Location: < 85.75833539554192, 85.75833539554192 > feet      Velocity: < 0.24241664604458016, 0.24241664604458016 > feet/second
+
+
+Progress report at 0.0:2.0:22.0
+Ball 0: Location: < 86.0007520415865, 86.0007520415865 > feet      Velocity: < 0.23999247958413436, 0.23999247958413436 > feet/second
+
+
+Progress report at 0.0:2.0:23.0
+Ball 0: Location: < 86.24074452117063, 86.24074452117063 > feet      Velocity: < 0.23759255478829303, 0.23759255478829303 > feet/second
+
+
+Progress report at 0.0:2.0:24.0
+Ball 0: Location: < 86.47833707595892, 86.47833707595892 > feet      Velocity: < 0.2352166292404101, 0.2352166292404101 > feet/second
+
+
+Progress report at 0.0:2.0:25.0
+Ball 0: Location: < 86.71355370519933, 86.71355370519933 > feet      Velocity: < 0.232864462948006, 0.232864462948006 > feet/second
+
+
+Progress report at 0.0:2.0:26.0
+Ball 0: Location: < 86.94641816814733, 86.94641816814733 > feet      Velocity: < 0.23053581831852593, 0.23053581831852593 > feet/second
+
+
+Progress report at 0.0:2.0:27.0
+Ball 0: Location: < 87.17695398646586, 87.17695398646586 > feet      Velocity: < 0.22823046013534068, 0.22823046013534068 > feet/second
+
+
+Progress report at 0.0:2.0:28.0
+Ball 0: Location: < 87.4051844466012, 87.4051844466012 > feet      Velocity: < 0.22594815553398728, 0.22594815553398728 > feet/second
+
+
+Progress report at 0.0:2.0:29.0
+Ball 0: Location: < 87.63113260213518, 87.63113260213518 > feet      Velocity: < 0.22368867397864742, 0.22368867397864742 > feet/second
+
+
+Progress report at 0.0:2.0:30.0
+Ball 0: Location: < 87.85482127611382, 87.85482127611382 > feet      Velocity: < 0.22145178723886094, 0.22145178723886094 > feet/second
+
+
+Progress report at 0.0:2.0:31.0
+Ball 0: Location: < 88.07627306335269, 88.07627306335269 > feet      Velocity: < 0.21923726936647234, 0.21923726936647234 > feet/second
+
+
+Progress report at 0.0:2.0:32.0
+Ball 0: Location: < 88.29551033271916, 88.29551033271916 > feet      Velocity: < 0.2170448966728076, 0.2170448966728076 > feet/second
+
+
+Progress report at 0.0:2.0:33.0
+Ball 0: Location: < 88.51255522939196, 88.51255522939196 > feet      Velocity: < 0.21487444770607952, 0.21487444770607952 > feet/second
+
+
+Progress report at 0.0:2.0:34.0
+Ball 0: Location: < 88.72742967709804, 88.72742967709804 > feet      Velocity: < 0.21272570322901874, 0.21272570322901874 > feet/second
+
+
+Progress report at 0.0:2.0:35.0
+Ball 0: Location: < 88.94015538032706, 88.94015538032706 > feet      Velocity: < 0.21059844619672854, 0.21059844619672854 > feet/second
+
+
+Progress report at 0.0:2.0:36.0
+Ball 0: Location: < 89.15075382652378, 89.15075382652378 > feet      Velocity: < 0.20849246173476127, 0.20849246173476127 > feet/second
+
+
+Progress report at 0.0:2.0:37.0
+Ball 0: Location: < 89.35924628825855, 89.35924628825855 > feet      Velocity: < 0.20640753711741366, 0.20640753711741366 > feet/second
+
+
+Progress report at 0.0:2.0:38.0
+Ball 0: Location: < 89.56565382537596, 89.56565382537596 > feet      Velocity: < 0.20434346174623952, 0.20434346174623952 > feet/second
+
+
+Progress report at 0.0:2.0:39.0
+Ball 0: Location: < 89.7699972871222, 89.7699972871222 > feet      Velocity: < 0.20230002712877712, 0.20230002712877712 > feet/second
+
+
+Progress report at 0.0:2.0:40.0
+Ball 0: Location: < 89.97229731425097, 89.97229731425097 > feet      Velocity: < 0.20027702685748935, 0.20027702685748935 > feet/second
+
+
+Progress report at 0.0:2.0:41.0
+Ball 0: Location: < 90.17257434110846, 90.17257434110846 > feet      Velocity: < 0.19827425658891445, 0.19827425658891445 > feet/second
+
+
+Progress report at 0.0:2.0:42.0
+Ball 0: Location: < 90.37084859769737, 90.37084859769737 > feet      Velocity: < 0.1962915140230253, 0.1962915140230253 > feet/second
+
+
+Progress report at 0.0:2.0:43.0
+Ball 0: Location: < 90.5671401117204, 90.5671401117204 > feet      Velocity: < 0.19432859888279505, 0.19432859888279505 > feet/second
+
+
+Progress report at 0.0:2.0:44.0
+Ball 0: Location: < 90.7614687106032, 90.7614687106032 > feet      Velocity: < 0.1923853128939671, 0.1923853128939671 > feet/second
+
+
+Progress report at 0.0:2.0:45.0
+Ball 0: Location: < 90.95385402349716, 90.95385402349716 > feet      Velocity: < 0.19046145976502743, 0.19046145976502743 > feet/second
+
+
+Progress report at 0.0:2.0:46.0
+Ball 0: Location: < 91.14431548326219, 91.14431548326219 > feet      Velocity: < 0.18855684516737714, 0.18855684516737714 > feet/second
+
+
+Progress report at 0.0:2.0:47.0
+Ball 0: Location: < 91.33287232842957, 91.33287232842957 > feet      Velocity: < 0.18667127671570335, 0.18667127671570335 > feet/second
+
+
+Progress report at 0.0:2.0:48.0
+Ball 0: Location: < 91.51954360514527, 91.51954360514527 > feet      Velocity: < 0.18480456394854633, 0.18480456394854633 > feet/second
+
+
+Progress report at 0.0:2.0:49.0
+Ball 0: Location: < 91.70434816909382, 91.70434816909382 > feet      Velocity: < 0.18295651830906087, 0.18295651830906087 > feet/second
+
+
+Progress report at 0.0:2.0:50.0
+Ball 0: Location: < 91.88730468740287, 91.88730468740287 > feet      Velocity: < 0.18112695312597027, 0.18112695312597027 > feet/second
+
+
+Progress report at 0.0:2.0:51.0
+Ball 0: Location: < 92.06843164052884, 92.06843164052884 > feet      Velocity: < 0.17931568359471056, 0.17931568359471056 > feet/second
+
+
+Progress report at 0.0:2.0:52.0
+Ball 0: Location: < 92.24774732412355, 92.24774732412355 > feet      Velocity: < 0.17752252675876345, 0.17752252675876345 > feet/second
+
+
+Progress report at 0.0:2.0:53.0
+Ball 0: Location: < 92.42526985088232, 92.42526985088232 > feet      Velocity: < 0.17574730149117582, 0.17574730149117582 > feet/second
+
+
+Progress report at 0.0:2.0:54.0
+Ball 0: Location: < 92.60101715237349, 92.60101715237349 > feet      Velocity: < 0.17398982847626407, 0.17398982847626407 > feet/second
+
+
+Progress report at 0.0:2.0:55.0
+Ball 0: Location: < 92.77500698084975, 92.77500698084975 > feet      Velocity: < 0.17224993019150142, 0.17224993019150142 > feet/second
+
+
+Progress report at 0.0:2.0:56.0
+Ball 0: Location: < 92.94725691104125, 92.94725691104125 > feet      Velocity: < 0.1705274308895864, 0.1705274308895864 > feet/second
+
+
+Progress report at 0.0:2.0:57.0
+Ball 0: Location: < 93.11778434193084, 93.11778434193084 > feet      Velocity: < 0.16882215658069055, 0.16882215658069055 > feet/second
+
+
+Progress report at 0.0:2.0:58.0
+Ball 0: Location: < 93.28660649851153, 93.28660649851153 > feet      Velocity: < 0.16713393501488363, 0.16713393501488363 > feet/second
+
+
+Progress report at 0.0:2.0:59.0
+Ball 0: Location: < 93.45374043352642, 93.45374043352642 > feet      Velocity: < 0.16546259566473479, 0.16546259566473479 > feet/second
+
+
+Progress report at 0.0:3.0:0.0
+Ball 0: Location: < 93.61920302919115, 93.61920302919115 > feet      Velocity: < 0.16380796970808745, 0.16380796970808745 > feet/second
+
+
+Progress report at 0.0:3.0:1.0
+Ball 0: Location: < 93.78301099889924, 93.78301099889924 > feet      Velocity: < 0.16216989001100657, 0.16216989001100657 > feet/second
+
+
+Progress report at 0.0:3.0:2.0
+Ball 0: Location: < 93.94518088891024, 93.94518088891024 > feet      Velocity: < 0.1605481911108965, 0.1605481911108965 > feet/second
+
+
+Progress report at 0.0:3.0:3.0
+Ball 0: Location: < 94.10572908002113, 94.10572908002113 > feet      Velocity: < 0.15894270919978754, 0.15894270919978754 > feet/second
+
+
+Progress report at 0.0:3.0:4.0
+Ball 0: Location: < 94.26467178922093, 94.26467178922093 > feet      Velocity: < 0.15735328210778965, 0.15735328210778965 > feet/second
+
+
+Progress report at 0.0:3.0:5.0
+Ball 0: Location: < 94.42202507132872, 94.42202507132872 > feet      Velocity: < 0.15577974928671176, 0.15577974928671176 > feet/second
+
+
+Progress report at 0.0:3.0:6.0
+Ball 0: Location: < 94.57780482061543, 94.57780482061543 > feet      Velocity: < 0.15422195179384465, 0.15422195179384465 > feet/second
+
+
+Progress report at 0.0:3.0:7.0
+Ball 0: Location: < 94.73202677240927, 94.73202677240927 > feet      Velocity: < 0.1526797322759062, 0.1526797322759062 > feet/second
+
+
+Progress report at 0.0:3.0:8.0
+Ball 0: Location: < 94.88470650468517, 94.88470650468517 > feet      Velocity: < 0.15115293495314713, 0.15115293495314713 > feet/second
+
+
+Progress report at 0.0:3.0:9.0
+Ball 0: Location: < 95.03585943963832, 95.03585943963832 > feet      Velocity: < 0.14964140560361566, 0.14964140560361566 > feet/second
+
+
+Progress report at 0.0:3.0:10.0
+Ball 0: Location: < 95.18550084524193, 95.18550084524193 > feet      Velocity: < 0.1481449915475795, 0.1481449915475795 > feet/second
+
+
+Progress report at 0.0:3.0:11.0
+Ball 0: Location: < 95.33364583678951, 95.33364583678951 > feet      Velocity: < 0.1466635416321037, 0.1466635416321037 > feet/second
+
+
+Progress report at 0.0:3.0:12.0
+Ball 0: Location: < 95.48030937842162, 95.48030937842162 > feet      Velocity: < 0.14519690621578268, 0.14519690621578268 > feet/second
+
+
+Progress report at 0.0:3.0:13.0
+Ball 0: Location: < 95.62550628463741, 95.62550628463741 > feet      Velocity: < 0.14374493715362485, 0.14374493715362485 > feet/second
+
+
+Progress report at 0.0:3.0:14.0
+Ball 0: Location: < 95.76925122179104, 95.76925122179104 > feet      Velocity: < 0.1423074877820886, 0.1423074877820886 > feet/second
+
+
+Progress report at 0.0:3.0:15.0
+Ball 0: Location: < 95.91155870957313, 95.91155870957313 > feet      Velocity: < 0.1408844129042677, 0.1408844129042677 > feet/second
+
+
+Progress report at 0.0:3.0:16.0
+Ball 0: Location: < 96.0524431224774, 96.0524431224774 > feet      Velocity: < 0.13947556877522502, 0.13947556877522502 > feet/second
+
+
+Progress report at 0.0:3.0:17.0
+Ball 0: Location: < 96.19191869125262, 96.19191869125262 > feet      Velocity: < 0.13808081308747278, 0.13808081308747278 > feet/second
+
+
+Progress report at 0.0:3.0:18.0
+Ball 0: Location: < 96.3299995043401, 96.3299995043401 > feet      Velocity: < 0.13670000495659804, 0.13670000495659804 > feet/second
+
+
+Progress report at 0.0:3.0:19.0
+Ball 0: Location: < 96.46669950929669, 96.46669950929669 > feet      Velocity: < 0.13533300490703207, 0.13533300490703207 > feet/second
+
+
+Progress report at 0.0:3.0:20.0
+Ball 0: Location: < 96.60203251420371, 96.60203251420371 > feet      Velocity: < 0.13397967485796175, 0.13397967485796175 > feet/second
+
+
+Progress report at 0.0:3.0:21.0
+Ball 0: Location: < 96.73601218906168, 96.73601218906168 > feet      Velocity: < 0.13263987810938213, 0.13263987810938213 > feet/second
+
+
+Progress report at 0.0:3.0:22.0
+Ball 0: Location: < 96.86865206717107, 96.86865206717107 > feet      Velocity: < 0.1313134793282883, 0.1313134793282883 > feet/second
+
+
+Progress report at 0.0:3.0:23.0
+Ball 0: Location: < 96.99996554649935, 96.99996554649935 > feet      Velocity: < 0.13000034453500542, 0.13000034453500542 > feet/second
+
+
+Progress report at 0.0:3.0:24.0
+Ball 0: Location: < 97.12996589103436, 97.12996589103436 > feet      Velocity: < 0.12870034108965536, 0.12870034108965536 > feet/second
+
+
+Progress report at 0.0:3.0:25.0
+Ball 0: Location: < 97.25866623212401, 97.25866623212401 > feet      Velocity: < 0.12741333767875881, 0.12741333767875881 > feet/second
+
+
+Progress report at 0.0:3.0:26.0
+Ball 0: Location: < 97.38607956980277, 97.38607956980277 > feet      Velocity: < 0.12613920430197123, 0.12613920430197123 > feet/second
+
+
+Progress report at 0.0:3.0:27.0
+Ball 0: Location: < 97.51221877410475, 97.51221877410475 > feet      Velocity: < 0.12487781225895152, 0.12487781225895152 > feet/second
+
+
+Progress report at 0.0:3.0:28.0
+Ball 0: Location: < 97.63709658636371, 97.63709658636371 > feet      Velocity: < 0.123629034136362, 0.123629034136362 > feet/second
+
+
+Progress report at 0.0:3.0:29.0
+Ball 0: Location: < 97.76072562050007, 97.76072562050007 > feet      Velocity: < 0.12239274379499838, 0.12239274379499838 > feet/second
+
+
+Progress report at 0.0:3.0:30.0
+Ball 0: Location: < 97.88311836429507, 97.88311836429507 > feet      Velocity: < 0.1211688163570484, 0.1211688163570484 > feet/second
+
+
+Progress report at 0.0:3.0:31.0
+Ball 0: Location: < 98.00428718065211, 98.00428718065211 > feet      Velocity: < 0.11995712819347792, 0.11995712819347792 > feet/second
+
+
+Progress report at 0.0:3.0:32.0
+Ball 0: Location: < 98.12424430884559, 98.12424430884559 > feet      Velocity: < 0.11875755691154315, 0.11875755691154315 > feet/second
+
+
+Progress report at 0.0:3.0:33.0
+Ball 0: Location: < 98.24300186575714, 98.24300186575714 > feet      Velocity: < 0.11756998134242772, 0.11756998134242772 > feet/second
+
+
+Progress report at 0.0:3.0:34.0
+Ball 0: Location: < 98.36057184709956, 98.36057184709956 > feet      Velocity: < 0.11639428152900344, 0.11639428152900344 > feet/second
+
+
+Progress report at 0.0:3.0:35.0
+Ball 0: Location: < 98.47696612862856, 98.47696612862856 > feet      Velocity: < 0.11523033871371341, 0.11523033871371341 > feet/second
+
+
+Progress report at 0.0:3.0:36.0
+Ball 0: Location: < 98.59219646734228, 98.59219646734228 > feet      Velocity: < 0.11407803532657627, 0.11407803532657627 > feet/second
+
+
+Progress report at 0.0:3.0:37.0
+Ball 0: Location: < 98.70627450266885, 98.70627450266885 > feet      Velocity: < 0.11293725497331052, 0.11293725497331052 > feet/second
+
+
+Progress report at 0.0:3.0:38.0
+Ball 0: Location: < 98.81921175764215, 98.81921175764215 > feet      Velocity: < 0.1118078824235774, 0.1118078824235774 > feet/second
+
+
+Progress report at 0.0:3.0:39.0
+Ball 0: Location: < 98.93101964006573, 98.93101964006573 > feet      Velocity: < 0.11068980359934164, 0.11068980359934164 > feet/second
+
+
+Progress report at 0.0:3.0:40.0
+Ball 0: Location: < 99.04170944366507, 99.04170944366507 > feet      Velocity: < 0.10958290556334822, 0.10958290556334822 > feet/second
+
+
+Progress report at 0.0:3.0:41.0
+Ball 0: Location: < 99.15129234922841, 99.15129234922841 > feet      Velocity: < 0.10848707650771475, 0.10848707650771475 > feet/second
+
+
+Progress report at 0.0:3.0:42.0
+Ball 0: Location: < 99.25977942573613, 99.25977942573613 > feet      Velocity: < 0.1074022057426376, 0.1074022057426376 > feet/second
+
+
+Progress report at 0.0:3.0:43.0
+Ball 0: Location: < 99.36718163147877, 99.36718163147877 > feet      Velocity: < 0.10632818368521123, 0.10632818368521123 > feet/second
+
+
+Progress report at 0.0:3.0:44.0
+Ball 0: Location: < 99.47350981516398, 99.47350981516398 > feet      Velocity: < 0.10526490184835911, 0.10526490184835911 > feet/second
+
+
+Progress report at 0.0:3.0:45.0
+Ball 0: Location: < 99.57877471701234, 99.57877471701234 > feet      Velocity: < 0.10421225282987552, 0.10421225282987552 > feet/second
+
+
+Progress report at 0.0:3.0:46.0
+Ball 0: Location: < 99.68298696984222, 99.68298696984222 > feet      Velocity: < 0.10317013030157676, 0.10317013030157676 > feet/second
+
+
+Progress report at 0.0:3.0:47.0
+Ball 0: Location: < 99.7861571001438, 99.7861571001438 > feet      Velocity: < 0.10213842899856099, 0.10213842899856099 > feet/second
+
+
+Progress report at 0.0:3.0:48.0
+Ball 0: Location: < 99.88829552914235, 99.88829552914235 > feet      Velocity: < 0.10111704470857538, 0.10111704470857538 > feet/second
+
+
+Progress report at 0.0:3.0:49.0
+Ball 0: Location: < 99.98941257385093, 99.98941257385093 > feet      Velocity: < 0.10010587426148963, 0.10010587426148963 > feet/second
+
+
+Progress report at 0.0:3.0:50.0
+Ball 0: Location: < 100.08951844811241, 100.08951844811241 > feet      Velocity: < 0.09910481551887473, 0.09910481551887473 > feet/second
+
+
+Progress report at 0.0:3.0:51.0
+Ball 0: Location: < 100.18862326363129, 100.18862326363129 > feet      Velocity: < 0.09811376736368599, 0.09811376736368599 > feet/second
+
+
+Progress report at 0.0:3.0:52.0
+Ball 0: Location: < 100.28673703099497, 100.28673703099497 > feet      Velocity: < 0.09713262969004913, 0.09713262969004913 > feet/second
+
+
+Progress report at 0.0:3.0:53.0
+Ball 0: Location: < 100.38386966068502, 100.38386966068502 > feet      Velocity: < 0.09616130339314863, 0.09616130339314863 > feet/second
+
+
+Progress report at 0.0:3.0:54.0
+Ball 0: Location: < 100.48003096407817, 100.48003096407817 > feet      Velocity: < 0.09519969035921715, 0.09519969035921715 > feet/second
+
+
+Progress report at 0.0:3.0:55.0
+Ball 0: Location: < 100.57523065443739, 100.57523065443739 > feet      Velocity: < 0.09424769345562498, 0.09424769345562498 > feet/second
+
+
+Progress report at 0.0:3.0:56.0
+Ball 0: Location: < 100.66947834789302, 100.66947834789302 > feet      Velocity: < 0.09330521652106873, 0.09330521652106873 > feet/second
+
+
+Progress report at 0.0:3.0:57.0
+Ball 0: Location: < 100.7627835644141, 100.7627835644141 > feet      Velocity: < 0.09237216435585804, 0.09237216435585804 > feet/second
+
+
+Progress report at 0.0:3.0:58.0
+Ball 0: Location: < 100.85515572876996, 100.85515572876996 > feet      Velocity: < 0.09144844271229946, 0.09144844271229946 > feet/second
+
+
+Progress report at 0.0:3.0:59.0
+Ball 0: Location: < 100.94660417148226, 100.94660417148226 > feet      Velocity: < 0.09053395828517646, 0.09053395828517646 > feet/second
+
+
+Progress report at 0.0:4.0:0.0
+Ball 0: Location: < 101.03713812976744, 101.03713812976744 > feet      Velocity: < 0.08962861870232469, 0.08962861870232469 > feet/second
+
+
+Progress report at 0.0:4.0:1.0
+Ball 0: Location: < 101.12676674846976, 101.12676674846976 > feet      Velocity: < 0.08873233251530144, 0.08873233251530144 > feet/second
+
+
+Progress report at 0.0:4.0:2.0
+Ball 0: Location: < 101.21549908098507, 101.21549908098507 > feet      Velocity: < 0.08784500919014843, 0.08784500919014843 > feet/second
+
+
+Progress report at 0.0:4.0:3.0
+Ball 0: Location: < 101.30334409017522, 101.30334409017522 > feet      Velocity: < 0.08696655909824694, 0.08696655909824694 > feet/second
+
+
+Progress report at 0.0:4.0:4.0
+Ball 0: Location: < 101.39031064927346, 101.39031064927346 > feet      Velocity: < 0.08609689350726446, 0.08609689350726446 > feet/second
+
+
+Progress report at 0.0:4.0:5.0
+Ball 0: Location: < 101.47640754278072, 101.47640754278072 > feet      Velocity: < 0.08523592457219181, 0.08523592457219181 > feet/second
+
+
+Progress report at 0.0:4.0:6.0
+Ball 0: Location: < 101.56164346735291, 101.56164346735291 > feet      Velocity: < 0.0843835653264699, 0.0843835653264699 > feet/second
+
+
+Progress report at 0.0:4.0:7.0
+Ball 0: Location: < 101.64602703267938, 101.64602703267938 > feet      Velocity: < 0.0835397296732052, 0.0835397296732052 > feet/second
+
+
+Progress report at 0.0:4.0:8.0
+Ball 0: Location: < 101.72956676235259, 101.72956676235259 > feet      Velocity: < 0.08270433237647315, 0.08270433237647315 > feet/second
+
+
+All soccer balls have stopped moving. No collision possible
+.                                       
+.                                       
+======================================  
+... Testing SoccerSim check for collision...
+...   Should collide at about 5 seconds   
+======================================  
+
+--- WELCOME TO SOCCER SIMULATION ---
+
+The size of the soccer field is <-500, 500> in the x direction and <-500, 500> in the y direction
+
+INITIAL CONDITIONS
+Location: < 10.0, 10.0 > feet
+Velocity: < 1.0, 1.0 > feet/second
+Location: < 20.0, 20.0 > feet
+Velocity: < -1.0, -1.0 > feet/second
+
+
+Progress report at 0.0:0.0:1.0
+Ball 0: Location: < 11.0, 11.0 > feet      Velocity: < 0.99, 0.99 > feet/second
+Ball 1: Location: < 19.0, 19.0 > feet      Velocity: < -0.99, -0.99 > feet/second
+
+
+Progress report at 0.0:0.0:2.0
+Ball 0: Location: < 11.99, 11.99 > feet      Velocity: < 0.9801, 0.9801 > feet/second
+Ball 1: Location: < 18.01, 18.01 > feet      Velocity: < -0.9801, -0.9801 > feet/second
+
+
+Progress report at 0.0:0.0:3.0
+Ball 0: Location: < 12.9701, 12.9701 > feet      Velocity: < 0.9702989999999999, 0.9702989999999999 > feet/second
+Ball 1: Location: < 17.0299, 17.0299 > feet      Velocity: < -0.9702989999999999, -0.9702989999999999 > feet/second
+
+
+Progress report at 0.0:0.0:4.0
+Ball 0: Location: < 13.940399000000001, 13.940399000000001 > feet      Velocity: < 0.96059601, 0.96059601 > feet/second
+Ball 1: Location: < 16.059601, 16.059601 > feet      Velocity: < -0.96059601, -0.96059601 > feet/second
+
+
+Progress report at 0.0:0.0:5.0
+Ball 0: Location: < 14.90099501, 14.90099501 > feet      Velocity: < 0.9509900498999999, 0.9509900498999999 > feet/second
+Ball 1: Location: < 15.099004990000001, 15.099004990000001 > feet      Velocity: < -0.9509900498999999, -0.9509900498999999 > feet/second
+
+
+
+ --- A collision has occured between ball 0 and ball 1 at: Location: < 14.90099501, 14.90099501 > feet ---
+
+.                                       
+.                                       
+======================================  
+... Testing SoccerSim valid ball should go out of bounds...
+...   Speed *should* kick it out quickly  
+======================================  
+
+--- WELCOME TO SOCCER SIMULATION ---
+
+The size of the soccer field is <-500, 500> in the x direction and <-500, 500> in the y direction
+
+INITIAL CONDITIONS
+Location: < 10.0, 10.0 > feet
+Velocity: < 1000.0, 1000.0 > feet/second
+
+
+Progress report at 0.0:0.0:1.0
+Ball 0: Location: < 1010.0, 1010.0 > feet      Velocity: < 990.0, 990.0 > feet/second
+
+
+All soccer balls have stopped moving. No collision possible
+.                                       
+.                                       
+======================================  
+... Testing SoccerSim valid ball set six balls subsecond time slice...
+...   Should collide Ball 1 and 4 in less than 1 sec  
+======================================  
+
+--- WELCOME TO SOCCER SIMULATION ---
+
+The size of the soccer field is <-500, 500> in the x direction and <-500, 500> in the y direction
+
+INITIAL CONDITIONS
+Location: < 200.0, 200.0 > feet
+Velocity: < 10.0, 10.0 > feet/second
+Location: < 100.0, 100.0 > feet
+Velocity: < -100.0, -100.0 > feet/second
+Location: < 150.0, 150.0 > feet
+Velocity: < 200.0, 200.0 > feet/second
+Location: < 175.0, 175.0 > feet
+Velocity: < -110.0, -110.0 > feet/second
+Location: < 20.0, 20.0 > feet
+Velocity: < 1.0, 1.0 > feet/second
+Location: < 50.0, 50.0 > feet
+Velocity: < -5.0, -5.0 > feet/second
+
+
+Progress report at 0.0:0.0:0.1
+Ball 0: Location: < 201.0, 201.0 > feet      Velocity: < 9.9899547129175, 9.9899547129175 > feet/second
+Ball 1: Location: < 90.0, 90.0 > feet      Velocity: < -99.899547129175, -99.899547129175 > feet/second
+Ball 2: Location: < 170.0, 170.0 > feet      Velocity: < 199.79909425835, 199.79909425835 > feet/second
+Ball 3: Location: < 164.0, 164.0 > feet      Velocity: < -109.8895018420925, -109.8895018420925 > feet/second
+Ball 4: Location: < 20.1, 20.1 > feet      Velocity: < 0.99899547129175, 0.99899547129175 > feet/second
+Ball 5: Location: < 49.5, 49.5 > feet      Velocity: < -4.99497735645875, -4.99497735645875 > feet/second
+
+
+Progress report at 0.0:0.0:0.2
+Ball 0: Location: < 201.99899547129175, 201.99899547129175 > feet      Velocity: < 9.979919516614258, 9.979919516614258 > feet/second
+Ball 1: Location: < 80.0100452870825, 80.0100452870825 > feet      Velocity: < -99.79919516614258, -99.79919516614258 > feet/second
+Ball 2: Location: < 189.979909425835, 189.979909425835 > feet      Velocity: < 199.59839033228516, 199.59839033228516 > feet/second
+Ball 3: Location: < 153.01104981579076, 153.01104981579076 > feet      Velocity: < -109.77911468275683, -109.77911468275683 > feet/second
+Ball 4: Location: < 20.199899547129178, 20.199899547129178 > feet      Velocity: < 0.9979919516614257, 0.9979919516614257 > feet/second
+Ball 5: Location: < 49.000502264354125, 49.000502264354125 > feet      Velocity: < -4.989959758307129, -4.989959758307129 > feet/second
+
+
+Progress report at 0.0:0.0:0.30000000000000004
+Ball 0: Location: < 202.99698742295317, 202.99698742295317 > feet      Velocity: < 9.969894400953795, 9.969894400953795 > feet/second
+Ball 1: Location: < 70.03012577046825, 70.03012577046825 > feet      Velocity: < -99.69894400953795, -99.69894400953795 > feet/second
+Ball 2: Location: < 209.9397484590635, 209.9397484590635 > feet      Velocity: < 199.3978880190759, 199.3978880190759 > feet/second
+Ball 3: Location: < 142.03313834751506, 142.03313834751506 > feet      Velocity: < -109.66883841049173, -109.66883841049173 > feet/second
+Ball 4: Location: < 20.29969874229532, 20.29969874229532 > feet      Velocity: < 0.9969894400953794, 0.9969894400953794 > feet/second
+Ball 5: Location: < 48.501506288523416, 48.501506288523416 > feet      Velocity: < -4.984947200476897, -4.984947200476897 > feet/second
+
+
+Progress report at 0.0:0.0:0.4
+Ball 0: Location: < 203.99397686304854, 203.99397686304854 > feet      Velocity: < 9.959879355809816, 9.959879355809816 > feet/second
+Ball 1: Location: < 60.06023136951445, 60.06023136951445 > feet      Velocity: < -99.59879355809817, -99.59879355809817 > feet/second
+Ball 2: Location: < 229.8795372609711, 229.8795372609711 > feet      Velocity: < 199.19758711619633, 199.19758711619633 > feet/second
+Ball 3: Location: < 131.0662545064659, 131.0662545064659 > feet      Velocity: < -109.55867291390797, -109.55867291390797 > feet/second
+Ball 4: Location: < 20.39939768630486, 20.39939768630486 > feet      Velocity: < 0.9959879355809815, 0.9959879355809815 > feet/second
+Ball 5: Location: < 48.00301156847573, 48.00301156847573 > feet      Velocity: < -4.979939677904908, -4.979939677904908 > feet/second
+
+
+Progress report at 0.0:0.0:0.5
+Ball 0: Location: < 204.98996479862953, 204.98996479862953 > feet      Velocity: < 9.9498743710662, 9.9498743710662 > feet/second
+Ball 1: Location: < 50.10035201370463, 50.10035201370463 > feet      Velocity: < -99.498743710662, -99.498743710662 > feet/second
+Ball 2: Location: < 249.79929597259073, 249.79929597259073 > feet      Velocity: < 198.997487421324, 198.997487421324 > feet/second
+Ball 3: Location: < 120.1103872150751, 120.1103872150751 > feet      Velocity: < -109.44861808172818, -109.44861808172818 > feet/second
+Ball 4: Location: < 20.498996479862956, 20.498996479862956 > feet      Velocity: < 0.9949874371066199, 0.9949874371066199 > feet/second
+Ball 5: Location: < 47.505017600685235, 47.505017600685235 > feet      Velocity: < -4.9749371855331, -4.9749371855331 > feet/second
+
+
+Progress report at 0.0:0.0:0.6
+Ball 0: Location: < 205.98495223573616, 205.98495223573616 > feet      Velocity: < 9.939879436616982, 9.939879436616982 > feet/second
+Ball 1: Location: < 40.15047764263843, 40.15047764263843 > feet      Velocity: < -99.39879436616984, -99.39879436616984 > feet/second
+Ball 2: Location: < 269.69904471472313, 269.69904471472313 > feet      Velocity: < 198.79758873233968, 198.79758873233968 > feet/second
+Ball 3: Location: < 109.16552540690228, 109.16552540690228 > feet      Velocity: < -109.3386738027868, -109.3386738027868 > feet/second
+Ball 4: Location: < 20.598495223573618, 20.598495223573618 > feet      Velocity: < 0.9939879436616982, 0.9939879436616982 > feet/second
+Ball 5: Location: < 47.00752388213193, 47.00752388213193 > feet      Velocity: < -4.969939718308491, -4.969939718308491 > feet/second
+
+
+Progress report at 0.0:0.0:0.7
+Ball 0: Location: < 206.97894017939785, 206.97894017939785 > feet      Velocity: < 9.929894542366357, 9.929894542366357 > feet/second
+Ball 1: Location: < 30.210598206021444, 30.210598206021444 > feet      Velocity: < -99.29894542366358, -99.29894542366358 > feet/second
+Ball 2: Location: < 289.5788035879571, 289.5788035879571 > feet      Velocity: < 198.59789084732716, 198.59789084732716 > feet/second
+Ball 3: Location: < 98.23165802662359, 98.23165802662359 > feet      Velocity: < -109.22883996602992, -109.22883996602992 > feet/second
+Ball 4: Location: < 20.697894017939788, 20.697894017939788 > feet      Velocity: < 0.9929894542366356, 0.9929894542366356 > feet/second
+Ball 5: Location: < 46.51052991030108, 46.51052991030108 > feet      Velocity: < -4.964947271183179, -4.964947271183179 > feet/second
+
+
+Progress report at 0.0:0.0:0.7999999999999999
+Ball 0: Location: < 207.9719296336345, 207.9719296336345 > feet      Velocity: < 9.919919678228656, 9.919919678228656 > feet/second
+Ball 1: Location: < 20.280703663655085, 20.280703663655085 > feet      Velocity: < -99.19919678228656, -99.19919678228656 > feet/second
+Ball 2: Location: < 309.4385926726898, 309.4385926726898 > feet      Velocity: < 198.39839356457313, 198.39839356457313 > feet/second
+Ball 3: Location: < 87.3087740300206, 87.3087740300206 > feet      Velocity: < -109.1191164605152, -109.1191164605152 > feet/second
+Ball 4: Location: < 20.79719296336345, 20.79719296336345 > feet      Velocity: < 0.9919919678228655, 0.9919919678228655 > feet/second
+Ball 5: Location: < 46.01403518318276, 46.01403518318276 > feet      Velocity: < -4.959959839114328, -4.959959839114328 > feet/second
+
+
+
+ --- A collision has occured between ball 1 and ball 4 at: Location: < 20.280703663655085, 20.280703663655085 > feet ---
+
+.                                       
+.                                       
+======================================  
+... Testing SoccerSim valid ball set five balls 1.234 second time slice...
+...   Should say "not possible @ 13:29.5"  
+======================================  
+
+--- WELCOME TO SOCCER SIMULATION ---
+
+The size of the soccer field is <-500, 500> in the x direction and <-500, 500> in the y direction
+
+INITIAL CONDITIONS
+Location: < 200.0, 200.0 > feet
+Velocity: < 10.0, 10.0 > feet/second
+Location: < 100.0, 100.0 > feet
+Velocity: < -100.0, -100.0 > feet/second
+Location: < 150.0, 150.0 > feet
+Velocity: < 200.0, 200.0 > feet/second
+Location: < 175.0, 175.0 > feet
+Velocity: < -110.0, -110.0 > feet/second
+Location: < 20.0, 20.0 > feet
+Velocity: < 1.0, 1.0 > feet/second
+Location: < 50.0, 50.0 > feet
+Velocity: < -5.0, -5.0 > feet/second
+
+
+Progress report at 0.0:0.0:1.234
+Ball 0: Location: < 212.34, 212.34 > feet      Velocity: < 9.876744748281789, 9.876744748281789 > feet/second
+Ball 1: Location: < -23.400000000000006, -23.400000000000006 > feet      Velocity: < -98.7674474828179, -98.7674474828179 > feet/second
+Ball 2: Location: < 396.8, 396.8 > feet      Velocity: < 197.5348949656358, 197.5348949656358 > feet/second
+Ball 3: Location: < 39.25999999999999, 39.25999999999999 > feet      Velocity: < -108.64419223109968, -108.64419223109968 > feet/second
+Ball 4: Location: < 21.234, 21.234 > feet      Velocity: < 0.9876744748281789, 0.9876744748281789 > feet/second
+Ball 5: Location: < 43.83, 43.83 > feet      Velocity: < -4.9383723741408945, -4.9383723741408945 > feet/second
+
+
+Progress report at 0.0:0.0:2.468
+Ball 0: Location: < 224.52790301937972, 224.52790301937972 > feet      Velocity: < 9.75500868227119, 9.75500868227119 > feet/second
+Ball 1: Location: < -145.2790301937973, -145.2790301937973 > feet      Velocity: < -97.55008682271192, -97.55008682271192 > feet/second
+Ball 2: Location: < 640.5580603875947, 640.5580603875947 > feet      Velocity: < 195.10017364542384, 195.10017364542384 > feet/second
+Ball 3: Location: < -94.80693321317702, -94.80693321317702 > feet      Velocity: < -107.3050955049831, -107.3050955049831 > feet/second
+Ball 4: Location: < 22.452790301937974, 22.452790301937974 > feet      Velocity: < 0.9755008682271191, 0.9755008682271191 > feet/second
+Ball 5: Location: < 37.73604849031013, 37.73604849031013 > feet      Velocity: < -4.877504341135595, -4.877504341135595 > feet/second
+
+
+All soccer balls have stopped moving. No collision possible
+.                                       
+.                                       
+======================================  
+... Testing SoccerSim valid ball set ten balls 10 second time slice...
+...   Should contact ball 1 and 8 @ 30 sec  
+======================================  
+
+--- WELCOME TO SOCCER SIMULATION ---
+
+The size of the soccer field is <-500, 500> in the x direction and <-500, 500> in the y direction
+
+INITIAL CONDITIONS
+Location: < 150.0, 150.0 > feet
+Velocity: < 10.0, 10.0 > feet/second
+Location: < 100.0, 100.0 > feet
+Velocity: < -100.0, -100.0 > feet/second
+Location: < 200.0, 200.0 > feet
+Velocity: < 200.0, 200.0 > feet/second
+Location: < 250.0, 250.0 > feet
+Velocity: < -110.0, -110.0 > feet/second
+Location: < 20.0, 20.0 > feet
+Velocity: < 1.0, 1.0 > feet/second
+Location: < 50.0, 50.0 > feet
+Velocity: < -5.0, -5.0 > feet/second
+Location: < -100.0, -100.0 > feet
+Velocity: < 200.0, 200.0 > feet/second
+Location: < -200.0, -200.0 > feet
+Velocity: < 300.0, 300.0 > feet/second
+Location: < -110.0, -110.0 > feet
+Velocity: < 20.0, 20.0 > feet/second
+Location: < 1.0, 1.0 > feet
+Velocity: < 50.0, 50.0 > feet/second
+
+
+Progress report at 0.0:0.0:10.0
+Ball 0: Location: < 250.0, 250.0 > feet      Velocity: < 9.043820750088043, 9.043820750088043 > feet/second
+Ball 1: Location: < -900.0, -900.0 > feet      Velocity: < -90.43820750088044, -90.43820750088044 > feet/second
+Ball 2: Location: < 2200.0, 2200.0 > feet      Velocity: < 180.87641500176088, 180.87641500176088 > feet/second
+Ball 3: Location: < -850.0, -850.0 > feet      Velocity: < -99.48202825096848, -99.48202825096848 > feet/second
+Ball 4: Location: < 30.0, 30.0 > feet      Velocity: < 0.9043820750088044, 0.9043820750088044 > feet/second
+Ball 5: Location: < 0.0, 0.0 > feet      Velocity: < -4.521910375044022, -4.521910375044022 > feet/second
+Ball 6: Location: < 1900.0, 1900.0 > feet      Velocity: < 180.87641500176088, 180.87641500176088 > feet/second
+Ball 7: Location: < 2800.0, 2800.0 > feet      Velocity: < 271.3146225026413, 271.3146225026413 > feet/second
+Ball 8: Location: < 90.0, 90.0 > feet      Velocity: < 18.087641500176087, 18.087641500176087 > feet/second
+Ball 9: Location: < 501.0, 501.0 > feet      Velocity: < 45.21910375044022, 45.21910375044022 > feet/second
+
+
+All soccer balls have stopped moving. No collision possible
+.                                       
+.                                       
+======================================  
+... End of SoccerSim Testing...         
+======================================  
