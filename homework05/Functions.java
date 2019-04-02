@@ -4,8 +4,7 @@ public class Functions {
   /**
   * Field Declarations
   */
-  public int n = 0;
-  //public static double[] coeff;
+  public int n = 1;
   private static double currentApprox = 0.0;
   private static double previousApprox = 0.0;
 
@@ -15,13 +14,13 @@ public class Functions {
   public double calculatePoly(double lowerBound, double upperBound, double[] coeff, int n) {
     System.out.println("Polynomial Function");
     double width = (upperBound - lowerBound) / n;
-    double functionValue = 0.0;
+    double functionValue = lowerBound + (((upperBound - lowerBound) / n) / 2);
 
     while (true) {
       //find approximation
       for (int i = 0; i < Riemann.coeff.length; i++) {
-        functionValue = lowerBound + ((upperBound - lowerBound) / n);
         currentApprox += functionValue * width;
+        functionValue = (((upperBound - lowerBound) / n) / 2) + width;
       }
 
       if (1 - (currentApprox/previousApprox) <= Riemann.percent) {
