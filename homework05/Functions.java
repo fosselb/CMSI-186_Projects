@@ -13,50 +13,63 @@ public class Functions {
   */
   public double calculatePoly(double lowerBound, double upperBound, double[] coeff, int n) {
     System.out.println("Polynomial Function");
-    double width = (upperBound - lowerBound) / n;
-    double functionValue = lowerBound + (((upperBound - lowerBound) / n) / 2);
+    double x;
+    double functionValue = 0.0;
 
     while (true) {
+
       //find approximation
-      for (int i = 0; i < Riemann.coeff.length; i++) {
+      for (int i = 0; i < n; i++) {
+        //System.out.println("---- n = " + n);
+        double width = (upperBound - lowerBound) / n;
+        x = lowerBound + (((upperBound - lowerBound) / n) / 2) + (width * i);
+        for (int j = 0; j < Riemann.coeff.length; j++) {
+          functionValue += coeff[j] * Math.pow(x, j);
+        }
         currentApprox += functionValue * width;
-        functionValue = (((upperBound - lowerBound) / n) / 2) + width;
+        //System.out.println(currentApprox);
+
+        if (Math.abs(1 - (currentApprox/previousApprox)) <= Riemann.percent) {
+          //System.out.println("ratio " + currentApprox/previousApprox);
+          return currentApprox;
+        } else {
+          previousApprox = currentApprox;
+          currentApprox = 0.0;
+          n++;
+        }
       }
-
-      if (1 - (currentApprox/previousApprox) <= Riemann.percent) {
-        return currentApprox;
-      } else {
-        previousApprox = currentApprox;
-        n++;
-      }
     }
-
-
-
-
-
-    //populate coeff array
-    /*
-    int numberOfCoeff = Riemann.argsLength - 4;
-    coeff = new double[numberOfCoeff];
-    for(int i = 0; i < numberOfCoeff; i++) {
-      coeff[i] = Riemann.args[i + 1];
-    }
-    */
-
-    //what's in the coeff array
-    /*
-    for (int i = 0; i < 3; i++) {
-      System.out.println(coeff[i]);
-    }
-    */
-
   }
 
-  public String polyToString() {
-    return "The Riemann Sum approximation is " + currentApprox;
-  }
+  public double calculateSine(double lowerBound, double upperBound, double[] coeff, int n) {
+    System.out.println("Sine Function");
+    double x;
+    double functionValue = 0.0;
+    System.out.println("lower bound = " + lowerBound);
+    System.out.println("upper bound = " + upperBound);
 
+    while (true) {
+
+      //find approximation
+      for (int i = 0; i < n; i++) {
+        //ystem.out.println("---- n = " + n);
+        double width = (upperBound - lowerBound) / n;
+        x = lowerBound + (((upperBound - lowerBound) / n) / 2) + (width * i);
+        functionValue = Math.sin(x);
+        currentApprox += functionValue * width;
+        //System.out.println(currentApprox);
+
+        if (Math.abs(1 - (currentApprox/previousApprox)) <= Riemann.percent) {
+          //System.out.println("ratio " + currentApprox/previousApprox);
+          return currentApprox;
+        } else {
+          previousApprox = currentApprox;
+          currentApprox = 0.0;
+          n++;
+        }
+      }
+    }
+  }
 
   public static void main(String[] args) {
 

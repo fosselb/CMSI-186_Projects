@@ -27,14 +27,18 @@ public class Riemann {
       if (percent <= 0.0 || percent >= 100.0) {
         throw new IllegalArgumentException("\nPlease enter a percentage that is postive, greater than 0, and less than 100");
       }
+      upperBound = Double.parseDouble(args[args.length - 2]);
+      lowerBound = Double.parseDouble(args[args.length - 3]);
     } else {
       percent = DEFAULT_PERCENT;
       argsLength++;
+      upperBound = Double.parseDouble(args[args.length - 1]);
+      lowerBound = Double.parseDouble(args[args.length - 2]);
     }
 
     //assign lower and upper Bounds
-    upperBound = Double.parseDouble(args[args.length - 2]);
-    lowerBound = Double.parseDouble(args[args.length - 3]);
+    //upperBound = Double.parseDouble(args[args.length - 2]);
+    //lowerBound = Double.parseDouble(args[args.length - 3]);
     if (upperBound < lowerBound) {
       throw new IllegalArgumentException("\nPlease enter valid lower and upper bounds");
     }
@@ -65,19 +69,27 @@ public class Riemann {
   public static void main(String[] args) {
     Riemann r = new Riemann();
     Functions f = new Functions();
+/*
+    if (args[0] == "runtests") {
+      r.tests();
+      System.exit(0);
+    }
+*/
+    System.out.println("\n--- WELCOME TO THE RIEMANN INTEGRATION PROGRAM ---\n");
+
     try {
       r.validateArgs(args);
     } catch (IllegalArgumentException iae) {
       System.out.println(iae);
+      System.exit(0);
     }
-
-    System.out.println("\n--- WELCOME TO THE RIEMANN INTEGRATION PROGRAM ---\n");
 
     switch(args[0]) {
       case "runtests": r.tests();
         break;
-      case "poly": f.calculatePoly(lowerBound, upperBound, coeff, f.n);
-        System.out.println(f.polyToString());
+      case "poly": System.out.println("The Riemann Sum approximation is " + f.calculatePoly(lowerBound, upperBound, coeff, f.n));
+        break;
+      case "sin": System.out.println("The Riemann Sum approximation is " + f.calculateSine(lowerBound, upperBound, coeff, f.n));
         break;
     }
 
