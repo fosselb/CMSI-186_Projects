@@ -36,9 +36,6 @@ public class Riemann {
       lowerBound = Double.parseDouble(args[args.length - 2]);
     }
 
-    //assign lower and upper Bounds
-    //upperBound = Double.parseDouble(args[args.length - 2]);
-    //lowerBound = Double.parseDouble(args[args.length - 3]);
     if (upperBound < lowerBound) {
       throw new IllegalArgumentException("\nPlease enter valid lower and upper bounds");
     }
@@ -49,18 +46,17 @@ public class Riemann {
     for(int i = 0; i < numberOfCoeff; i++) {
       coeff[i] = Double.parseDouble(args[i + 1]);
     }
-    //System.out.println(coeff);
 
-    //System.out.println("The percent value is: " + percent);
-    //System.out.println("The lowerBound value is: " + lowerBound);
-    //System.out.println("The upperBound value is: " + upperBound);
   }
 
   public void tests() {
-    System.out.println("\n-- Test validateArgs() --\n");
+    Riemann r = new Riemann();
+    Functions f = new Functions();
+    System.out.println("\n-- Tests --\n");
     System.out.println("Test 0: <poly> <0.0> <8.0> <-2.0> <1.0> <4.0> <1e-6%>");
     String[] testArgs0 = {"poly", "0.0", "8.0", "-2.0", "1.0", "4.0", "1e-6%"};
-    validateArgs(testArgs0);
+    r.validateArgs(testArgs0);
+    System.out.println("The Riemann Sum approximation is " + f.calculatePoly(lowerBound, upperBound, coeff, f.n));
     System.out.println("The percent value is: " + percent);
     System.out.println("The lowerBound value is: " + lowerBound);
     System.out.println("The upperBound value is: " + upperBound);
@@ -69,14 +65,13 @@ public class Riemann {
   public static void main(String[] args) {
     Riemann r = new Riemann();
     Functions f = new Functions();
+    System.out.println("\n--- WELCOME TO THE RIEMANN INTEGRATION PROGRAM ---\n");
 /*
-    if (args[0] == "runtests") {
+    if (args[0] == "runtests" && args.length = 1) {
       r.tests();
       System.exit(0);
     }
 */
-    System.out.println("\n--- WELCOME TO THE RIEMANN INTEGRATION PROGRAM ---\n");
-
     try {
       r.validateArgs(args);
     } catch (IllegalArgumentException iae) {
