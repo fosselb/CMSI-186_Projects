@@ -16,8 +16,13 @@ public class Riemann {
   public void validateArgs(String args[]) throws IllegalArgumentException {
     argsLength = args.length;
 
+    //check for run Tests
+    if (args[0].equals("runtests")) {
+      return;
+    }
+
     //percent value
-    if(args.length < 3) {
+    if (args.length < 3) {
       throw new IllegalArgumentException("\nYou must have at least 3 arguemnts\nFormat: <functionName> <additionalDescriptors> <lowerBound> <upperBound> <percent%>");
     }
 
@@ -49,38 +54,51 @@ public class Riemann {
 
   }
 
-  public void tests() {
+  private void resetValues() {
+    lowerBound = 0.0;
+    upperBound = 0.0;
+    percent = 0.0;
+    coeff = new double[0];
+  }
+
+  private void testPoly() {
     Riemann r = new Riemann();
     Functions f = new Functions();
-    System.out.println("\n-- Tests --\n");
+    System.out.println("-- Test Polynomial Function --\n");
     System.out.println("Test 0: <poly> <0.0> <8.0> <-2.0> <1.0> <4.0> <1e-6%>");
     String[] testArgs0 = {"poly", "0.0", "8.0", "-2.0", "1.0", "4.0", "1e-6%"};
     r.validateArgs(testArgs0);
     System.out.println("The Riemann Sum approximation is " + f.calculatePoly(lowerBound, upperBound, coeff, f.n));
-    System.out.println("The percent value is: " + percent);
-    System.out.println("The lowerBound value is: " + lowerBound);
-    System.out.println("The upperBound value is: " + upperBound);
+    System.out.println("-------------------------------------");
+    //r.resetValues();
+  }
+
+  private void testSine() {
+    Riemann r = new Riemann();
+    Functions f = new Functions();
+    System.out.println("-- Test Sine Function --\n");
+    System.out.println("Test 1: <sin> <0.0> <1.0> <-3.45> <6.789> <1.5e-4%> ");
+    String[] testArgs1 = {"0.0", "1.0", "-3.45", "6.789", "1.5e-4%"};
+    r.validateArgs(testArgs1);
+    System.out.println("The Riemann Sum approximation is " + f.calculateSine(lowerBound, upperBound, coeff, f.n));
+    System.out.println("-------------------------------------");
   }
 
   public static void main(String[] args) {
     Riemann r = new Riemann();
     Functions f = new Functions();
     System.out.println("\n--- WELCOME TO THE RIEMANN INTEGRATION PROGRAM ---\n");
-/*
-    if (args[0] == "runtests" && args.length = 1) {
-      r.tests();
-      System.exit(0);
-    }
-*/
+
     try {
       r.validateArgs(args);
     } catch (IllegalArgumentException iae) {
       System.out.println(iae);
-      System.exit(0);
+      //System.exit(0);
     }
 
     switch(args[0]) {
-      case "runtests": r.tests();
+      case "runtests": r.testPoly();
+        r.testSine();
         break;
       case "poly": System.out.println("The Riemann Sum approximation is " + f.calculatePoly(lowerBound, upperBound, coeff, f.n));
         break;
