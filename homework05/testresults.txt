@@ -1,0 +1,408 @@
+.                                                                              
+=====================================================                          
+Testing the Riemann Ingetration Project Homework # 05                          
+=====================================================                          
+.                                                                              
+.                                                                              
+... Running built-in tests in the Riemann class                                
+...   should either throw exceptions which will not appear in the output file  
+...     but which should be caught to keep the test program running            
+...   or preferably output error messages which SHOULD appear there then quit  
+
+--- WELCOME TO THE RIEMANN INTEGRATION PROGRAM ---
+
+-- Test Polynomial Function --
+
+Test 0: <poly> <0.0> <8.0> <-2.0> <1.0> <4.0> <1e-6%>
+Polynomial Function
+lower bound = 1.0
+upper bound = 4.0
+percent = 1.0E-6 %
+The Riemann Sum approximation is 18.00070312499999
+-------------------------------------
+-- Test Sine Function --
+
+Test 1: <sin> <0.0> <1.0> <-3.45> <6.789> <1.5e-4%> 
+Sinusoid Function
+lower bound = -3.45
+upper bound = 6.789
+percent = 1.5E-4 %
+The Riemann Sum approximation is 8.615821413448053
+-------------------------------------
+.                                                                              
+.                                                                              
+============================================================================   
+Testing bogus function name 'bogus'                                            
+...should either throw an exception which will not appear in the output file   
+...  or preferably ouput error messages which SHOULD appear there, then quit  
+============================================================================   
+
+--- WELCOME TO THE RIEMANN INTEGRATION PROGRAM ---
+
+java.lang.IllegalArgumentException: 
+You must have at least 3 arguemnts
+Format: <functionName> <additionalDescriptors> <lowerBound> <upperBound> <percent%>
+.                                                                              
+.                                                                              
+============================================================================   
+Testing bogus function name 'poly' with no arguments                           
+...should either throw an exception which will not appear in the output file   
+...  or preferably ouput error messages which SHOULD appear there, then quit  
+============================================================================   
+
+--- WELCOME TO THE RIEMANN INTEGRATION PROGRAM ---
+
+java.lang.IllegalArgumentException: 
+You must have at least 3 arguemnts
+Format: <functionName> <additionalDescriptors> <lowerBound> <upperBound> <percent%>
+Polynomial Function
+lower bound = 0.0
+upper bound = 0.0
+percent = 0.0 %
+.                                                                              
+.                                                                              
+============================================================================   
+Testing valid function name 'poly' with only one arg                           
+...should either throw an exception which will not appear in the output file   
+...  or preferably ouput error messages which SHOULD appear there, then quit  
+============================================================================   
+
+--- WELCOME TO THE RIEMANN INTEGRATION PROGRAM ---
+
+java.lang.IllegalArgumentException: 
+You must have at least 3 arguemnts
+Format: <functionName> <additionalDescriptors> <lowerBound> <upperBound> <percent%>
+Polynomial Function
+lower bound = 0.0
+upper bound = 0.0
+percent = 0.0 %
+.                                                                              
+.                                                                              
+============================================================================   
+Testing valid function name 'poly' with only two args                          
+...should either throw an exception which will not appear in the output file   
+...  or preferably ouput error messages which SHOULD appear there, then quit  
+============================================================================   
+.                                                                              
+.                                                                              
+============================================================================   
+Testing valid function name 'poly' with four args with negative final arg      
+...should either throw an exception which will not appear in the output file   
+...  or preferably ouput error messages which SHOULD appear there, then quit  
+============================================================================   
+
+--- WELCOME TO THE RIEMANN INTEGRATION PROGRAM ---
+
+java.lang.IllegalArgumentException: 
+Please enter valid lower and upper bounds
+Polynomial Function
+lower bound = 2.0
+upper bound = -1.0
+percent = 1.0 %
+.                                                                              
+.                                                                              
+============================================================================   
+Testing valid function name 'poly' with four args with zero final arg          
+...should either throw an exception which will not appear in the output file   
+...  or preferably ouput error messages which SHOULD appear there, then quit  
+============================================================================   
+
+--- WELCOME TO THE RIEMANN INTEGRATION PROGRAM ---
+
+java.lang.IllegalArgumentException: 
+Please enter valid lower and upper bounds
+Polynomial Function
+lower bound = 2.0
+upper bound = 0.0
+percent = 1.0 %
+.                                                                              
+.                                                                              
+============================================================================   
+Testing valid function name 'poly' with three args and default percentage      
+...should produce a result close to '0.0000'                                   
+============================================================================   
+.                                                                              
+.                                                                              
+============================================================================   
+Testing valid function name 'poly' with three args with final arg 1e-6%       
+...should produce a result close to '2.0000'                                   
+============================================================================   
+
+--- WELCOME TO THE RIEMANN INTEGRATION PROGRAM ---
+
+Polynomial Function
+lower bound = 1.0
+upper bound = 2.0
+percent = 1.0E-6 %
+The Riemann Sum approximation is 2.0
+.                                                                              
+.                                                                              
+============================================================================   
+Testing valid function name 'poly' with test case parabola args and 1e-6%     
+...should produce a result close to '18.0000'                                  
+============================================================================   
+
+--- WELCOME TO THE RIEMANN INTEGRATION PROGRAM ---
+
+Polynomial Function
+lower bound = 1.0
+upper bound = 4.0
+percent = 1.0E-6 %
+The Riemann Sum approximation is 18.00070312499999
+.                                                                              
+.                                                                              
+============================================================================   
+Testing valid function name 'poly' with test case parabola args and default    
+...should produce a result close to '18.1800'                                  
+============================================================================   
+
+--- WELCOME TO THE RIEMANN INTEGRATION PROGRAM ---
+
+Polynomial Function
+lower bound = 1.0
+upper bound = 4.0
+percent = 1.0 %
+The Riemann Sum approximation is 19.125
+.                                                                              
+.                                                                              
+============================================================================   
+Testing valid function name 'poly' with web page args and default              
+...should produce a result close to '1268.75'                                  
+============================================================================   
+
+--- WELCOME TO THE RIEMANN INTEGRATION PROGRAM ---
+
+Polynomial Function
+lower bound = -10.0
+upper bound = 5.0
+percent = 1.0 %
+The Riemann Sum approximation is 1193.75
+.                                                                              
+.                                                                              
+============================================================================   
+Testing valid function name 'poly' for x\5 - 2X\3 - X\2 - 7X - 3            
+   from 0 to 2 with 1e-6%                                                    
+...should produce a result close to '-20.00'                                   
+============================================================================   
+
+--- WELCOME TO THE RIEMANN INTEGRATION PROGRAM ---
+
+Polynomial Function
+lower bound = 0.0
+upper bound = 2.0
+percent = 1.0E-6 %
+The Riemann Sum approximation is -20.000940338574317
+.                                                                              
+.                                                                              
+============================================================================   
+Testing valid function name 'sin' with web page args and default               
+...should produce a result close to '1.9137'                                   
+============================================================================   
+.                                                                              
+.                                                                              
+============================================================================   
+Testing valid function name 'sin' with args -3.45 6.789 and 1.5e-4%           
+...should produce a result close to '-1.8278'                                  
+============================================================================   
+.                                                                              
+.                                                                              
+============================================================================   
+Testing valid function name 'sin' with args 0.0 1.0 -3.45 6.789 and 1.5e-4%   
+...should produce a result close to '-1.8278'                                  
+============================================================================   
+
+--- WELCOME TO THE RIEMANN INTEGRATION PROGRAM ---
+
+Sinusoid Function
+lower bound = -3.45
+upper bound = 6.789
+percent = 1.5E-4 %
+The Riemann Sum approximation is -1.8325973831768578
+.                                                                              
+.                                                                              
+============================================================================   
+Testing valid function name 'sin' with args -17.0 3.0 -11.0 11.0 and 1e-7%    
+...should produce a result close to '0.6409'                                   
+============================================================================   
+
+--- WELCOME TO THE RIEMANN INTEGRATION PROGRAM ---
+
+Sinusoid Function
+lower bound = -11.0
+upper bound = 11.0
+percent = 1.0E-7 %
+The Riemann Sum approximation is 0.6409243464578704
+.                                                                              
+.                                                                              
+============================================================================   
+Testing valid function name 'sin' with args -17.0 1.0 -23.0 23.0 and 1e-4%    
+...should produce a result close to '-1.6276'                                  
+============================================================================   
+
+--- WELCOME TO THE RIEMANN INTEGRATION PROGRAM ---
+
+Sinusoid Function
+lower bound = -23.0
+upper bound = 23.0
+percent = 1.0E-4 %
+The Riemann Sum approximation is -1.6367867816257096
+.                                                                              
+.                                                                              
+============================================================================   
+Testing valid function name 'sqrt' with args 23.0 -3.0 7.0 1.0 7.0 and 1e-6%  
+...should output a result close to 67.8939                                     
+============================================================================   
+
+--- WELCOME TO THE RIEMANN INTEGRATION PROGRAM ---
+
+.                                                                              
+.                                                                              
+============================================================================   
+Testing valid function name 'sqrt' with args 100.0 0.0 1.0 and 1e-8%          
+...should output a result close to 10.0                                        
+============================================================================   
+
+--- WELCOME TO THE RIEMANN INTEGRATION PROGRAM ---
+
+.                                                                              
+.                                                                              
+============================================================================   
+Testing valid function name 'sqrt' with args -100.0 0.0 1.0 and 1e-8%         
+...should either throw an exception which will not appear in the output file   
+...  or preferably ouput error messages which SHOULD appear there, then quit   
+...  Also acceptable is the java output of 'NaN'                               
+============================================================================   
+
+--- WELCOME TO THE RIEMANN INTEGRATION PROGRAM ---
+
+.                                                                              
+.                                                                              
+============================================================================   
+Testing valid function name 'sqrt' with args 2.0 0.0 1.0 and 1e-3%            
+...should output a result close to 1.4142                                      
+============================================================================   
+
+--- WELCOME TO THE RIEMANN INTEGRATION PROGRAM ---
+
+.                                                                              
+.                                                                              
+============================================================================   
+Testing valid function name 'cos' with web page args and default               
+...should produce a result close to '-0.1326'                                  
+============================================================================   
+
+--- WELCOME TO THE RIEMANN INTEGRATION PROGRAM ---
+
+.                                                                              
+.                                                                              
+============================================================================   
+Testing valid function name 'cos' with args -3.45 6.789 and 1.5e-4%           
+...should produce a result close to '0.1810'                                   
+============================================================================   
+
+--- WELCOME TO THE RIEMANN INTEGRATION PROGRAM ---
+
+.                                                                              
+.                                                                              
+============================================================================   
+Testing valid function name 'cos' with args 0.0 1.0 -3.45 6.789 and 1.5e-4%   
+...should produce a result close to '0.1810'                                   
+============================================================================   
+
+--- WELCOME TO THE RIEMANN INTEGRATION PROGRAM ---
+
+.                                                                              
+.                                                                              
+============================================================================   
+Testing valid function name 'cos' with args -17.0 3.0 -11.0 11.0 and 1e-7%    
+...should produce a result close to '-0.1834'                                  
+============================================================================   
+
+--- WELCOME TO THE RIEMANN INTEGRATION PROGRAM ---
+
+.                                                                              
+.                                                                              
+============================================================================   
+Testing valid function name 'cos' with args -17.0 1.0 -23.0 23.0 and 1e-4%    
+...should produce a result close to '0.4658'                                   
+============================================================================   
+
+--- WELCOME TO THE RIEMANN INTEGRATION PROGRAM ---
+
+.                                                                              
+.                                                                              
+============================================================================   
+Testing valid function name 'tan' with args -0.5 1.25 and default              
+...should produce a result close to '1.0029'                                   
+============================================================================   
+
+--- WELCOME TO THE RIEMANN INTEGRATION PROGRAM ---
+
+.                                                                              
+.                                                                              
+============================================================================   
+Testing valid function name 'tan' with args -0.5 1.25 and 1.5e-4%             
+...should produce a result close to '1.0235'                                   
+============================================================================   
+
+--- WELCOME TO THE RIEMANN INTEGRATION PROGRAM ---
+
+.                                                                              
+.                                                                              
+============================================================================   
+Testing valid function name 'tan' with args 0.0 1.0 -0.5 1.25 and 1.5e-4%     
+...should produce a result close to '1.0235'                                   
+============================================================================   
+
+--- WELCOME TO THE RIEMANN INTEGRATION PROGRAM ---
+
+.                                                                              
+.                                                                              
+============================================================================   
+Testing valid function name 'log' with args 0.0 1.0 1.1 2.3 and 1e-5%         
+...should produce a result close to '0.6109'                                   
+============================================================================   
+
+--- WELCOME TO THE RIEMANN INTEGRATION PROGRAM ---
+
+.                                                                              
+.                                                                              
+============================================================================   
+Testing valid function name 'log'                                              
+...should produce a result close to '0.6140'                                   
+============================================================================   
+
+--- WELCOME TO THE RIEMANN INTEGRATION PROGRAM ---
+
+.                                                                              
+.                                                                              
+============================================================================   
+Testing valid function name 'exp' with web page args and default prct          
+...should produce a result close to '25.5763'                                  
+============================================================================   
+
+--- WELCOME TO THE RIEMANN INTEGRATION PROGRAM ---
+
+.                                                                              
+.                                                                              
+============================================================================   
+Testing valid function name 'exp' with web page args and 1.6e-7%              
+...should produce a result close to '25.7264'                                  
+============================================================================   
+
+--- WELCOME TO THE RIEMANN INTEGRATION PROGRAM ---
+
+.                                                                              
+.                                                                              
+============================================================================   
+Testing valid function name 'exp' with 0.0 1.0 2.0 3.5 and 1e-7%              
+...should produce a result close to '25.7264'                                  
+============================================================================   
+
+--- WELCOME TO THE RIEMANN INTEGRATION PROGRAM ---
+
+.                                                                              
+.                                                                              
+============================================================================   
+End of Testing                                                                 
+============================================================================   
