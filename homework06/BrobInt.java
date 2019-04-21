@@ -148,8 +148,9 @@ public class BrobInt {
    public BrobInt add( BrobInt bint ) {
      int[] newBintArray = null;
      int[] carryArray = null;
+     BrobInt thisBrobInt = new BrobInt( this.internalValue );
 
-     if (this.numsReversed.length < bint.numsReversed.length) {
+     if (thisBrobInt.compareTo(bint) == -1) {
        int[] temp = this.numsReversed;
        this.numsReversed = bint.numsReversed;
        bint.numsReversed = temp;
@@ -163,6 +164,7 @@ public class BrobInt {
      int[] resultArray = new int[this.numsReversed.length + 1];
      carryArray = new int[this.numsReversed.length + 1];
 
+     //same signs ++ or --
      if ((this.sign == 0 && bint.sign == 0) || (this.sign == 1 && bint.sign == 1)) {
        for (int i = 0; i < this.numsReversed.length; i++) {
          int result = this.numsReversed[i] + newBintArray[i] + carryArray[i];
@@ -177,6 +179,12 @@ public class BrobInt {
            resultArray[i + 1] = 1;
          }
        }
+     } else {
+       for (int i = 0; i < this.numsReversed.length; i++) {
+         int result = this.numsReversed[i] - newBintArray[i];
+         resultArray[i] = result;
+       }
+       System.out.println("first number is bigger than second");
      }
 
      StringBuilder stringBuilder = new StringBuilder();
@@ -397,9 +405,9 @@ public class BrobInt {
       System.out.println("Add b1 and b2: " + b1.add(b2));
 
       System.out.println("\nTEST 3:");
-      BrobInt b3 = new BrobInt("479");
+      BrobInt b3 = new BrobInt("2");
       System.out.println("Make new BrobInt : " + b3.toString());
-      BrobInt b4 = new BrobInt("322441");
+      BrobInt b4 = new BrobInt("-3");
       System.out.println("Make new BrobInt : " + b4.toString());
       /*
       System.out.print("numsReversed b3 = ");
@@ -412,11 +420,13 @@ public class BrobInt {
       }
       System.out.println("\nInternal value = " + b4.internalValue);
       */
+      System.out.println("Compare to: " + b3.compareTo(b4));
       System.out.println("\nAdd b3 and b4: " + b3.add(b4));
 
       System.out.println("\nTEST 4:");
       BrobInt b5 = new BrobInt("00001");
       System.out.println("Make new BrobInt and remove leading zeros: " + b5.removeLeadingZeros(b5));
+      System.out.println("TEST ADD: " + (3-7));
       System.exit( 0 );
    }
 }
