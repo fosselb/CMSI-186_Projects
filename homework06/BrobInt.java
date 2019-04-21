@@ -51,7 +51,8 @@ public class BrobInt {
    public  byte   sign          = 0;         // "0" is positive, "1" is negative
    private String reversed      = "";        // the backwards version of the internal String representation
    private int[] numsReversed = null;
-   private int[] carryArray = null;
+   //private int[] carryArray = null;
+   //private BrobInt newBint = null;
 
    private static BufferedReader input = new BufferedReader( new InputStreamReader( System.in ) );
    private static final boolean DEBUG_ON = false;
@@ -91,6 +92,7 @@ public class BrobInt {
 
       } catch (IllegalArgumentException iae) {
         System.out.println(iae);
+        System.exit(0);
       }
 
       if (false) {
@@ -144,23 +146,26 @@ public class BrobInt {
    *  @return BrobInt that is the sum of the value of this BrobInt and the one passed in
    *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
    public BrobInt add( BrobInt bint ) {
-/*
-     if ( this.internalValue.length() < bint.internalValue.length() ) {
+     int[] newBintArray = null;
+     int[] carryArray = null;
+
+     if (this.numsReversed.length < bint.numsReversed.length) {
        int[] temp = this.numsReversed;
        this.numsReversed = bint.numsReversed;
        bint.numsReversed = temp;
      }
-*/
+
+     newBintArray = new int[this.numsReversed.length];
+     for (int i = 0; i < bint.numsReversed.length; i++) {
+       newBintArray[i] = bint.numsReversed[i];
+     }
+
      int[] resultArray = new int[this.numsReversed.length + 1];
      carryArray = new int[this.numsReversed.length + 1];
 
-     for (int i = 0; i < carryArray.length; i++) {
-       carryArray[i] = 0;
-     }
-
      if ((this.sign == 0 && bint.sign == 0) || (this.sign == 1 && bint.sign == 1)) {
        for (int i = 0; i < this.numsReversed.length; i++) {
-         int result = this.numsReversed[i] + bint.numsReversed[i] + carryArray[i];
+         int result = this.numsReversed[i] + newBintArray[i] + carryArray[i];
          if (result >= 10) {
            resultArray[i] = result % 10;
            carryArray[i + 1] = 1;
@@ -181,11 +186,14 @@ public class BrobInt {
      String joinedString = stringBuilder.toString();
 
      if (this.sign == 1 && bint.sign == 1) {
-       return new BrobInt( "-" + joinedString );
+
+       BrobInt b = new BrobInt( joinedString );
+       b = b.removeLeadingZeros(b);
+       return new BrobInt( "-" + b.internalValue );
      }
 
-     return new BrobInt( joinedString );
-     //throw new UnsupportedOperationException( "\n         Sorry, that operation is not yet implemented." );
+     BrobInt b = new BrobInt( joinedString );
+     return b.removeLeadingZeros(b);
    }
 
   /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -194,7 +202,7 @@ public class BrobInt {
    *  @return BrobInt that is the difference of the value of this BrobInt and the one passed in
    *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
    public BrobInt subtract( BrobInt bint ) {
-      throw new UnsupportedOperationException( "\n         Sorry, that operation is not yet implemented." );
+     throw new UnsupportedOperationException( "\n         Sorry, that operation is not yet implemented." );
    }
 
   /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -382,17 +390,33 @@ public class BrobInt {
         System.out.print(b.numsReversed[i] + " ");
       }
       System.out.println("\nTEST 2:");
-      BrobInt b1 = new BrobInt("100");
+      BrobInt b1 = new BrobInt("-0000003");
       System.out.println("Make new BrobInt : " + b1.toString());
-      BrobInt b2 = new BrobInt("977");
+      BrobInt b2 = new BrobInt("-0007053");
       System.out.println("Make new BrobInt : " + b2.toString());
       System.out.println("Add b1 and b2: " + b1.add(b2));
+
       System.out.println("\nTEST 3:");
-      BrobInt b3 = new BrobInt("1");
+      BrobInt b3 = new BrobInt("479");
       System.out.println("Make new BrobInt : " + b3.toString());
-      BrobInt b4 = new BrobInt("3");
+      BrobInt b4 = new BrobInt("322441");
       System.out.println("Make new BrobInt : " + b4.toString());
-      System.out.println("Add b3 and b4: " + b3.add(b4));
+      /*
+      System.out.print("numsReversed b3 = ");
+      for (int i = 0; i < b3.numsReversed.length; i++) {
+        System.out.print(b3.numsReversed[i]);
+      }
+      System.out.print("\nnumsReversed b4 = ");
+      for (int i = 0; i < b4.numsReversed.length; i++) {
+        System.out.print(b4.numsReversed[i]);
+      }
+      System.out.println("\nInternal value = " + b4.internalValue);
+      */
+      System.out.println("\nAdd b3 and b4: " + b3.add(b4));
+
+      System.out.println("\nTEST 4:");
+      BrobInt b5 = new BrobInt("00001");
+      System.out.println("Make new BrobInt and remove leading zeros: " + b5.removeLeadingZeros(b5));
       System.exit( 0 );
    }
 }
