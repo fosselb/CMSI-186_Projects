@@ -1,8 +1,8 @@
 /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  * File name  :  BrobInt.java
  * Purpose    :  Learning exercise to implement arbitrarily large numbers and their operations
- * @author    :  Fosse Lin-Bianco
- * Date       :  2019-04-10
+ * @author    :  B.J. Johnson
+ * Date       :  2017-04-04
  * Description:  @see <a href='http://bjohnson.lmu.build/cmsi186web/homework06.html'>Assignment Page</a>
  * Notes      :  None
  * Warnings   :  None
@@ -10,14 +10,17 @@
  *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  * Revision History
  * ================
- *   Ver      Date     Modified by:      Reason for change or modification
- *  -----  ----------  ------------      ---------------------------------------------------------------------
- *  1.0.0  2017-04-04  B.J. Johnson      Initial writing and begin coding
- *  1.1.0  2017-04-13  B.J. Johnson      Completed addByt, addInt, compareTo, equals, toString, Constructor,
- *                                         validateDigits, two reversers, and valueOf methods; revamped equals
- *                                         and compareTo methods to use the Java String methods; ready to
- *                                         start work on subtractByte and subtractInt methods
- *  1.1.1  2019-04-13  Fosse Lin-Bianco  Begin coding
+ *   Ver      Date     Modified by:  Reason for change or modification
+ *  -----  ----------  ------------  ---------------------------------------------------------------------
+ *  1.0.0  2017-04-04  B.J. Johnson  Initial writing and begin coding
+ *  1.1.0  2017-04-13  B.J. Johnson  Completed addByt, addInt, compareTo, equals, toString, Constructor,
+ *                                     validateDigits, two reversers, and valueOf methods; revamped equals
+ *                                     and compareTo methods to use the Java String methods; ready to
+ *                                     start work on subtractByte and subtractInt methods
+ *  1.2.0  2019-04-18  B.J. Johnson  Fixed bug in add() method that was causing errors in Collatz
+ *                                     sequence.  Added some tests into the main() method at the bottom
+ *                                     of the file to test construction.  Also added two tests there to
+ *                                     test multiplication by three and times-3-plus-1 operations
  *
  *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 import java.util.Arrays;
@@ -49,13 +52,13 @@ public class BrobInt {
   /// These are the internal fields
    public  String internalValue = "";        // internal String representation of this BrobInt
    public  byte   sign          = 0;         // "0" is positive, "1" is negative
+  /// You can use this or not, as you see fit.  The explanation was provided in class
    private String reversed      = "";        // the backwards version of the internal String representation
    private int[] numsReversed = null;
-   //private int[] carryArray = null;
-   //private BrobInt newBint = null;
 
    private static BufferedReader input = new BufferedReader( new InputStreamReader( System.in ) );
    private static final boolean DEBUG_ON = false;
+   private static final boolean INFO_ON  = false;
 
   /**
    *  Constructor takes a string and assigns it to the internal storage, checks for a sign character
@@ -101,7 +104,6 @@ public class BrobInt {
         System.out.println(reversed);
         System.out.println(this.numsReversed[0]);
       }
-
    }
 
   /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -118,16 +120,11 @@ public class BrobInt {
   /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    *  Method to reverse the value of this BrobInt
    *  @return BrobInt that is the reverse of the value of this BrobInt
+   *  NOTE: you can use this or not, as you see fit; explanation was given in class
+   *  @see StringBuffer API page for an easy way to do this
    *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
    public BrobInt reverser() {
-     throw new UnsupportedOperationException( "\n         Sorry, that operation is not yet implemented." );
-/*
-     String value = ;
-     BrobInt bi = new BrobInt(String value);
-     String reversedValue = new StringBuilder(value).reverse().toString();
-     bi.internalValue = reversedS;
-     return bi;
-*/
+      throw new UnsupportedOperationException( "\n         Sorry, that operation is not yet implemented." );
    }
 
   /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -135,13 +132,15 @@ public class BrobInt {
    *  Note: static method
    *  @param  bint         BrobInt to reverse its value
    *  @return BrobInt that is the reverse of the value of the BrobInt passed as argument
+   *  NOTE: you can use this or not, as you see fit; explanation was given in class
+   *  @see StringBuffer API page for an easy way to do this
    *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-   public static BrobInt reverser( BrobInt bint ) { //???
+   public static BrobInt reverser( BrobInt bint ) {
       throw new UnsupportedOperationException( "\n         Sorry, that operation is not yet implemented." );
    }
 
   /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-   *  Method to add the value of a BrobInt passed as argument to this BrobInt using byte array
+   *  Method to add the value of a BrobIntk passed as argument to this BrobInt
    *  @param  bint         BrobInt to add to this
    *  @return BrobInt that is the sum of the value of this BrobInt and the one passed in
    *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
@@ -150,7 +149,9 @@ public class BrobInt {
      int[] carryArray = null;
      BrobInt thisBrobInt = new BrobInt( this.internalValue );
 
-     if (thisBrobInt.compareTo(bint) == -1) {
+//thisBrobInt.compareTo(bint) == -1
+//Math.abs(Integer.parseInt(this.internalValue)) < Math.abs(Integer.parseInt(bint.internalValue))
+     if (this.numsReversed.length < bint.numsReversed.length) {
        int[] temp = this.numsReversed;
        this.numsReversed = bint.numsReversed;
        bint.numsReversed = temp;
@@ -179,12 +180,6 @@ public class BrobInt {
            resultArray[i + 1] = 1;
          }
        }
-     } else {
-       for (int i = 0; i < this.numsReversed.length; i++) {
-         int result = this.numsReversed[i] - newBintArray[i];
-         resultArray[i] = result;
-       }
-       System.out.println("first number is bigger than second");
      }
 
      StringBuilder stringBuilder = new StringBuilder();
@@ -202,15 +197,89 @@ public class BrobInt {
 
      BrobInt b = new BrobInt( joinedString );
      return b.removeLeadingZeros(b);
+     //throw new UnsupportedOperationException( "\n         Sorry, that operation is not yet implemented." );
    }
 
   /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-   *  Method to subtract the value of a BrobIntk passed as argument to this BrobInt using bytes
+   *  Method to subtract the value of a BrobIntk passed as argument to this BrobInt
    *  @param  bint         BrobInt to subtract from this
    *  @return BrobInt that is the difference of the value of this BrobInt and the one passed in
    *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
    public BrobInt subtract( BrobInt bint ) {
-     throw new UnsupportedOperationException( "\n         Sorry, that operation is not yet implemented." );
+     int[] newBintArray = null;
+     int[] carryArray = null;
+     BrobInt thisBrobInt = new BrobInt( this.internalValue );
+     boolean changeToNegative = false;
+
+     if (this.sign == 0 && bint.sign == 1) {
+       bint.sign = 0;
+       return thisBrobInt.add(bint);
+     } else if (this.sign == 1 && bint.sign == 0) {
+       thisBrobInt.sign = 1;
+       bint.sign = 1;
+       return thisBrobInt.add(bint);
+     } else {
+
+       //(-) - (-)
+       if (this.sign == 1 && bint.sign == 1) {
+         bint.sign = 0;
+         this.sign = 0;
+         String tempString = this.internalValue;
+         this.internalValue = bint.internalValue;
+         bint.internalValue = tempString;
+         int[] tempArray = this.numsReversed;
+         this.numsReversed = bint.numsReversed;
+         bint.numsReversed = tempArray;
+         //carry on to subtract as normal
+       }
+
+       //(+) - (+)
+       if (Math.abs(Integer.parseInt(this.internalValue)) < Math.abs(Integer.parseInt(bint.internalValue))) {
+         int[] temp = this.numsReversed;
+         this.numsReversed = bint.numsReversed;
+         bint.numsReversed = temp;
+         changeToNegative = true;
+       }
+
+       newBintArray = new int[this.numsReversed.length];
+       for (int i = 0; i < bint.numsReversed.length; i++) {
+         newBintArray[i] = bint.numsReversed[i];
+       }
+
+       int[] resultArray = new int[this.numsReversed.length + 1];
+       carryArray = new int[this.numsReversed.length + 1];
+
+       if (this.sign == 0 && bint.sign == 0) {
+         for (int i = 0; i < this.numsReversed.length; i++) {
+           //int result = this.numsReversed[i] - newBintArray[i] + carryArray[i];
+           if (this.numsReversed[i] < newBintArray[i]) {
+             resultArray[i] = 10 + this.numsReversed[i] - newBintArray[i] + carryArray[i];
+             carryArray[i + 1] = -1;
+           } else {
+             resultArray[i] = this.numsReversed[i] - newBintArray[i] + carryArray[i];
+           }
+           //resultArray[i] = result;
+         }
+       }
+
+       StringBuilder stringBuilder = new StringBuilder();
+       for (int j = resultArray.length - 1; j >= 0; j--) {
+         stringBuilder.append(resultArray[j]);
+       }
+       String joinedString = stringBuilder.toString();
+
+       if (changeToNegative) {
+         BrobInt b = new BrobInt( joinedString );
+         b = b.removeLeadingZeros(b);
+         return new BrobInt( "-" + b.internalValue );
+       } else {
+         BrobInt b = new BrobInt( joinedString );
+         return b.removeLeadingZeros(b);
+       }
+
+
+     }
+     //throw new UnsupportedOperationException( "\n         Sorry, that operation is not yet implemented." );
    }
 
   /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -242,7 +311,7 @@ public class BrobInt {
 
   /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    *  Method to compare a BrobInt passed as argument to this BrobInt
-   *  @param  bint  BrobInt to add to this
+   *  @param  bint  BrobInt to compare to this
    *  @return int   that is one of neg/0/pos if this BrobInt precedes/equals/follows the argument
    *  NOTE: this method does not do a lexicographical comparison using the java String "compareTo()" method
    *        It takes into account the length of the two numbers, and if that isn't enough it does a
@@ -250,46 +319,50 @@ public class BrobInt {
    *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
    public int compareTo( BrobInt bint ) {
 
-     // handle the signs here
-      if( 1 == sign && 0 == bint.sign ) {
-         return -1;
-      } else if( 0 == sign && 1 == bint.sign ) {
-         return 1;
-      }
+        // remove any leading zeros because we will compare lengths
+         String me  = removeLeadingZeros( this ).toString();
+         String arg = removeLeadingZeros( bint ).toString();
 
-     // the signs are the same at this point
-     // check the length and return the appropriate value
-     //   1 means this is longer than bint, hence larger
-     //  -1 means bint is longer than this, hence larger
-      if( internalValue.length() > bint.internalValue.length() ) {
-         return 1;
-      } else if( internalValue.length() < bint.internalValue.length() ) {
-         return (-1);
+        // handle the signs here
+         if( 1 == sign && 0 == bint.sign ) {
+            return -1;
+         } else if( 0 == sign && 1 == bint.sign ) {
+            return 1;
+         } else if( 0 == sign && 0 == bint.sign ) {
+           // the signs are the same at this point ~ both positive
+           // check the length and return the appropriate value
+           //   1 means this is longer than bint, hence larger positive
+           //  -1 means bint is longer than this, hence larger positive
+            if( me.length() != arg.length() ) {
+               return (me.length() > arg.length()) ? 1 : -1;
+            }
+         } else {
+           // the signs are the same at this point ~ both negative
+            if( me.length() != arg.length() ) {
+               return (me.length() > arg.length()) ? -1 : 1;
+            }
+         }
 
-     // otherwise, they are the same length, so compare absolute values
-      } else {
-         for( int i = 0; i < internalValue.length(); i++ ) {
-            Character a = Character.valueOf( internalValue.charAt(i) );
-            Character b = Character.valueOf( bint.internalValue.charAt(i) );
+        // otherwise, they are the same length, so compare absolute values
+         for( int i = 0; i < me.length(); i++ ) {
+            Character a = Character.valueOf( me.charAt(i) );
+            Character b = Character.valueOf( arg.charAt(i) );
             if( Character.valueOf(a).compareTo( Character.valueOf(b) ) > 0 ) {
                return 1;
             } else if( Character.valueOf(a).compareTo( Character.valueOf(b) ) < 0 ) {
                return (-1);
             }
          }
+         return 0;
       }
-      return 0;
-   }
 
   /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    *  Method to check if a BrobInt passed as argument is equal to this BrobInt
    *  @param  bint     BrobInt to compare to this
    *  @return boolean  that is true if they are equal and false otherwise
-   *  NOTE: this method performs a similar lexicographical comparison as the "compareTo()" using the
-   *        java String "equals()" method -- THAT was easy..........
    *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
    public boolean equals( BrobInt bint ) {
-      return (internalValue.equals( bint.toString() ));
+      return ( (sign == bint.sign) && (this.toString().equals( bint.toString() )) );
    }
 
   /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -309,54 +382,56 @@ public class BrobInt {
    *  @return String  which is the String representation of this BrobInt
    *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
    public String toString() {
-     //BrobInt b = new BrobInt(this.internalValue);
-     //BrobInt result = b.removeLeadingZeros(b);
-     //return (result.sign == 0) ? (result.internalValue) : ("-" + result.internalValue);
      return (this.sign == 0) ? (this.internalValue) : ("-" + this.internalValue);
    }
 
   /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    *  Method to remove leading zeros from a BrobInt passed as argument
-   *  @param  gint     BrobInt to remove zeros from
+   *  @param  bint     BrobInt to remove zeros from
    *  @return BrobInt that is the argument BrobInt with leading zeros removed
    *  Note that the sign is preserved if it exists
    *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-   public BrobInt removeLeadingZeros( BrobInt gint ) {
+   public BrobInt removeLeadingZeros( BrobInt bint ) {
       Character sign = null;
-      String returnString = gint.toString();
+      String returnString = bint.toString();
       int index = 0;
-      if( allZeroDetect( gint ) ) {
-         return gint;
+
+      if( allZeroDetect( bint ) ) {
+         return bint;
       }
       if( ('-' == returnString.charAt( index )) || ('+' == returnString.charAt( index )) ) {
          sign = returnString.charAt( index );
          index++;
       }
       if( returnString.charAt( index ) != '0' ) {
-         return gint;
+         return bint;
       }
+
       while( returnString.charAt( index ) == '0' ) {
          index++;
       }
-      returnString = gint.toString().substring( index, gint.toString().length() );
+      returnString = bint.toString().substring( index, bint.toString().length() );
       if( sign != null ) {
          returnString = sign.toString() + returnString;
       }
       return new BrobInt( returnString );
+
    }
+
   /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    *  Method to return a boolean if a BrobInt is all zeros
-   *  @param  gint     BrobInt to compare to this
+   *  @param  bint     BrobInt to compare to this
    *  @return boolean  that is true if the BrobInt passed is all zeros, false otherwise
    *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-   public boolean allZeroDetect( BrobInt gint ) {
-      for( int i = 0; i < gint.toString().length(); i++ ) {
-         if( gint.toString().charAt(i) != '0' ) {
+   public boolean allZeroDetect( BrobInt bint ) {
+      for( int i = 0; i < bint.toString().length(); i++ ) {
+         if( bint.toString().charAt(i) != '0' ) {
             return false;
          }
       }
       return true;
    }
+
   /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    *  Method to display an Array representation of this BrobInt as its bytes
    *  @param   d  byte array from which to display the contents
@@ -378,55 +453,46 @@ public class BrobInt {
       catch( IOException ioe ) {
          System.out.println( "Caught IOException" );
       }
+
    }
+
   /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    *  the main method redirects the user to the test class
    *  @param  args  String array which contains command line arguments
    *  NOTE:  we don't really care about these, since we test the BrobInt class with the BrobIntTester
    *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
    public static void main( String[] args ) {
-      System.out.println("=========================================");
       System.out.println( "\n  Hello, world, from the BrobInt program!!\n" );
       System.out.println( "\n   You should run your tests from the BrobIntTester...\n" );
-      System.out.println("TEST 1:");
-      BrobInt b = new BrobInt("-1234567890");
-      System.out.println("Make new BrobInt : " + b.toString());
-      System.out.println("Internal Value: " + b.internalValue);
-      System.out.println("Sign Value: " + b.sign);
-      System.out.print("numsReversed array: ");
-      for (int i = 0; i < b.numsReversed.length; i++) {
-        System.out.print(b.numsReversed[i] + " ");
-      }
-      System.out.println("\nTEST 2:");
-      BrobInt b1 = new BrobInt("-0000003");
+      BrobInt b = null;;
+      try { System.out.println( "   Making a new BrobInt: " ); b = new BrobInt( "147258369789456123" ); }
+      catch( Exception e ) { System.out.println( "        Exception thrown:  " ); }
+      try { System.out.println( "   expecting: 147258369789456123\n     and got: " + b.toString() ); }
+      catch( Exception e ) { System.out.println( "        Exception thrown:  " ); }
+      System.out.println( "\n    Multiplying 82832833 by 3: " );
+      try { System.out.println( "      expecting: 248498499\n        and got: " + new BrobInt("82832833").multiply( BrobInt.THREE ) ); }
+      catch( Exception e ) { System.out.println( "        Exception thrown:  " + e.toString() ); }
+
+      System.out.println( "\n    Multiplying 3 by 82832833 and adding 1: " );
+      try { System.out.println( "      expecting: 248498500\n        and got: " + BrobInt.THREE.multiply( new BrobInt( "82832833" ) ).add( BrobInt.ONE ) ); }
+      catch( Exception e ) { System.out.println( "        Exception thrown:  " + e.toString() ); }
+
+      System.out.println("=========================================");
+      System.out.println( "\n  Hello, world, from the BrobInt program from FOSSE Test!!\n" );
+      System.out.println("\nTEST 2 (ADD):");
+      BrobInt b1 = new BrobInt("-11112");
       System.out.println("Make new BrobInt : " + b1.toString());
-      BrobInt b2 = new BrobInt("-0007053");
+      BrobInt b2 = new BrobInt("-99999");
       System.out.println("Make new BrobInt : " + b2.toString());
       System.out.println("Add b1 and b2: " + b1.add(b2));
 
-      System.out.println("\nTEST 3:");
-      BrobInt b3 = new BrobInt("2");
-      System.out.println("Make new BrobInt : " + b3.toString());
-      BrobInt b4 = new BrobInt("-3");
-      System.out.println("Make new BrobInt : " + b4.toString());
-      /*
-      System.out.print("numsReversed b3 = ");
-      for (int i = 0; i < b3.numsReversed.length; i++) {
-        System.out.print(b3.numsReversed[i]);
-      }
-      System.out.print("\nnumsReversed b4 = ");
-      for (int i = 0; i < b4.numsReversed.length; i++) {
-        System.out.print(b4.numsReversed[i]);
-      }
-      System.out.println("\nInternal value = " + b4.internalValue);
-      */
-      System.out.println("Compare to: " + b3.compareTo(b4));
-      System.out.println("\nAdd b3 and b4: " + b3.add(b4));
-
-      System.out.println("\nTEST 4:");
-      BrobInt b5 = new BrobInt("00001");
-      System.out.println("Make new BrobInt and remove leading zeros: " + b5.removeLeadingZeros(b5));
-      System.out.println("TEST ADD: " + (3-7));
+      System.out.println("\nTEST 3 (SUBTRACT):");
+      BrobInt b3 = new BrobInt("-999999");
+      System.out.println("Make new BrobInt b3: " + b3.toString());
+      BrobInt b4 = new BrobInt("-234567");
+      System.out.println("Make new BrobInt b4: " + b4.toString());
+      System.out.println("Subtract b3 and b4: " + b3.subtract(b4));
       System.exit( 0 );
+
    }
 }
