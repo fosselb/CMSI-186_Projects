@@ -306,8 +306,8 @@ public class BrobInt {
        b = new BrobInt( h.halve(b.toString()) );
        System.out.println("BrobInt a(after): " + a.toString());
        System.out.println("BrobInt b(after): " + b.toString());
-       System.out.println("Condition: " + Integer.parseInt(b.toString()) % 2);
-       if (Integer.parseInt(b.toString()) % 2 != 0) {
+       System.out.println("Condition: " + b.numsReversed[0] % 2);
+       if (b.numsReversed[0] % 2 != 0) {
          total = total.add(a);
        }
        System.out.println("Total: " + total.toString());
@@ -512,6 +512,16 @@ public class BrobInt {
       BrobInt b2 = new BrobInt("0");
       System.out.println("Make new BrobInt : " + b2.toString());
       System.out.println("Add b1 and b2: " + b1.add(b2));
+
+      System.out.println("\nMORE ADD TESTS");
+      BrobInt a  = new BrobInt("440");
+      //BrobInt b = new BrobInt("0");
+      System.out.println("BrobInt a: " + a.toString());
+      //System.out.println("BrobInt b: " + b.toString());
+      a = a.add(a);
+      //b = new BrobInt( h.halve(b.toString()) );
+      System.out.println("BrobInt a(after): " + a.toString());
+      //System.out.println("BrobInt b(after): " + b.toString());
 
       System.out.println("\nTEST 3 (SUBTRACT):");
       BrobInt b3 = new BrobInt("-999999");
