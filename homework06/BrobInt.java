@@ -251,14 +251,12 @@ public class BrobInt {
 
        if (this.sign == 0 && bint.sign == 0) {
          for (int i = 0; i < this.numsReversed.length; i++) {
-           //int result = this.numsReversed[i] - newBintArray[i] + carryArray[i];
            if (this.numsReversed[i] < newBintArray[i]) {
              resultArray[i] = 10 + this.numsReversed[i] - newBintArray[i] + carryArray[i];
              carryArray[i + 1] = -1;
            } else {
              resultArray[i] = this.numsReversed[i] - newBintArray[i] + carryArray[i];
            }
-           //resultArray[i] = result;
          }
        }
 
@@ -266,15 +264,19 @@ public class BrobInt {
        for (int j = resultArray.length - 1; j >= 0; j--) {
          stringBuilder.append(resultArray[j]);
        }
-       String joinedString = stringBuilder.toString();
 
-       if (changeToNegative) {
-         BrobInt b = new BrobInt( joinedString );
-         b = b.removeLeadingZeros(b);
-         return new BrobInt( "-" + b.internalValue );
+       String joinedString = stringBuilder.toString();
+       BrobInt b = new BrobInt( joinedString );
+       b = b.removeLeadingZeros(b);
+
+       if (b.allZeroDetect(b)) {
+         return new BrobInt( "0" );
        } else {
-         BrobInt b = new BrobInt( joinedString );
-         return b.removeLeadingZeros(b);
+         if (changeToNegative) {
+           return new BrobInt( "-" + b.internalValue );
+         } else {
+           return b;
+         }
        }
 
 
@@ -288,7 +290,32 @@ public class BrobInt {
    *  @return BrobInt that is the product of the value of this BrobInt and the one passed in
    *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
    public BrobInt multiply( BrobInt bint ) {
-      throw new UnsupportedOperationException( "\n         Sorry, that operation is not yet implemented." );
+     BrobInt total = new BrobInt( "0" );
+     BrobInt a = new BrobInt( this.internalValue );
+     BrobInt b = new BrobInt( bint.internalValue );
+     Halver h = new Halver();
+
+     System.out.println("BrobInt a: " + a.toString());
+     System.out.println("BrobInt b: " + b.toString());
+     System.out.println(Math.abs(Integer.parseInt(b.toString())));
+
+     while (Math.abs(Integer.parseInt(b.toString())) > 1) {
+       System.out.println("BrobInt a: " + a.toString());
+       System.out.println("BrobInt b: " + b.toString());
+       a = a.add(a);
+       b = new BrobInt( h.halve(b.toString()) );
+       System.out.println("BrobInt a(after): " + a.toString());
+       System.out.println("BrobInt b(after): " + b.toString());
+       System.out.println("Condition: " + Integer.parseInt(b.toString()) % 2);
+       if (Integer.parseInt(b.toString()) % 2 != 0) {
+         total = total.add(a);
+       }
+       System.out.println("Total: " + total.toString());
+       System.out.println("================");
+     }
+
+     return total;
+     //throw new UnsupportedOperationException( "\n         Sorry, that operation is not yet implemented." );
    }
 
   /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -480,9 +507,9 @@ public class BrobInt {
       System.out.println("=========================================");
       System.out.println( "\n  Hello, world, from the BrobInt program from FOSSE Test!!\n" );
       System.out.println("\nTEST 2 (ADD):");
-      BrobInt b1 = new BrobInt("-11112");
+      BrobInt b1 = new BrobInt("01");
       System.out.println("Make new BrobInt : " + b1.toString());
-      BrobInt b2 = new BrobInt("-99999");
+      BrobInt b2 = new BrobInt("0");
       System.out.println("Make new BrobInt : " + b2.toString());
       System.out.println("Add b1 and b2: " + b1.add(b2));
 
@@ -492,6 +519,13 @@ public class BrobInt {
       BrobInt b4 = new BrobInt("-234567");
       System.out.println("Make new BrobInt b4: " + b4.toString());
       System.out.println("Subtract b3 and b4: " + b3.subtract(b4));
+
+      System.out.println("\nTEST 4 (MULTIPLY):");
+      BrobInt b5 = new BrobInt("55");
+      System.out.println("Make new BrobInt b5: " + b5.toString());
+      BrobInt b6 = new BrobInt("72");
+      System.out.println("Make new BrobInt b6: " + b6.toString());
+      System.out.println("Multiply b5 and b6: " + b5.multiply(b6));
       System.exit( 0 );
 
    }
