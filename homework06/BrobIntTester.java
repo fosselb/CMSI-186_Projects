@@ -438,9 +438,6 @@ public class BrobIntTester {
       try {
          System.out.println( "      expecting: 234577\n" +
                              "        and got: " + g13.subtract( g15 ) );
-         BrobInt a1 = new BrobInt("234567");
-         BrobInt a2 = new BrobInt("-10");
-         System.out.println("Subtract Test (Fosse): " + a1.toString() + " - " + a2.toString() + " = " + a1.subtract(a2));
       }
       catch( Exception e ) { System.out.println( "        Exception thrown:  " ); }
 
@@ -448,9 +445,6 @@ public class BrobIntTester {
       try {
          System.out.println( "      expecting: -234577\n" +
                              "        and got: " + g15.subtract( g13 ) );
-         BrobInt a3 = new BrobInt("-10");
-         BrobInt a4 = new BrobInt("234567");
-         System.out.println("Subtract Test (Fosse): " + a3.toString() + " - " + a4.toString() + " = " + a3.subtract(a4));
       }
       catch( Exception e ) { System.out.println( "        Exception thrown:  " ); }
 
@@ -458,9 +452,6 @@ public class BrobIntTester {
       try {
          System.out.println( "      expecting: 765432\n" +
                              "        and got: " + g14.subtract( g16 ) );
-         BrobInt a5 = new BrobInt("-234567");
-         BrobInt a6 = new BrobInt("-999999");
-         System.out.println("Subtract Test (Fosse): " + a5.toString() + " - " + a6.toString() + " = " + a5.subtract(a6));
       }
       catch( Exception e ) { System.out.println( "        Exception thrown:  " ); }
 
@@ -468,9 +459,6 @@ public class BrobIntTester {
       try {
          System.out.println( "      expecting: -765432\n" +
                              "        and got: " + g16.subtract( g14 ) );
-         BrobInt a7 = new BrobInt("-999999");
-         BrobInt a8 = new BrobInt("-234567");
-         System.out.println("Subtract Test (Fosse): " + a7.toString() + " - " + a8.toString() + " = " + a7.subtract(a8));
       }
       catch( Exception e ) { System.out.println( "        Exception thrown:  " ); }
 
