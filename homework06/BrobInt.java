@@ -251,7 +251,8 @@ public class BrobInt {
        }
 
        //(+) - (+)
-       if (Math.abs(Integer.parseInt(thisBrobInt.internalValue)) < Math.abs(Integer.parseInt(secondBrobInt.internalValue))) {
+       if (thisBrobInt.compareTo(secondBrobInt) == -1) {
+         //Math.abs(Integer.parseInt(thisBrobInt.internalValue)) < Math.abs(Integer.parseInt(secondBrobInt.internalValue))
          int[] temp = thisBrobInt.numsReversed;
          thisBrobInt.numsReversed = secondBrobInt.numsReversed;
          secondBrobInt.numsReversed = temp;
@@ -316,7 +317,8 @@ public class BrobInt {
      //System.out.println("BrobInt b: " + b.toString());
      //System.out.println(Math.abs(Integer.parseInt(b.toString())));
 
-     while (Math.abs(Integer.parseInt(b.toString())) > 1) {
+     while (b.compareTo(BrobInt.ONE) == 1) {
+       //Math.abs(Integer.parseInt(b.toString())) > 1
        //System.out.println("Condition: " + b.numsReversed[0] % 2);
        if (b.numsReversed[0] % 2 != 0) {
          total = total.add(a);
@@ -357,7 +359,8 @@ public class BrobInt {
      if (d1.equals(BrobInt.ZERO)) {
        //System.out.println("HERE 0");
        throw new IllegalArgumentException("\nERROR: This operation is impossible, well at least to our current knowledge");
-     } else if (d2.equals(BrobInt.ZERO) || Math.abs(Integer.parseInt(d1.internalValue)) > Math.abs(Integer.parseInt(d2.internalValue))) {
+     } else if (d2.equals(BrobInt.ZERO) || (d1.compareTo(d2) == 1)) {
+       //Math.abs(Integer.parseInt(d1.internalValue)) > Math.abs(Integer.parseInt(d2.internalValue))
        //System.out.println("HERE 1");
        return BrobInt.ZERO;
      } else if (d1.equals(d2)) {
@@ -368,7 +371,8 @@ public class BrobInt {
 
        n = d1.internalValue.length();
        d3 = new BrobInt(d2.internalValue.substring(0, n));
-       if (Math.abs(Integer.parseInt(d1.internalValue)) > Math.abs(Integer.parseInt(d3.internalValue))) {
+       if (d1.compareTo(d3) == 1) {
+         //Math.abs(Integer.parseInt(d1.internalValue)) > Math.abs(Integer.parseInt(d3.internalValue))
          d3 = new BrobInt(d2.internalValue.substring(0, n + 1));
          n++;
        }
@@ -382,18 +386,32 @@ public class BrobInt {
          // System.out.println("d2 = " + d2.internalValue);
          // System.out.println("d3 = " + d3.internalValue.length());
          // System.out.println("d1 = " + d1.internalValue.length());
-         while (Math.abs(Integer.parseInt(d3.internalValue)) >= Math.abs(Integer.parseInt(d1.internalValue))) {
+         while ((d3.compareTo(d1) == 1 || d3.compareTo(d1) == 0) && !d3.allZeroDetect(d3)) {
+           //Math.abs(Integer.parseInt(d3.internalValue)) >= Math.abs(Integer.parseInt(d1.internalValue))
            // System.out.println("START WHILE LOOP 2");
-           // System.out.println("HERE NO GO ---- BEFORE");
-           // System.out.println("d3 = " + d3.internalValue);
-           // System.out.println("d1 = " + d1.internalValue);
-           // System.out.println("q = " + q.internalValue);
+           //System.out.println("Test conditions:");
+           //BrobInt test = new BrobInt("00");
+           //BrobInt test2 = new BrobInt("2");
+           if (DEBUG_ON) {
+             //System.out.println("------: " + test.compareTo(test2));
+             System.out.println("d3 testug XEROS: " + !d3.allZeroDetect(d3));
+             System.out.println("d3 testing = " + d3.internalValue);
+             System.out.println("d1 testing = " + d1.internalValue);
+             System.out.println(d3.compareTo(d1) == 1);
+             System.out.println(d3.compareTo(d1) == 0);
+             System.out.println("HERE NO GO ---- BEFORE");
+             System.out.println("d3 = " + d3.internalValue);
+             System.out.println("d1 = " + d1.internalValue);
+             System.out.println("q = " + q.internalValue);
+           }
            d3 = d3.subtract(d1);
            q = q.add(BrobInt.ONE);
-           // System.out.println("AFTER SUB AND ADDITION OF 1");
-           //System.out.println("d3 = " + d3.internalValue);
-           // System.out.println("d1 = " + d1.internalValue);
-           //System.out.println("q = " + q.internalValue);
+           if (DEBUG_ON) {
+             System.out.println("AFTER SUB AND ADDITION OF 1");
+             System.out.println("d3 = " + d3.internalValue);
+             System.out.println("d1 = " + d1.internalValue);
+             System.out.println("q = " + q.internalValue);
+           }
          }
 
          //System.out.println("n = " + n);
@@ -648,12 +666,20 @@ public class BrobInt {
       System.out.println("Make new BrobInt b6: " + b6.toString());
       System.out.println("Multiply b5 and b6: " + b5.multiply(b6));
 
+      System.out.println("\nTEST 5 (Equals TO):");
+      BrobInt b9 = new BrobInt("00");
+      System.out.println("Make new BrobInt b9: " + b9.toString());
+      BrobInt b10 = new BrobInt("0");
+      System.out.println("Make new BrobInt b10: " + b10.toString());
+      System.out.println("Compare b9 and b10: " + b9.equals(b10));
+
       System.out.println("\nTEST 4 (DIVIDE):");
-      BrobInt b7 = new BrobInt("52");
+      BrobInt b7 = new BrobInt("10000");
       System.out.println("Make new BrobInt b7: " + b7.toString());
       BrobInt b8 = new BrobInt("2");
       System.out.println("Make new BrobInt b8: " + b8.toString());
       System.out.println("Divide b7 and b8: " + b7.divide(b8));
+
       System.exit( 0 );
 
    }
