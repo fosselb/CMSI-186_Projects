@@ -53,8 +53,8 @@ public class BrobInt {
    public  String internalValue = "";        // internal String representation of this BrobInt
    public  byte   sign          = 0;         // "0" is positive, "1" is negative
   /// You can use this or not, as you see fit.  The explanation was provided in class
-   private String reversed      = "";        // the backwards version of the internal String representation
-   private int[] numsReversed = null;
+   public String reversed      = "";        // the backwards version of the internal String representation
+   public int[] numsReversed = null;
 
    private static BufferedReader input = new BufferedReader( new InputStreamReader( System.in ) );
    private static final boolean DEBUG_ON = false;
@@ -145,28 +145,34 @@ public class BrobInt {
    *  @return BrobInt that is the sum of the value of this BrobInt and the one passed in
    *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
    public BrobInt add( BrobInt bint ) {
+
      int[] newBintArray = null;
      int[] carryArray = null;
      BrobInt thisBrobInt = new BrobInt( this.internalValue );
+     BrobInt secondBrobInt = new BrobInt( bint.internalValue );
+     thisBrobInt.sign = this.sign;
+     secondBrobInt.sign = bint.sign;
 
 //thisBrobInt.compareTo(bint) == -1
 //Math.abs(Integer.parseInt(this.internalValue)) < Math.abs(Integer.parseInt(bint.internalValue))
-     if (this.numsReversed.length < bint.numsReversed.length) {
+
+      //instead of editing this and bint
+     if (this.numsReversed.length < secondBrobInt.numsReversed.length) {
        int[] temp = this.numsReversed;
-       this.numsReversed = bint.numsReversed;
-       bint.numsReversed = temp;
+       this.numsReversed = secondBrobInt.numsReversed;
+       secondBrobInt.numsReversed = temp;
      }
 
      newBintArray = new int[this.numsReversed.length];
-     for (int i = 0; i < bint.numsReversed.length; i++) {
-       newBintArray[i] = bint.numsReversed[i];
+     for (int i = 0; i < secondBrobInt.numsReversed.length; i++) {
+       newBintArray[i] = secondBrobInt.numsReversed[i];
      }
 
      int[] resultArray = new int[this.numsReversed.length + 1];
      carryArray = new int[this.numsReversed.length + 1];
 
      //same signs ++ or --
-     if ((this.sign == 0 && bint.sign == 0) || (this.sign == 1 && bint.sign == 1)) {
+     if ((this.sign == 0 && secondBrobInt.sign == 0) || (this.sign == 1 && secondBrobInt.sign == 1)) {
        for (int i = 0; i < this.numsReversed.length; i++) {
          int result = this.numsReversed[i] + newBintArray[i] + carryArray[i];
          if (result >= 10) {
@@ -188,7 +194,7 @@ public class BrobInt {
      }
      String joinedString = stringBuilder.toString();
 
-     if (this.sign == 1 && bint.sign == 1) {
+     if (this.sign == 1 && secondBrobInt.sign == 1) {
 
        BrobInt b = new BrobInt( joinedString );
        b = b.removeLeadingZeros(b);
@@ -196,7 +202,11 @@ public class BrobInt {
      }
 
      BrobInt b = new BrobInt( joinedString );
-     return b.removeLeadingZeros(b);
+     if (b.allZeroDetect(b)) {
+       return new BrobInt("0");
+     } else {
+       return b.removeLeadingZeros(b);
+     }
      //throw new UnsupportedOperationException( "\n         Sorry, that operation is not yet implemented." );
    }
 
@@ -209,53 +219,60 @@ public class BrobInt {
      int[] newBintArray = null;
      int[] carryArray = null;
      BrobInt thisBrobInt = new BrobInt( this.internalValue );
+     BrobInt secondBrobInt = new BrobInt( bint.internalValue );
+     thisBrobInt.sign = this.sign;
+     secondBrobInt.sign = bint.sign;
      boolean changeToNegative = false;
 
-     if (this.sign == 0 && bint.sign == 1) {
-       bint.sign = 0;
-       return thisBrobInt.add(bint);
-     } else if (this.sign == 1 && bint.sign == 0) {
+     if (thisBrobInt.equals(secondBrobInt)) {
+       return new BrobInt("0");
+     }
+
+     if (thisBrobInt.sign == 0 && secondBrobInt.sign == 1) {
+       secondBrobInt.sign = 0;
+       return thisBrobInt.add(secondBrobInt);
+     } else if (thisBrobInt.sign == 1 && secondBrobInt.sign == 0) {
        thisBrobInt.sign = 1;
-       bint.sign = 1;
-       return thisBrobInt.add(bint);
+       secondBrobInt.sign = 1;
+       return thisBrobInt.add(secondBrobInt);
      } else {
 
        //(-) - (-)
-       if (this.sign == 1 && bint.sign == 1) {
-         bint.sign = 0;
-         this.sign = 0;
-         String tempString = this.internalValue;
-         this.internalValue = bint.internalValue;
-         bint.internalValue = tempString;
-         int[] tempArray = this.numsReversed;
-         this.numsReversed = bint.numsReversed;
-         bint.numsReversed = tempArray;
+       if (thisBrobInt.sign == 1 && secondBrobInt.sign == 1) {
+         secondBrobInt.sign = 0;
+         thisBrobInt.sign = 0;
+         String tempString = thisBrobInt.internalValue;
+         thisBrobInt.internalValue = secondBrobInt.internalValue;
+         secondBrobInt.internalValue = tempString;
+         int[] tempArray = thisBrobInt.numsReversed;
+         thisBrobInt.numsReversed = secondBrobInt.numsReversed;
+         secondBrobInt.numsReversed = tempArray;
          //carry on to subtract as normal
        }
 
        //(+) - (+)
-       if (Math.abs(Integer.parseInt(this.internalValue)) < Math.abs(Integer.parseInt(bint.internalValue))) {
-         int[] temp = this.numsReversed;
-         this.numsReversed = bint.numsReversed;
-         bint.numsReversed = temp;
+       if (Math.abs(Integer.parseInt(thisBrobInt.internalValue)) < Math.abs(Integer.parseInt(secondBrobInt.internalValue))) {
+         int[] temp = thisBrobInt.numsReversed;
+         thisBrobInt.numsReversed = secondBrobInt.numsReversed;
+         secondBrobInt.numsReversed = temp;
          changeToNegative = true;
        }
 
-       newBintArray = new int[this.numsReversed.length];
-       for (int i = 0; i < bint.numsReversed.length; i++) {
-         newBintArray[i] = bint.numsReversed[i];
+       newBintArray = new int[thisBrobInt.numsReversed.length];
+       for (int i = 0; i < secondBrobInt.numsReversed.length; i++) {
+         newBintArray[i] = secondBrobInt.numsReversed[i];
        }
 
-       int[] resultArray = new int[this.numsReversed.length + 1];
-       carryArray = new int[this.numsReversed.length + 1];
+       int[] resultArray = new int[thisBrobInt.numsReversed.length + 1];
+       carryArray = new int[thisBrobInt.numsReversed.length + 1];
 
-       if (this.sign == 0 && bint.sign == 0) {
-         for (int i = 0; i < this.numsReversed.length; i++) {
-           if (this.numsReversed[i] < newBintArray[i]) {
-             resultArray[i] = 10 + this.numsReversed[i] - newBintArray[i] + carryArray[i];
+       if (thisBrobInt.sign == 0 && secondBrobInt.sign == 0) {
+         for (int i = 0; i < thisBrobInt.numsReversed.length; i++) {
+           if (thisBrobInt.numsReversed[i] < newBintArray[i]) {
+             resultArray[i] = 10 + thisBrobInt.numsReversed[i] - newBintArray[i] + carryArray[i];
              carryArray[i + 1] = -1;
            } else {
-             resultArray[i] = this.numsReversed[i] - newBintArray[i] + carryArray[i];
+             resultArray[i] = thisBrobInt.numsReversed[i] - newBintArray[i] + carryArray[i];
            }
          }
        }
@@ -295,23 +312,28 @@ public class BrobInt {
      BrobInt b = new BrobInt( bint.internalValue );
      Halver h = new Halver();
 
-     System.out.println("BrobInt a: " + a.toString());
-     System.out.println("BrobInt b: " + b.toString());
-     System.out.println(Math.abs(Integer.parseInt(b.toString())));
+     //System.out.println("BrobInt a: " + a.toString());
+     //System.out.println("BrobInt b: " + b.toString());
+     //System.out.println(Math.abs(Integer.parseInt(b.toString())));
 
      while (Math.abs(Integer.parseInt(b.toString())) > 1) {
-       System.out.println("BrobInt a: " + a.toString());
-       System.out.println("BrobInt b: " + b.toString());
-       a = a.add(a);
-       b = new BrobInt( h.halve(b.toString()) );
-       System.out.println("BrobInt a(after): " + a.toString());
-       System.out.println("BrobInt b(after): " + b.toString());
-       System.out.println("Condition: " + b.numsReversed[0] % 2);
+       //System.out.println("Condition: " + b.numsReversed[0] % 2);
        if (b.numsReversed[0] % 2 != 0) {
          total = total.add(a);
        }
-       System.out.println("Total: " + total.toString());
-       System.out.println("================");
+       // System.out.println("START OF 1st ADD");
+       // System.out.println("BrobInt a: " + a.toString());
+       // System.out.println("BrobInt b: " + b.toString());
+       a = a.add(a);
+       b = new BrobInt( h.halve(b.toString()) );
+      // System.out.println("BrobInt a(after): " + a.toString());
+      // System.out.println("BrobInt b(after): " + b.toString());
+      //  System.out.println("Total: " + total.toString());
+      //  System.out.println("================");
+     }
+
+     if (b.numsReversed[0] % 2 != 0) {
+       total = total.add(a);
      }
 
      return total;
@@ -324,7 +346,83 @@ public class BrobInt {
    *  @return BrobInt that is the dividend of this BrobInt divided by the one passed in
    *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
    public BrobInt divide( BrobInt bint ) {
-      throw new UnsupportedOperationException( "\n         Sorry, that operation is not yet implemented." );
+     BrobInt d2 = new BrobInt( this.internalValue );
+     BrobInt d1 = new BrobInt( bint.internalValue );
+     d2.sign = this.sign;
+     d1.sign = bint.sign;
+     BrobInt d3 = null;
+     BrobInt q = new BrobInt( "0" );
+     int n = 0;
+
+     if (d1.equals(BrobInt.ZERO)) {
+       //System.out.println("HERE 0");
+       throw new IllegalArgumentException("\nERROR: This operation is impossible, well at least to our current knowledge");
+     } else if (d2.equals(BrobInt.ZERO) || Math.abs(Integer.parseInt(d1.internalValue)) > Math.abs(Integer.parseInt(d2.internalValue))) {
+       //System.out.println("HERE 1");
+       return BrobInt.ZERO;
+     } else if (d1.equals(d2)) {
+       //System.out.println("HERE 2");
+       return BrobInt.ONE;
+     } else {
+       System.out.println("START DIVISION WITH REGUALR CASE");
+
+       n = d1.internalValue.length();
+       d3 = new BrobInt(d2.internalValue.substring(0, n));
+       if (Math.abs(Integer.parseInt(d1.internalValue)) > Math.abs(Integer.parseInt(d3.internalValue))) {
+         //n++;
+         d3 = new BrobInt(d2.internalValue.substring(0, n + 1));
+       }
+
+       System.out.println("n = " + n);
+       System.out.println("d3 = " + d3.internalValue);
+
+       while (n <= d2.internalValue.length()) {
+         System.out.println("START WHILE LOOP 1");
+         System.out.println("n = " + n);
+         System.out.println("d2 = " + d2.internalValue);
+         System.out.println("d3 = " + d3.internalValue.length());
+         System.out.println("d1 = " + d1.internalValue.length());
+         while (Math.abs(Integer.parseInt(d3.internalValue)) > Math.abs(Integer.parseInt(d1.internalValue))) {
+           System.out.println("START WHILE LOOP 2");
+           System.out.println("HERE NO GO ---- BEFORE");
+           System.out.println("d3 = " + d3.internalValue);
+           System.out.println("d1 = " + d1.internalValue);
+           System.out.println("q = " + q.internalValue);
+           d3 = d3.subtract(d1);
+           q = q.add(BrobInt.ONE);
+           System.out.println("AFTER SUB AND ADDITION OF 1");
+           System.out.println("d3 = " + d3.internalValue);
+           System.out.println("d1 = " + d1.internalValue);
+           System.out.println("q = " + q.internalValue);
+         }
+
+         System.out.println("n = " + n);
+
+         if (n++ == d2.internalValue.length()) {
+           System.out.println("BREAK POINT");
+           break;
+         }
+
+         //d3 = d3.multiply(BrobInt.TEN);
+         q = q.multiply(BrobInt.TEN);
+
+
+         d3.internalValue = d3.internalValue + d2.internalValue.substring(n - 1, n);
+         System.out.println("d3 = " + d3.internalValue);
+         System.out.println("q = " + q.internalValue);
+         System.out.println("HEREEEEEEEE");
+         System.out.println("=============");
+         System.out.println("n (HERE) = " + n);
+       }
+
+       //System.out.println("q = " + q.toString());
+       System.out.println("***");
+       return q;
+     }
+
+
+
+     //throw new UnsupportedOperationException( "\n         Sorry, that operation is not yet implemented." );
    }
 
   /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -409,6 +507,9 @@ public class BrobInt {
    *  @return String  which is the String representation of this BrobInt
    *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
    public String toString() {
+     // BrobInt a = new BrobInt( this.internalValue );
+     // a.sign = this.sign;
+     // return (a.allZeroDetect(a)) ? "0" : ((a.sign == 0) ? (a.internalValue) : ("-" + a.internalValue));
      return (this.sign == 0) ? (this.internalValue) : ("-" + this.internalValue);
    }
 
@@ -506,36 +607,45 @@ public class BrobInt {
 
       System.out.println("=========================================");
       System.out.println( "\n  Hello, world, from the BrobInt program from FOSSE Test!!\n" );
+      System.out.println("TEST 1:");
+      BrobInt a = new BrobInt("00000000");
+      if (a.allZeroDetect(a)) {
+        System.out.println("ALL ZEROS");
+      }
+
       System.out.println("\nTEST 2 (ADD):");
-      BrobInt b1 = new BrobInt("01");
+      BrobInt b1 = new BrobInt("0");
       System.out.println("Make new BrobInt : " + b1.toString());
       BrobInt b2 = new BrobInt("0");
       System.out.println("Make new BrobInt : " + b2.toString());
       System.out.println("Add b1 and b2: " + b1.add(b2));
-
-      System.out.println("\nMORE ADD TESTS");
-      BrobInt a  = new BrobInt("440");
-      //BrobInt b = new BrobInt("0");
-      System.out.println("BrobInt a: " + a.toString());
-      //System.out.println("BrobInt b: " + b.toString());
-      a = a.add(a);
-      //b = new BrobInt( h.halve(b.toString()) );
-      System.out.println("BrobInt a(after): " + a.toString());
-      //System.out.println("BrobInt b(after): " + b.toString());
+      System.out.println("\nMORE ADD TESTS:");
+      BrobInt b1_1 = new BrobInt("-234567");
+      System.out.println("Make new BrobInt : " + b1_1.toString());
+      BrobInt b2_2 = new BrobInt("-10");
+      System.out.println("Make new BrobInt : " + b2_2.toString());
+      System.out.println("Add b1_1 and b2_2: " + b1_1.add(b2_2)); //-234567 + -10
 
       System.out.println("\nTEST 3 (SUBTRACT):");
-      BrobInt b3 = new BrobInt("-999999");
+      BrobInt b3 = new BrobInt("1");
       System.out.println("Make new BrobInt b3: " + b3.toString());
-      BrobInt b4 = new BrobInt("-234567");
+      BrobInt b4 = new BrobInt("1");
       System.out.println("Make new BrobInt b4: " + b4.toString());
       System.out.println("Subtract b3 and b4: " + b3.subtract(b4));
 
       System.out.println("\nTEST 4 (MULTIPLY):");
-      BrobInt b5 = new BrobInt("55");
+      BrobInt b5 = new BrobInt("23");
       System.out.println("Make new BrobInt b5: " + b5.toString());
-      BrobInt b6 = new BrobInt("72");
+      BrobInt b6 = new BrobInt("37");
       System.out.println("Make new BrobInt b6: " + b6.toString());
       System.out.println("Multiply b5 and b6: " + b5.multiply(b6));
+
+      System.out.println("\nTEST 4 (DIVIDE):");
+      BrobInt b7 = new BrobInt("52");
+      System.out.println("Make new BrobInt b7: " + b7.toString());
+      BrobInt b8 = new BrobInt("2");
+      System.out.println("Make new BrobInt b8: " + b8.toString());
+      System.out.println("Divide b7 and b8: " + b7.divide(b8));
       System.exit( 0 );
 
    }
