@@ -18,8 +18,24 @@
  *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 public class Collatz {
-  public BrobInt arg = null;
-  int count = 0;
+  //public static BrobInt arg = null;
+  //private BrobInt count = new BrobInt("0");
+
+  /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+   *  Method to validate arguments
+   *  @param  bint
+   *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+   public void validateArgs( String args ) {
+     BrobInt b = new BrobInt(args);
+     if (b.equals(BrobInt.ZERO)) {
+       throw new IllegalArgumentException("\nERROR: This sequence will go on forever and it is impossible to reach 1");
+     } else if (args == " ") {
+       throw new IllegalArgumentException("ERROR: Please enter a number to begin");
+     } else if (args.contains(".")) {
+       throw new IllegalArgumentException("ERROR: Please enter a whole number to begin");
+     }
+
+   }
 
   /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
    *  Method to run the Collatz Sequence
@@ -27,13 +43,15 @@ public class Collatz {
    *  @return BrobInt that is the number of steps needed to complete the sequence
    *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
    public BrobInt runCollatz( BrobInt bint ) {
-     BrobInt arg = new BrobInt(bint.internalValue);
-     arg.sign = bint.sign;
-     while (arg.numsReversed[0] % 2 > 1) {
-       arg = (arg.numsReversed[0] % 2 == 0) ? arg.divide(BrobInt.TW0) : (arg.multiply(BrobInt.THREE).add(BrobInt.ONE));
-       count++;
+     BrobInt count = new BrobInt("0");
+     BrobInt b = new BrobInt(bint.internalValue);
+     b.sign = bint.sign;
+
+     while (b.compareTo(BrobInt.ONE) == 1) {
+       b = (b.remainder(BrobInt.TWO).equals(BrobInt.ZERO)) ? b.divide(BrobInt.TWO) : (b.multiply(BrobInt.THREE).add(BrobInt.ONE));
+       count = count.add(BrobInt.ONE);
      }
-     return new BrobInt(Integer.toString(count));
+     return count;
      //throw new UnsupportedOperationException( "\n         Sorry, that operation is not yet implemented." );
    }
 
@@ -42,8 +60,19 @@ public class Collatz {
    *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
    public static void main( String[] args ) {
      System.out.println( "\n  Hello, world, from the Collatz program!!\n" );
-     arg = new BrobInt(args[0]);
-     arg.runCollatz(arg);
+
+     try {
+       Collatz c = new Collatz();
+       c.validateArgs(args[0]);
+       BrobInt arg = new BrobInt(args[0]);
+
+       System.out.println("Make new BrobInt : " + arg.toString());
+       System.out.println("The number of steps in the Collatz sequence is " + c.runCollatz(arg).toString());
+     } catch (Exception iae) {
+       System.out.println(iae);
+       System.exit(0);
+     }
+
      }
 
 
