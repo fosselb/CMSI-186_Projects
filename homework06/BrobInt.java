@@ -364,59 +364,60 @@ public class BrobInt {
        //System.out.println("HERE 2");
        return BrobInt.ONE;
      } else {
-       System.out.println("START DIVISION WITH REGUALR CASE");
+       // System.out.println("START DIVISION WITH REGUALR CASE");
 
        n = d1.internalValue.length();
        d3 = new BrobInt(d2.internalValue.substring(0, n));
        if (Math.abs(Integer.parseInt(d1.internalValue)) > Math.abs(Integer.parseInt(d3.internalValue))) {
-         //n++;
          d3 = new BrobInt(d2.internalValue.substring(0, n + 1));
+         n++;
        }
 
-       System.out.println("n = " + n);
-       System.out.println("d3 = " + d3.internalValue);
+       // System.out.println("n = " + n);
+       // System.out.println("d3 = " + d3.internalValue);
 
        while (n <= d2.internalValue.length()) {
-         System.out.println("START WHILE LOOP 1");
-         System.out.println("n = " + n);
-         System.out.println("d2 = " + d2.internalValue);
-         System.out.println("d3 = " + d3.internalValue.length());
-         System.out.println("d1 = " + d1.internalValue.length());
-         while (Math.abs(Integer.parseInt(d3.internalValue)) > Math.abs(Integer.parseInt(d1.internalValue))) {
-           System.out.println("START WHILE LOOP 2");
-           System.out.println("HERE NO GO ---- BEFORE");
-           System.out.println("d3 = " + d3.internalValue);
-           System.out.println("d1 = " + d1.internalValue);
-           System.out.println("q = " + q.internalValue);
+         // System.out.println("START WHILE LOOP 1");
+         // System.out.println("n = " + n);
+         // System.out.println("d2 = " + d2.internalValue);
+         // System.out.println("d3 = " + d3.internalValue.length());
+         // System.out.println("d1 = " + d1.internalValue.length());
+         while (Math.abs(Integer.parseInt(d3.internalValue)) >= Math.abs(Integer.parseInt(d1.internalValue))) {
+           // System.out.println("START WHILE LOOP 2");
+           // System.out.println("HERE NO GO ---- BEFORE");
+           // System.out.println("d3 = " + d3.internalValue);
+           // System.out.println("d1 = " + d1.internalValue);
+           // System.out.println("q = " + q.internalValue);
            d3 = d3.subtract(d1);
            q = q.add(BrobInt.ONE);
-           System.out.println("AFTER SUB AND ADDITION OF 1");
-           System.out.println("d3 = " + d3.internalValue);
-           System.out.println("d1 = " + d1.internalValue);
-           System.out.println("q = " + q.internalValue);
+           // System.out.println("AFTER SUB AND ADDITION OF 1");
+           //System.out.println("d3 = " + d3.internalValue);
+           // System.out.println("d1 = " + d1.internalValue);
+           //System.out.println("q = " + q.internalValue);
          }
 
-         System.out.println("n = " + n);
+         //System.out.println("n = " + n);
 
          if (n++ == d2.internalValue.length()) {
-           System.out.println("BREAK POINT");
+          //System.out.println("BREAK POINT");
+          //System.out.println(q);
            break;
          }
 
          //d3 = d3.multiply(BrobInt.TEN);
          q = q.multiply(BrobInt.TEN);
-
+         //System.out.println("q2 = " + q.internalValue);
 
          d3.internalValue = d3.internalValue + d2.internalValue.substring(n - 1, n);
-         System.out.println("d3 = " + d3.internalValue);
-         System.out.println("q = " + q.internalValue);
-         System.out.println("HEREEEEEEEE");
-         System.out.println("=============");
-         System.out.println("n (HERE) = " + n);
+         // System.out.println("d3 = " + d3.internalValue);
+         // System.out.println("q = " + q.internalValue);
+         // System.out.println("HEREEEEEEEE");
+         // System.out.println("=============");
+         // System.out.println("n (HERE) = " + n);
        }
 
        //System.out.println("q = " + q.toString());
-       System.out.println("***");
+       // System.out.println("***");
        return q;
      }
 
@@ -431,7 +432,14 @@ public class BrobInt {
    *  @return BrobInt that is the remainder of division of this BrobInt by the one passed in
    *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
    public BrobInt remainder( BrobInt bint ) {
-      throw new UnsupportedOperationException( "\n         Sorry, that operation is not yet implemented." );
+     BrobInt a = new BrobInt( this.internalValue );
+     BrobInt b = new BrobInt( bint.internalValue );
+     a.sign = this.sign;
+     b.sign = bint.sign;
+
+     return a.subtract(a.divide(b).multiply(b));
+
+     //throw new UnsupportedOperationException( "\n         Sorry, that operation is not yet implemented." );
    }
 
   /** ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
