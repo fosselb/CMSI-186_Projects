@@ -14,6 +14,7 @@
  *   Ver      Date     Modified by:      Reason for change or modification
  *  -----  ----------  ------------      ---------------------------------------------------------------------
  *  1.0.0  2019-04-26  Fosse Lin-Bianco  Started coding.
+ *  1.0.1  2019-05-08  Fosse Lin-Bianco  Functioning makeChangeWithDynamicProgramming() method.
  *
  *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 import java.util.Arrays;
@@ -155,30 +156,14 @@ public class DynamicChangeMaker {
        }
      }
 
-     if (DEBUG_ON) {
-       System.out.println("\n");
-       System.out.print("table[0][0]: " + table[0][0].toString() + "  ");
-       System.out.print("table[0][1]: " + table[0][1].toString() + "  ");
-       System.out.print("table[0][2]: " + table[0][2].toString() + "  ");
-       System.out.print("table[0][3]: " + table[0][3].toString() + "  ");
-       System.out.print("table[0][4]: " + table[0][4].toString() + "  ");
-       System.out.print("table[0][5]: " + table[0][5].toString() + "  ");
-       System.out.println("\n");
-       System.out.print("table[1][0]: " + table[1][0].toString() + "  ");
-       System.out.print("table[1][1]: " + table[1][1].toString() + "  ");
-       System.out.print("table[1][2]: " + table[1][2].toString() + "  ");
-       System.out.print("table[1][3]: " + table[1][3].toString() + "  ");
-       System.out.print("table[1][4]: " + table[1][4].toString() + "  ");
-       System.out.print("table[1][5]: " + table[1][5].toString() + "  ");
-       System.out.println("\n");
-     }
+     // if (table[rowCount - 1][columnCount - 1].isImpossible()) {
+     //   throw new IllegalArgumentException("This is IMPOSSIBLE");
+     // } else {
+     //   return table[rowCount - 1][columnCount - 1];
+     // }
 
-     if (table[rowCount - 1][columnCount - 1].isImpossible()) {
-       throw new IllegalArgumentException("This is IMPOSSIBLE");
-     } else {
-       return table[rowCount - 1][columnCount - 1];
-     }
-     
+     return table[rowCount - 1][columnCount - 1];
+
    }
 
   /**
@@ -199,15 +184,6 @@ public class DynamicChangeMaker {
          inputCoinDenominations[i] = Integer.parseInt(inputArgs[i]);
        }
 
-       if (DEBUG_ON) {
-         System.out.print("inputCoinDenominations: ");
-         for (int i = 0; i < inputCoinDenominations.length; i++) {
-           System.out.print(inputCoinDenominations[i] + " ");
-         }
-         System.out.println("");
-         System.out.println("inputTargetAmount: " + inputTargetAmount);
-       }
-
        //running programs
        DynamicChangeMaker dcm = new DynamicChangeMaker();
        Tuple result = dcm.makeChangeWithDynamicProgramming(inputCoinDenominations, inputTargetAmount);
@@ -216,7 +192,12 @@ public class DynamicChangeMaker {
        System.out.println("Hello World from the Change Maker Program:");
        System.out.println("==========================================");
 
-       System.out.println(result.toString());
+       //System.out.println(result.toString());
+
+       if (result.isImpossible()) {
+         System.out.println("\n" + "This is IMPOSSIBLE" + "\n");
+         System.exit(0);
+       }
 
        System.out.println(
        "\n" +
