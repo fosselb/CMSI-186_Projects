@@ -13,15 +13,18 @@
  *   Ver      Date     Modified by:      Reason for change or modification
  *  -----  ----------  ------------      ---------------------------------------------------------------------
  *  1.0.0  2019-05-13  Fosse Lin-Bianco  Started coding.
- *  1.0.1  2019-05-14  Fosse Lin-Bianco
+ *  1.0.1  2019-05-14  Fosse Lin-Bianco  Created method to generate random numbers.
+ *  1.0.2  2019-05-14  Fosse Lin-Bianco  Change version numbers.
+ *  1.0.3  2019-05-14  Fosse Lin-Bianco  Add estimate pi method.
+ *  1.0.4  2019-05-14  Fosse Lin-Bianco  Formatting changes.
  *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 public class PiSolver {
    /**
    * Field Declarations
    */
-   public double dartsInCircle;
-   public double totalDarts;
+   public static double dartsInCircle;
+   public static double totalDarts;
 
    /**
     * Method that generates two random number between -1 and 1
@@ -37,7 +40,7 @@ public class PiSolver {
    /**
     * Method that simulates throwing darts at a circle, radius 1, wihin a sqaure
     */
-   public static double throwDart() {
+   public static void throwDart() {
 
    }
 
@@ -53,11 +56,6 @@ public class PiSolver {
   public static void main(String[] args) {
     PiSolver p = new PiSolver();
 
-    System.out.println("TESTING generateRandomValues(): ");
-    positionX = p.generateRandomValues();
-    positionY = p.generateRandomValues();
-    System.out.println("Pos X: " + positionX);
-    System.out.println("Pos Y: " + positionY);
   }
 
 }
