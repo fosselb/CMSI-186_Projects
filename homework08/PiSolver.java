@@ -2,7 +2,7 @@
  * File name  :  PiSolver.java
  * Purpose    :  To create a program that estimates the value of PI by throwing random darts at a circle within a square
  * @author    :  Fosse Lin-Bianco
- * Date       :  2019-04-26
+ * Date       :  2019-05-13
  * Description:
  * Notes      :  None
  * Warnings   :  None
@@ -12,8 +12,8 @@
  * ================
  *   Ver      Date     Modified by:      Reason for change or modification
  *  -----  ----------  ------------      ---------------------------------------------------------------------
- *  1.0.0  2019-04-13  Fosse Lin-Bianco  Started coding.
- *
+ *  1.0.0  2019-05-13  Fosse Lin-Bianco  Started coding.
+ *  1.0.1  2019-05-14  Fosse Lin-Bianco  Started coding.
  *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 public class PiSolver {
