@@ -13,15 +13,15 @@
  *   Ver      Date     Modified by:      Reason for change or modification
  *  -----  ----------  ------------      ---------------------------------------------------------------------
  *  1.0.0  2019-05-13  Fosse Lin-Bianco  Started coding.
- *  1.0.1  2019-05-14  Fosse Lin-Bianco  Started coding.
+ *  1.0.1  2019-05-14  Fosse Lin-Bianco
  *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 public class PiSolver {
-  /**
+   /**
    * Field Declarations
    */
-   public static double positionX;
-   public static double positionY;
+   public double dartsInCircle;
+   public double totalDarts;
 
    /**
     * Method that generates two random number between -1 and 1
@@ -36,15 +36,24 @@ public class PiSolver {
 
    /**
     * Method that simulates throwing darts at a circle, radius 1, wihin a sqaure
-    * @return ratio of darts in circle to total darts
     */
-   public static double simulateDarts() {
-     return 0.0;
+   public static double throwDart() {
+
+   }
+
+   /**
+    * Method that estimates pi
+    * @return estimated pi value
+    */
+   public static double estimatePi() {
+     return (dartsInCircle / totalDarts) * 4;
    }
 
 
   public static void main(String[] args) {
     PiSolver p = new PiSolver();
+
+    System.out.println("TESTING generateRandomValues(): ");
     positionX = p.generateRandomValues();
     positionY = p.generateRandomValues();
     System.out.println("Pos X: " + positionX);
