@@ -19,7 +19,7 @@
  *  1.0.4  2019-05-14  Fosse Lin-Bianco  Formatting changes.
  *  1.0.5  2019-05-14  Fosse Lin-Bianco  Add to throwDart() method.
  *  1.0.6  2019-05-15  Fosse Lin-Bianco  Create working program with inputs from command line.
-
+ *  1.0.7  2019-05-15  Fosse Lin-Bianco  Clean up code.
  *  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 public class PiSolver {
@@ -46,10 +46,9 @@ public class PiSolver {
 
    /**
     * Method that simulates throwing darts at a circle, radius 1, wihin a sqaure
+    * @return array for position
     */
    public static double[] throwDart() {
-     // double x = generateRandomValues();
-     // double y = generateRandomValues();
      for (int i = 0; i < position.length; i++) {
        position[i] = generateRandomValues();
      }
@@ -67,7 +66,6 @@ public class PiSolver {
      return (dartsInCircle / totalDarts) * 4;
    }
 
-
   public static void main(String[] args) {
     PiSolver p = new PiSolver();
 
@@ -80,35 +78,17 @@ public class PiSolver {
     //simulating throwing darts
     while (totalDarts < numberOfDarts) {
       double currentPosition[] = p.throwDart();
-
-      // System.out.println("current position array: ");
-      // for (int i = 0; i < currentPosition.length; i++) {
-      //   System.out.println(currentPosition[i]);
-      // }
-
       double currentDistance = Math.sqrt( Math.pow(currentPosition[0], 2) + Math.pow(currentPosition[1], 2) );
-
-      //System.out.println("Distance: " + currentDistance);
-
       if (currentDistance <= circleRadius) {
         dartsInCircle++;
       }
       totalDarts++;
     }
 
-    // System.out.println("dartsInCircle = " + dartsInCircle);
-    // System.out.println("totalDarts = " + totalDarts);
-
     System.out.println("\n" + "WELCOME TO THE PI SOLVER PROGRAM:");
     System.out.println("================================" + "\n");
     System.out.println("Real value of PI is: " + Math.PI);
     System.out.println("\n" + "Your estimate of PI is: " + p.estimatePi() + "\n");
-
-    // System.out.println("Testing: ");
-    // Dart d1 = new Dart(0.2, 0.2);
-    // System.out.println("X: " + d1.positionX);
-    // System.out.println("Y: " + d1.positionY);
-    // System.out.println("Distance: " + d1.distanceFromOrigin);
   }
 
 }
